@@ -1,0 +1,7 @@
+{ --- DIM --- }
+DIM FileName AS MESSAGE;
+
+FileName = SYS_M026 + "\DramWait\DramWait.CSV";
+
+{ --- Data Load --- }
+RecipeLoad( FileName ,"U001", "R001" ); 

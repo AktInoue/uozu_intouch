@@ -1,0 +1,7 @@
+{ --- Log Out --- }
+SYS_R999 = 0;
+$OperatorEntered = "none";
+$PasswordEntered = "";
+
+W0001_UserID_Mmesg = "";
+W0001_UserPassword_Mmesg = "";

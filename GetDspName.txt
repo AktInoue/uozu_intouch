@@ -1,0 +1,142 @@
+{ --- ChgMessage --- }
+CALL SubGetDspName( ActDspNo , 10001 , "éÛì¸é¿ê—");
+CALL SubGetDspName( ActDspNo , 10011 , "ãüããé¿ê—");
+CALL SubGetDspName( ActDspNo , 10016 , "ãüããàÍäá");
+CALL SubGetDspName( ActDspNo , 10021 , "¡¨∞ºﬁ∫∞Ÿ");
+CALL SubGetDspName( ActDspNo , 10031 , "äÛéﬂé¿ê—");
+CALL SubGetDspName( ActDspNo , 10035 , "äÛéﬂé¿ê—");
+CALL SubGetDspName( ActDspNo , 10101 , "ì˙ïÒ");
+CALL SubGetDspName( ActDspNo , 10201 , "åéïÒ");
+CALL SubGetDspName( ActDspNo , 10301 , "èTïÒ");
+CALL SubGetDspName( ActDspNo , 10501 , "“›√≈›Ωä‘äu");
+CALL SubGetDspName( ActDspNo , 10502 , "“›√≈›Ωóöó");
+CALL SubGetDspName( ActDspNo , 51    , "µ∞ ﬁ∞Àﬁ≠∞");
+CALL SubGetDspName( ActDspNo , 56    , "âÊñ ëJà⁄ê}");
+CALL SubGetDspName( ActDspNo , 61    , "¿›∏Ω√∞¿Ω(CDS)");
+CALL SubGetDspName( ActDspNo , 62    , "¿›∏Ω√∞¿Ω(SDS)");
+CALL SubGetDspName( ActDspNo , 71    , "±◊∞—óöó");
+CALL SubGetDspName( ActDspNo , 81    , "±◊∞— ªœÿ");
+CALL SubGetDspName( ActDspNo , 90    , "ƒ⁄›ƒﬁ");
+CALL SubGetDspName( ActDspNo , 91    , "ƒ⁄›ƒﬁ");
+CALL SubGetDspName( ActDspNo , 92    , "ƒ⁄›ƒﬁ");
+CALL SubGetDspName( ActDspNo , 101   , "»Øƒ‹∞∏");
+CALL SubGetDspName( ActDspNo , 111   , "“›√≈›Ωä‘äu");
+CALL SubGetDspName( ActDspNo , 115   , "“›√≈›Ωóöó");
+CALL SubGetDspName( ActDspNo , 121   , "“›√≈›Ωóöó");
+CALL SubGetDspName( ActDspNo , 122   , "“›√≈›Ωóöó");
+CALL SubGetDspName( ActDspNo , 123   , "“›√≈›Ωóöó");
+CALL SubGetDspName( ActDspNo , 124   , "“›√≈›Ωóöó");
+CALL SubGetDspName( ActDspNo , 125   , "“›√≈›Ωóöó");
+CALL SubGetDspName( ActDspNo , 126   , "“›√≈›Ωóöó");
+CALL SubGetDspName( ActDspNo , 127   , "“›√≈›Ωóöó");
+CALL SubGetDspName( ActDspNo , 151   , "ãŸã}í‚é~");
+
+CALL SubGetDspName( ActDspNo , 501   , "ëïíuñºèÃïœçX");
+CALL SubGetDspName( ActDspNo , 502   , "ëïíuñºèÃïœçX");
+CALL SubGetDspName( ActDspNo , 503   , "ëïíuñºèÃïœçX");
+CALL SubGetDspName( ActDspNo , 9001  , "ñÚâtñºèÃïœçX");
+CALL SubGetDspName( ActDspNo , 9002  , "ñÚâtñºèÃïœçX");
+CALL SubGetDspName( ActDspNo , 1010  , COM_ChemNM_L01_Mmesg);
+CALL SubGetDspName( ActDspNo , 1020  , COM_ChemNM_L02_Mmesg);
+CALL SubGetDspName( ActDspNo , 1030  , COM_ChemNM_L03_Mmesg);
+CALL SubGetDspName( ActDspNo , 1040  , COM_ChemNM_L04_Mmesg);
+CALL SubGetDspName( ActDspNo , 1050  , COM_ChemNM_L05_Mmesg);
+CALL SubGetDspName( ActDspNo , 1060  , COM_ChemNM_L06_Mmesg);
+CALL SubGetDspName( ActDspNo , 1070  , COM_ChemNM_L07_Mmesg);
+CALL SubGetDspName( ActDspNo , 1080  , COM_ChemNM_L08_Mmesg);
+CALL SubGetDspName( ActDspNo , 1090  , COM_ChemNM_L09_Mmesg);
+CALL SubGetDspName( ActDspNo , 1100  , COM_ChemNM_L10_Mmesg);
+CALL SubGetDspName( ActDspNo , 1110  , COM_ChemNM_L11_Mmesg);
+CALL SubGetDspName( ActDspNo , 1120  , COM_ChemNM_L12_Mmesg);
+CALL SubGetDspName( ActDspNo , 1130  , COM_ChemNM_L13_Mmesg);
+CALL SubGetDspName( ActDspNo , 1140  , COM_ChemNM_L14_Mmesg);
+CALL SubGetDspName( ActDspNo , 1150  , COM_ChemNM_L15_Mmesg);
+CALL SubGetDspName( ActDspNo , 1160  , COM_ChemNM_L16_Mmesg);
+CALL SubGetDspName( ActDspNo , 1170  , COM_ChemNM_L17_Mmesg);
+CALL SubGetDspName( ActDspNo , 1180  , COM_ChemNM_L18_Mmesg);
+CALL SubGetDspName( ActDspNo , 1190  , COM_ChemNM_L19_Mmesg);
+CALL SubGetDspName( ActDspNo , 1210  , COM_ChemNM_L21_Mmesg);
+CALL SubGetDspName( ActDspNo , 1220  , COM_ChemNM_L22_Mmesg);
+CALL SubGetDspName( ActDspNo , 1230  , COM_ChemNM_L23_Mmesg);
+CALL SubGetDspName( ActDspNo , 1240  , COM_ChemNM_L24_Mmesg);
+CALL SubGetDspName( ActDspNo , 1250  , COM_ChemNM_L25_Mmesg);
+CALL SubGetDspName( ActDspNo , 1260  , COM_ChemNM_L26_Mmesg);{---2008.07.25 ADD---}
+CALL SubGetDspName( ActDspNo , 1270  , COM_ChemNM_L27_Mmesg);{---2008.07.25 ADD---}
+CALL SubGetDspName( ActDspNo , 1280  , COM_ChemNM_L28_Mmesg);{---2008.07.25 ADD---}
+CALL SubGetDspName( ActDspNo , 1290  , COM_ChemNM_L29_Mmesg);{---2008.07.25 ADD---}
+
+CALL SubGetDspName( ActDspNo , 1400  , COM_ChemNM_L40_Mmesg);
+CALL SubGetDspName( ActDspNo , 1401  , COM_ChemNM_L40_Mmesg);
+
+CALL SubGetDspName( ActDspNo , 1410  , COM_ChemNM_L41_Mmesg);
+CALL SubGetDspName( ActDspNo , 1411  , COM_ChemNM_L41_Mmesg);
+
+CALL SubGetDspName( ActDspNo , 1421  , COM_ChemNM_L42_Mmesg);
+
+CALL SubGetDspName( ActDspNo , 1430  , COM_ChemNM_L43_Mmesg);
+CALL SubGetDspName( ActDspNo , 1431  , COM_ChemNM_L43_Mmesg);
+
+CALL SubGetDspName( ActDspNo , 1440  , COM_ChemNM_L44_Mmesg);
+CALL SubGetDspName( ActDspNo , 1441  , COM_ChemNM_L44_Mmesg);
+
+CALL SubGetDspName( ActDspNo , 1450  , COM_ChemNM_L45_Mmesg);
+CALL SubGetDspName( ActDspNo , 1451  , COM_ChemNM_L45_Mmesg);
+CALL SubGetDspName( ActDspNo , 1452  , COM_ChemNM_L45_Mmesg);
+
+CALL SubGetDspName( ActDspNo , 1460  , COM_ChemNM_L46_Mmesg);
+CALL SubGetDspName( ActDspNo , 1461  , COM_ChemNM_L46_Mmesg);
+CALL SubGetDspName( ActDspNo , 1462  , COM_ChemNM_L46_Mmesg);
+
+CALL SubGetDspName( ActDspNo , 1470  , COM_ChemNM_L47_Mmesg);
+CALL SubGetDspName( ActDspNo , 1471  , COM_ChemNM_L47_Mmesg);
+CALL SubGetDspName( ActDspNo , 1472  , COM_ChemNM_L47_Mmesg);
+
+CALL SubGetDspName( ActDspNo , 1480  , COM_ChemNM_L48_Mmesg);
+CALL SubGetDspName( ActDspNo , 1481  , COM_ChemNM_L48_Mmesg);
+
+CALL SubGetDspName( ActDspNo , 1490  , COM_ChemNM_L49_Mmesg);{---2008.07.25 ADD---}
+CALL SubGetDspName( ActDspNo , 1491  , COM_ChemNM_L49_Mmesg);{---2008.07.25 ADD---}
+CALL SubGetDspName( ActDspNo , 1492  , COM_ChemNM_L49_Mmesg);{---2008.07.25 ADD---}
+
+CALL SubGetDspName( ActDspNo , 1500  , COM_ChemNM_L50_Mmesg);
+
+CALL SubGetDspName( ActDspNo , 2010  , COM_ChemNM_L01_Mmesg);
+CALL SubGetDspName( ActDspNo , 2020  , COM_ChemNM_L02_Mmesg);
+CALL SubGetDspName( ActDspNo , 2030  , COM_ChemNM_L03_Mmesg);
+CALL SubGetDspName( ActDspNo , 2040  , COM_ChemNM_L04_Mmesg);
+CALL SubGetDspName( ActDspNo , 2050  , COM_ChemNM_L05_Mmesg);
+CALL SubGetDspName( ActDspNo , 2060  , COM_ChemNM_L06_Mmesg);
+CALL SubGetDspName( ActDspNo , 2070  , COM_ChemNM_L07_Mmesg);
+CALL SubGetDspName( ActDspNo , 2080  , COM_ChemNM_L08_Mmesg);
+CALL SubGetDspName( ActDspNo , 2090  , COM_ChemNM_L09_Mmesg);
+CALL SubGetDspName( ActDspNo , 2100  , COM_ChemNM_L10_Mmesg);
+CALL SubGetDspName( ActDspNo , 2110  , COM_ChemNM_L11_Mmesg);
+CALL SubGetDspName( ActDspNo , 2120  , COM_ChemNM_L12_Mmesg);
+CALL SubGetDspName( ActDspNo , 2130  , COM_ChemNM_L13_Mmesg);
+CALL SubGetDspName( ActDspNo , 2140  , COM_ChemNM_L14_Mmesg);
+CALL SubGetDspName( ActDspNo , 2150  , COM_ChemNM_L15_Mmesg);
+CALL SubGetDspName( ActDspNo , 2160  , COM_ChemNM_L16_Mmesg);
+CALL SubGetDspName( ActDspNo , 2170  , COM_ChemNM_L17_Mmesg);
+CALL SubGetDspName( ActDspNo , 2180  , COM_ChemNM_L18_Mmesg);
+CALL SubGetDspName( ActDspNo , 2190  , COM_ChemNM_L19_Mmesg);
+
+CALL SubGetDspName( ActDspNo , 2210  , COM_ChemNM_L21_Mmesg);
+CALL SubGetDspName( ActDspNo , 2220  , COM_ChemNM_L22_Mmesg);
+CALL SubGetDspName( ActDspNo , 2230  , COM_ChemNM_L23_Mmesg);
+CALL SubGetDspName( ActDspNo , 2240  , COM_ChemNM_L24_Mmesg);
+CALL SubGetDspName( ActDspNo , 2250  , COM_ChemNM_L25_Mmesg);
+CALL SubGetDspName( ActDspNo , 2260  , COM_ChemNM_L26_Mmesg);{---2008.07.25 ADD---}
+CALL SubGetDspName( ActDspNo , 2270  , COM_ChemNM_L27_Mmesg);{---2008.07.25 ADD---}
+CALL SubGetDspName( ActDspNo , 2280  , COM_ChemNM_L28_Mmesg);{---2008.07.25 ADD---}
+CALL SubGetDspName( ActDspNo , 2290  , COM_ChemNM_L29_Mmesg);{---2008.07.25 ADD---}
+
+CALL SubGetDspName( ActDspNo , 2400  , COM_ChemNM_L40_Mmesg);
+CALL SubGetDspName( ActDspNo , 2410  , COM_ChemNM_L41_Mmesg);
+CALL SubGetDspName( ActDspNo , 2420  , COM_ChemNM_L42_Mmesg);
+CALL SubGetDspName( ActDspNo , 2430  , COM_ChemNM_L43_Mmesg);
+CALL SubGetDspName( ActDspNo , 2440  , COM_ChemNM_L44_Mmesg);
+CALL SubGetDspName( ActDspNo , 2450  , COM_ChemNM_L45_Mmesg);
+CALL SubGetDspName( ActDspNo , 2460  , COM_ChemNM_L46_Mmesg);
+CALL SubGetDspName( ActDspNo , 2470  , COM_ChemNM_L47_Mmesg);
+CALL SubGetDspName( ActDspNo , 2480  , COM_ChemNM_L48_Mmesg);
+CALL SubGetDspName( ActDspNo , 2490  , COM_ChemNM_L49_Mmesg);{---2008.07.25 ADD---}

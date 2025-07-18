@@ -1,0 +1,66 @@
+{ --- DIM --- }
+DIM StYMD AS MESSAGE;
+DIM StHMS AS MESSAGE;
+DIM EdYMD AS MESSAGE;
+DIM EdHMS AS MESSAGE;
+
+DIM SYY AS REAL;
+DIM SMO AS REAL;
+DIM SDD AS REAL;
+DIM SHH AS REAL;
+DIM SMM AS REAL;
+DIM SSS AS REAL;
+
+DIM EYY AS REAL;
+DIM EMO AS REAL;
+DIM EDD AS REAL;
+DIM EHH AS REAL;
+DIM EMM AS REAL;
+DIM ESS AS REAL;
+
+{ --- List Default --- }
+G0071_ChemicalName_Mmesg = "‘S‚Ä";
+IF G0071_ChemNo_Mreal <> 0 THEN
+    G0071_Work01_Lmesg.Name = "COM_ChemNM_L" + Text(G0071_ChemNo_Mreal , "00" ) + "_Mmesg";
+    G0071_ChemicalName_Mmesg = StringTrim(G0071_Work01_Lmesg,3);
+ENDIF;
+
+StYMD = #G0071YMDS.Value;
+StHMS = StringRight("0" + #G0071HMSS.Value,8);
+EdYMD = #G0071YMDE.Value;
+EdHMS = StringRight("0" + #G0071HMSE.Value,8);
+
+SYY = StringToReal(StringMid(StYMD, 1,4));
+SMO = StringToReal(StringMid(StYMD, 6,2));
+SDD = StringToReal(StringMid(StYMD, 9,2));
+SHH = StringToReal(StringMid(StHMS, 1,2));
+SMM = StringToReal(StringMid(StHMS, 4,2));
+SSS = StringToReal(StringMid(StHMS, 7,2));
+
+EYY = StringToReal(StringMid(EdYMD, 1,4));
+EMO = StringToReal(StringMid(EdYMD, 6,2));
+EDD = StringToReal(StringMid(EdYMD, 9,2));
+EHH = StringToReal(StringMid(EdHMS, 1,2));
+EMM = StringToReal(StringMid(EdHMS, 4,2));
+ESS = StringToReal(StringMid(EdHMS, 7,2));
+
+IF ChemNo == 0 THEN
+   #G0071AlarmHistory.GroupName = "";
+   #G0071AlarmHistory.GroupExactMatch = 0;
+ELSE
+   #G0071AlarmHistory.GroupName = "CH" + Text(ChemNo,"00");
+   #G0071AlarmHistory.GroupExactMatch = 0;
+ENDIF;
+
+#G0071AlarmHistory.FromPriority = PriorityFrom;
+#G0071AlarmHistory.ToPriority   = PriorityTo;
+
+#G0071AlarmHistory.StartTime = Text(SMO,"00") + "/" + Text(SDD,"00") + "/" + Text(SYY,"0000") + " " +
+                               Text(SHH,"00") + ":" + Text(SMM,"00") + ":" + Text(SSS,"00");
+
+#G0071AlarmHistory.EndTime   = Text(EMO,"00") + "/" + Text(EDD,"00") + "/" + Text(EYY,"0000") + " " +
+                               Text(EHH,"00") + ":" + Text(EMM,"00") + ":" + Text(ESS,"00");
+
+#G0071AlarmHistory.Refresh();
+
+CALL DspScreenView();

@@ -1,0 +1,37 @@
+{ --- DIM --- }
+DIM RET AS REAL;
+
+RET = 0;
+
+{ --- Base Dsp --- }
+IF DspMode == 1 THEN
+    IF ActDspNo == ChgDspNo THEN
+        RET = 1;
+        Show "" + DspNM;
+    ELSE
+        Hide "" + DspNM;
+    ENDIF;
+ENDIF;
+
+{ --- Window Dsp --- }
+IF DspMode == 2 THEN
+    IF ActDspNo == ChgDspNo THEN
+        RET = 1;
+        ShowAt("" + DspNM ,  1024 / 2 , 768 / 2);
+    ELSE
+        Hide "" + DspNM;
+    ENDIF;
+ENDIF;
+
+{ --- Exe VB Program --- }
+IF DspMode == 3 THEN
+    IF ActDspNo == ChgDspNo THEN
+        RET = 1;
+        WWControl( DspNM , "Close" );
+        StartApp SYS_M020 + "\" + DspNM + ".EXE " + Param;
+    ELSE
+        WWControl( DspNM , "Close" );
+    ENDIF;
+ENDIF;
+
+RETURN RET;

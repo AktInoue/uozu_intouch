@@ -1,0 +1,11 @@
+{ --- DIM --- }
+DIM FileName AS MESSAGE;
+
+FileName = SYS_M026 + "\TrendPenRange";
+FileName = FileName + "\I" + Text(Index , "00" ) ;
+FileName = FileName + "\PEN" + Text(PenNo , "0" ) ;
+FileName = FileName + "\CHEM" + Text(ChemNo , "00" ) +".csv";
+
+RecipeLoad( FileName ,"U001", "R001" ); 
+G0092_TrendGraph_Mtrnd.MinRange = G0092_NowMin_Mreal;
+G0092_TrendGraph_Mtrnd.MaxRange = G0092_NowMax_Mreal;

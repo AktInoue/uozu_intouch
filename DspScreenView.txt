@@ -1,0 +1,74 @@
+{ --- Dsp Over View --- }
+IF COM_DspNo_Mreal == 51 OR
+   COM_DspNo_Mreal == 61 OR
+   COM_DspNo_Mreal == 151 THEN
+   COM_DspNo_SDS_Mreal = 0;
+ENDIF;
+IF COM_DspNo_Mreal == 52 OR
+   COM_DspNo_Mreal == 62 OR
+   COM_DspNo_Mreal == 152 THEN
+   COM_DspNo_SDS_Mreal = 1;
+ENDIF;
+
+IF COM_DspNo_Mreal == 71 THEN
+   IF G0071_ChemNo_Mreal == 0 THEN
+      COM_DspNo_SDS_Mreal = COM_DspNo_SDS_Mreal;
+   ELSE IF G0071_ChemNo_Mreal >= 1 AND G0071_ChemNo_Mreal <= 39 THEN
+      COM_DspNo_SDS_Mreal = 0;
+   ELSE
+      COM_DspNo_SDS_Mreal = 1;
+   ENDIF;
+   ENDIF;
+ENDIF;
+IF COM_DspNo_Mreal == 81 THEN
+   IF G0081_ChemNo_Mreal == 0 THEN
+      COM_DspNo_SDS_Mreal = COM_DspNo_SDS_Mreal;
+   ELSE IF G0081_ChemNo_Mreal >= 1 AND G0081_ChemNo_Mreal <= 39 THEN
+      COM_DspNo_SDS_Mreal = 0;
+   ELSE
+      COM_DspNo_SDS_Mreal = 1;
+   ENDIF;
+   ENDIF;
+ENDIF;
+IF COM_DspNo_Mreal == 82 THEN
+   IF G0081_ChemNo_Mreal == 0 THEN
+      COM_DspNo_SDS_Mreal = COM_DspNo_SDS_Mreal;
+   ELSE IF G0081_ChemNo_Mreal >= 1 AND G0081_ChemNo_Mreal <= 39 THEN
+      COM_DspNo_SDS_Mreal = 0;
+   ELSE
+      COM_DspNo_SDS_Mreal = 1;
+   ENDIF;
+   ENDIF;
+ENDIF;
+IF COM_DspNo_Mreal == 92 THEN
+   IF G0092_ChemNo_MReal >= 1 AND G0092_ChemNo_MReal <= 39 THEN
+      COM_DspNo_SDS_Mreal = 0;
+   ELSE IF G0092_ChemNo_MReal == 9999 THEN
+      COM_DspNo_SDS_Mreal = 0;
+   ELSE
+      COM_DspNo_SDS_Mreal = 1;
+   ENDIF;
+   ENDIF;
+ENDIF;
+IF COM_DspNo_Mreal >= 501 AND COM_DspNo_Mreal <= 508 THEN
+   IF G0501_ChemNo_Mreal >= 1 AND G0501_ChemNo_Mreal <= 39 THEN
+   COM_DspNo_SDS_Mreal = 0;
+   ELSE
+   COM_DspNo_SDS_Mreal = 1;
+   ENDIF;
+ENDIF;
+IF COM_DspNo_Mreal >= 9001 AND COM_DspNo_Mreal <= 9003 THEN
+   COM_DspNo_SDS_Mreal = 0;
+ENDIF;
+IF COM_DspNo_Mreal >= 1010 AND COM_DspNo_Mreal <= 1399 THEN
+   COM_DspNo_SDS_Mreal = 0;
+ENDIF;
+IF COM_DspNo_Mreal >= 1400 AND COM_DspNo_Mreal <= 1500 THEN
+   COM_DspNo_SDS_Mreal = 1;
+ENDIF;
+IF COM_DspNo_Mreal >= 2010 AND COM_DspNo_Mreal <= 2399 THEN
+   COM_DspNo_SDS_Mreal = 0;
+ENDIF;
+IF COM_DspNo_Mreal >= 2400 AND COM_DspNo_Mreal <= 2500 THEN
+   COM_DspNo_SDS_Mreal = 1;
+ENDIF;

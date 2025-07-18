@@ -1,0 +1,5 @@
+{--- Pato Light Sound OFF ---}
+IF StringTrim(SYS_M001,3) == "1" THEN
+    {--- Pato Light Sound OFF ---}
+    CALL SetPatoMelody(9);
+ENDIF;

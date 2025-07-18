@@ -1,0 +1,32 @@
+{ --- DIM --- }
+DIM I AS REAL;
+
+IF SetFlg == 1 THEN
+    { --- Alarm --- }
+    Com_ArmNameSet_Mmseg = ChemNM + StringSpace(16);
+    FOR I = StArmNo TO EdArmNo
+        Com_ArmNameSet_Idisc.Name = "CH" + Text(ChemNo,"00") + "_ALM" + Text( I, "000");
+        Com_ArmNameSet_Idisc.AlarmComment = Com_ArmNameSet_Mmseg +
+                                            Com_ArmNameSet_Idisc.AlarmComment;
+    NEXT;
+ENDIF;
+
+IF SetFlg == 2 THEN
+    { --- Event --- }
+    Com_ArmNameSet_Mmseg = ChemNM + StringSpace(16);
+    FOR I = StArmNo TO EdArmNo
+        Com_ArmNameSet_Idisc.Name = "CH" + Text(ChemNo,"00") + "_EVN" + Text( I, "000");
+        Com_ArmNameSet_Idisc.AlarmComment = Com_ArmNameSet_Mmseg +
+                                            Com_ArmNameSet_Idisc.AlarmComment;
+    NEXT;
+ENDIF;
+
+IF SetFlg == 3 THEN
+    { --- Alarm (PB) --- }
+    Com_ArmNameSet_Mmseg = ChemNM + StringSpace(16);
+    FOR I = StArmNo TO EdArmNo
+        Com_ArmNameSet_Idisc.Name = "CH" + Text(ChemNo,"00") + "P" + "_ALM" + Text( I, "000");
+        Com_ArmNameSet_Idisc.AlarmComment = Com_ArmNameSet_Mmseg +
+                                            Com_ArmNameSet_Idisc.AlarmComment;
+    NEXT;
+ENDIF;

@@ -1,0 +1,101 @@
+{ --- DIM --- }
+DIM KName AS MESSAGE;
+
+{ --- Initialize --- }
+G0092_TrendGraph_Mtrnd.Pen1 = G0092_ClearPen_TagID;
+G0092_TrendGraph_Mtrnd.Pen2 = G0092_ClearPen_TagID;
+G0092_TrendGraph_Mtrnd.Pen3 = G0092_ClearPen_TagID;
+G0092_TrendGraph_Mtrnd.Pen4 = G0092_ClearPen_TagID;
+G0092_TrendGraph_Mtrnd.Pen5 = G0092_ClearPen_TagID;
+G0092_TrendGraph_Mtrnd.Pen6 = G0092_ClearPen_TagID;
+G0092_TrendGraph_Mtrnd.Pen7 = G0092_ClearPen_TagID;
+G0092_TrendGraph_Mtrnd.Pen8 = G0092_ClearPen_TagID;
+
+G0092_PenNM01_Mmesg = "";
+G0092_PenNM02_Mmesg = "";
+G0092_PenNM03_Mmesg = "";
+G0092_PenNM04_Mmesg = "";
+G0092_PenNM05_Mmesg = "";
+G0092_PenNM06_Mmesg = "";
+G0092_PenNM07_Mmesg = "";
+G0092_PenNM08_Mmesg = "";
+
+{ --- éÌóﬁê›íË --- }
+IF Index == 1 THEN
+    KName = "LIA";
+ENDIF;
+IF Index == 2 THEN
+    KName = "FI";
+ENDIF;
+IF Index == 3 THEN
+    KName = "EFS";
+ENDIF;
+IF Index == 4 THEN
+    KName = "TI";
+ENDIF;
+IF Index == 5 THEN
+    KName = "PIA1";
+ENDIF;
+IF Index == 6 THEN
+    KName = "PIA2";
+ENDIF;
+IF Index == 7 THEN
+    KName = "WI";
+ENDIF;
+IF Index == 8 THEN
+    KName = "AIC";
+ENDIF;
+IF Index == 9 THEN
+    KName = "MON";
+ENDIF;
+IF Index == 10 THEN
+    KName = "WI2";
+ENDIF;
+
+{ --- Pen Data Set --- }
+G0092_SetPen_Ianlg.Name = "G0092_CH" + Text(ChemNo,"00") + "_" + KName + "01_MReal";
+IF StringTrim(G0092_SetPen_Ianlg.Comment,3) <> "" THEN 
+   HTSetPenName( G0092_TrendGraph_Mtrnd.Name, 1, G0092_SetPen_Ianlg.Name);
+   G0092_PenNM01_Mmesg = G0092_SetPen_Ianlg.Comment;
+ENDIF;
+
+G0092_SetPen_Ianlg.Name = "G0092_CH" + Text(ChemNo,"00") + "_" + KName + "02_MReal";
+IF StringTrim(G0092_SetPen_Ianlg.Comment,3) <> "" THEN 
+   HTSetPenName( G0092_TrendGraph_Mtrnd.Name, 2, G0092_SetPen_Ianlg.Name);
+   G0092_PenNM02_Mmesg = G0092_SetPen_Ianlg.Comment;
+ENDIF;
+
+G0092_SetPen_Ianlg.Name = "G0092_CH" + Text(ChemNo,"00") + "_" + KName + "03_MReal";
+IF StringTrim(G0092_SetPen_Ianlg.Comment,3) <> "" THEN 
+   HTSetPenName( G0092_TrendGraph_Mtrnd.Name, 3, G0092_SetPen_Ianlg.Name);
+   G0092_PenNM03_Mmesg = G0092_SetPen_Ianlg.Comment;
+ENDIF;
+
+G0092_SetPen_Ianlg.Name = "G0092_CH" + Text(ChemNo,"00") + "_" + KName + "04_MReal";
+IF StringTrim(G0092_SetPen_Ianlg.Comment,3) <> "" THEN 
+   HTSetPenName( G0092_TrendGraph_Mtrnd.Name, 4, G0092_SetPen_Ianlg.Name);
+   G0092_PenNM04_Mmesg = G0092_SetPen_Ianlg.Comment;
+ENDIF;
+
+G0092_SetPen_Ianlg.Name = "G0092_CH" + Text(ChemNo,"00") + "_" + KName + "05_MReal";
+IF StringTrim(G0092_SetPen_Ianlg.Comment,3) <> "" THEN 
+   HTSetPenName( G0092_TrendGraph_Mtrnd.Name, 5, G0092_SetPen_Ianlg.Name);
+   G0092_PenNM05_Mmesg = G0092_SetPen_Ianlg.Comment;
+ENDIF;
+
+G0092_SetPen_Ianlg.Name = "G0092_CH" + Text(ChemNo,"00") + "_" + KName + "06_MReal";
+IF StringTrim(G0092_SetPen_Ianlg.Comment,3) <> "" THEN 
+   HTSetPenName( G0092_TrendGraph_Mtrnd.Name, 6, G0092_SetPen_Ianlg.Name);
+   G0092_PenNM06_Mmesg = G0092_SetPen_Ianlg.Comment;
+ENDIF;
+
+G0092_SetPenMax_Ianlg.Name = "";
+G0092_SetPenMax_Ianlg.Name = "G0092_CH" + Text(ChemNo,"00") + "_" + KName + "07_MReal";
+HTSetPenName( G0092_TrendGraph_Mtrnd.Name, 7, G0092_SetPenMax_Ianlg.Name);
+
+G0092_SetPenMin_Ianlg.Name = "";
+G0092_SetPenMin_Ianlg.Name = "G0092_CH" + Text(ChemNo,"00") + "_" + KName + "08_MReal";
+HTSetPenName( G0092_TrendGraph_Mtrnd.Name, 8, G0092_SetPenMin_Ianlg.Name);
+
+CALL G0092LoadMaxMin(ChemNo,Index);
+CALL G0092PenUnitSet(G0092_ChemNo_MReal,G0092_Index_MReal,G0092_TrendGraph_Pen_Mint);

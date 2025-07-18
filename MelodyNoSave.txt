@@ -1,0 +1,7 @@
+{ --- DIM --- }
+DIM FileName AS MESSAGE;
+
+FileName = SYS_M026 + "\SoundNo\SoundNo.CSV";
+
+{ --- Data Load --- }
+RecipeSave( FileName ,"U001", "R001" ); 

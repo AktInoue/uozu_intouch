@@ -1,0 +1,26 @@
+{ --- Initialize --- }
+G0081_ListDsp_Mreal = 0;
+
+G0081_AlmSummQuery_Mmesg = "\intouch!ALM";
+IF ChemNo <> 0 THEN
+   G0081_AlmSummQuery_Mmesg = "\intouch!CH" + Text(ChemNo,"00") + "A";
+ENDIF;
+G0081_AlmSummPriorityFrom_Mreal = PriorityFrom;
+G0081_AlmSummPriorityTo_Mreal = PriorityTo;
+
+{Reflesh Alarm summary}
+almQuery("G0081_AlarmSummary", 
+                G0081_AlmSummQuery_Mmesg,
+                G0081_AlmSummPriorityFrom_Mreal,
+                G0081_AlmSummPriorityTo_Mreal ,
+                "All",
+                "Summ");
+
+{ --- List Default --- }
+G0081_ChemicalName_Mmesg = "‘S‚Ä";
+IF G0081_ChemNo_Mreal <> 0 THEN
+    G0081_Work01_Lmesg.Name = "COM_ChemNM_L" + Text(G0081_ChemNo_Mreal , "00" ) + "_Mmesg";
+    G0081_ChemicalName_Mmesg = StringTrim(G0081_Work01_Lmesg,3);
+ENDIF;
+
+CALL DspScreenView();

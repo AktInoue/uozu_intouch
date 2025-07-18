@@ -1,0 +1,23 @@
+{ --- DIM --- }
+DIM VMBNo AS REAL;
+
+VMBNo = (PageNo - 1) * 8 + 1;
+
+{ --- Data Clear --- }
+G0501_Column1001_Idisc.Name = "";
+G0501_Column1002_Idisc.Name = "";
+G0501_Column1003_Idisc.Name = "";
+G0501_Column1004_Idisc.Name = "";
+G0501_Column1005_Idisc.Name = "";
+G0501_Column1006_Idisc.Name = "";
+G0501_Column1007_Idisc.Name = "";
+G0501_Column1008_Idisc.Name = "";
+
+G0501_Column1001_Idisc.Name = "CH" + Text(ChemNo,"00") + "_VMB_LK" + Text(VMBNo+0,"00");
+G0501_Column1002_Idisc.Name = "CH" + Text(ChemNo,"00") + "_VMB_LK" + Text(VMBNo+1,"00");
+G0501_Column1003_Idisc.Name = "CH" + Text(ChemNo,"00") + "_VMB_LK" + Text(VMBNo+2,"00");
+G0501_Column1004_Idisc.Name = "CH" + Text(ChemNo,"00") + "_VMB_LK" + Text(VMBNo+3,"00");
+G0501_Column1005_Idisc.Name = "CH" + Text(ChemNo,"00") + "_VMB_LK" + Text(VMBNo+4,"00");
+G0501_Column1006_Idisc.Name = "CH" + Text(ChemNo,"00") + "_VMB_LK" + Text(VMBNo+5,"00");
+G0501_Column1007_Idisc.Name = "CH" + Text(ChemNo,"00") + "_VMB_LK" + Text(VMBNo+6,"00");
+G0501_Column1008_Idisc.Name = "CH" + Text(ChemNo,"00") + "_VMB_LK" + Text(VMBNo+7,"00");

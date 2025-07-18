@@ -1,0 +1,14 @@
+{ --- DIM --- }
+DIM YMD AS MESSAGE;
+DIM HMS AS MESSAGE;
+
+DIM FileNM AS MESSAGE;
+DIM OutLog AS MESSAGE;
+DIM FP AS REAL;
+
+YMD = Text($Year,"0000") + "-" + Text($Month,"00") + "-" + Text($Day,"00");
+HMS = Text($Hour,"00") + ":" + Text($Minute ,"00") + ":" + Text($Second,"00");
+
+FileNM = SYS_M029 + "\" + YMD + ".TXT";
+OutLog = YMD + " " + HMS + " (InTouch   ) " + LogMsg;
+FP = FileWriteMessage (FileNM, -1, OutLog, 1);

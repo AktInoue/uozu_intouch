@@ -1,0 +1,14 @@
+{ --- DIM --- }
+DIM FileName AS MESSAGE;
+
+FileName = SYS_M501 + "\CHEM_NM.csv";
+
+{ --- Data Clear --- }
+
+{ --- Data Load --- }
+RecipeLoad( FileName ,"LONG","LONG"); 
+RecipeLoad( FileName ,"UP","UP"); 
+RecipeLoad( FileName ,"MIDDLE","MIDDLE"); 
+RecipeLoad( FileName ,"DOWN","DOWN"); 
+RecipeLoad( FileName ,"F01","F01"); 
+RecipeLoad( FileName ,"F02","F02"); 

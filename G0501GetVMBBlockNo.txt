@@ -1,0 +1,87 @@
+{ ---- DIM ---- }
+DIM VSt AS REAL;
+DIM VLen AS REAL;
+DIM VMax1 AS REAL;
+DIM VMax2 AS REAL;
+
+VSt = 0;
+VLen = 0;
+
+{ --- Start Point --- }
+IF BlockNo >= 1 THEN
+    VSt = 1;
+    VMax1 = G0501_VmbMax01_Mreal;
+    VMax2 = G0501_VmbMax02_Mreal;
+    VLen = VMax1 + VMax2;
+ENDIF;
+IF BlockNo >= 2 THEN
+    VSt = VSt + VLen;
+    VMax1 = G0501_VmbMax03_Mreal;
+    VMax2 = G0501_VmbMax04_Mreal;
+    VLen = VMax1 + VMax2;
+ENDIF;
+IF BlockNo >= 3 THEN
+    VSt = VSt + VLen;
+    VMax1 = G0501_VmbMax05_Mreal;
+    VMax2 = G0501_VmbMax06_Mreal;
+    VLen = VMax1 + VMax2;
+ENDIF;
+IF BlockNo >= 4 THEN
+    VSt = VSt + VLen;
+    VMax1 = G0501_VmbMax07_Mreal;
+    VMax2 = G0501_VmbMax08_Mreal;
+    VLen = VMax1 + VMax2;
+ENDIF;
+IF BlockNo >= 5 THEN
+    VSt = VSt + VLen;
+    VMax1 = G0501_VmbMax09_Mreal;
+    VMax2 = G0501_VmbMax10_Mreal;
+    VLen = VMax1 + VMax2;
+ENDIF;
+IF BlockNo >= 6 THEN
+    VSt = VSt + VLen;
+    VMax1 = G0501_VmbMax11_Mreal;
+    VMax2 = G0501_VmbMax12_Mreal;
+    VLen = VMax1 + VMax2;
+ENDIF;
+IF BlockNo >= 7 THEN
+    VSt = VSt + VLen;
+    VMax1 = G0501_VmbMax13_Mreal;
+    VMax2 = G0501_VmbMax14_Mreal;
+    VLen = VMax1 + VMax2;
+ENDIF;
+IF BlockNo >= 8 THEN
+    VSt = VSt + VLen;
+    VMax1 = G0501_VmbMax15_Mreal;
+    VMax2 = G0501_VmbMax16_Mreal;
+    VLen = VMax1 + VMax2;
+ENDIF;
+IF BlockNo >= 9 THEN
+    VSt = VSt + VLen;
+    VMax1 = G0501_VmbMax17_Mreal;
+    VMax2 = G0501_VmbMax18_Mreal;
+    VLen = VMax1 + VMax2;
+ENDIF;
+IF BlockNo >= 10 THEN
+    VSt = VSt + VLen;
+    VMax1 = G0501_VmbMax19_Mreal;
+    VMax2 = G0501_VmbMax20_Mreal;
+    VLen = VMax1 + VMax2;
+ENDIF;
+
+IF Mode == 1 THEN
+   { -- Start --- }
+   RETURN VSt;
+ENDIF;
+IF Mode == 2 THEN
+   { -- Start --- }
+   RETURN VLen;
+ENDIF;
+IF Mode == 3 THEN
+   { -- Start --- }
+   RETURN VMax1;
+ENDIF;
+IF Mode == 4 THEN
+   { -- Start --- }
+   RETURN VMax2;
+ENDIF;

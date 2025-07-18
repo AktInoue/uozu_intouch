@@ -1,0 +1,33 @@
+{ --- DIM --- }
+DIM FileName AS MESSAGE;
+DIM Recipe AS MESSAGE;
+
+FileName = SYS_M026 + "\VMBCount";
+FileName = FileName + "\CHEM" + Text(ChemNo , "00" ) + ".csv";
+
+Recipe = "R001" ;
+
+{ --- Data Clear --- }
+G0501_VmbMax01_Mreal = 0;
+G0501_VmbMax02_Mreal = 0;
+G0501_VmbMax03_Mreal = 0;
+G0501_VmbMax04_Mreal = 0;
+G0501_VmbMax05_Mreal = 0;
+G0501_VmbMax06_Mreal = 0;
+G0501_VmbMax07_Mreal = 0;
+G0501_VmbMax08_Mreal = 0;
+G0501_VmbMax09_Mreal = 0;
+G0501_VmbMax10_Mreal = 0;
+G0501_VmbMax11_Mreal = 0;
+G0501_VmbMax12_Mreal = 0;
+G0501_VmbMax13_Mreal = 0;
+G0501_VmbMax14_Mreal = 0;
+G0501_VmbMax15_Mreal = 0;
+G0501_VmbMax16_Mreal = 0;
+G0501_VmbMax17_Mreal = 0;
+G0501_VmbMax18_Mreal = 0;
+G0501_VmbMax19_Mreal = 0;
+G0501_VmbMax20_Mreal = 0;
+
+{ --- Data Load --- }
+RecipeLoad( FileName ,"U001", Recipe ); 

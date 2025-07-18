@@ -1,0 +1,469 @@
+IF ChemNo == 1 THEN
+   G0092_Used_Idx01_MReal = 1; { - É^ÉìÉNó  -}
+   G0092_Used_Idx02_MReal = 1; { - èuéûèzä¬ó¨ó  - }
+   G0092_Used_Idx03_MReal = 1; { - êœéZó¨ó  - }
+   G0092_Used_Idx04_MReal = 1; { - â∑ìx - }
+   G0092_Used_Idx05_MReal = 1; { - à≥óÕ1 - }
+   G0092_Used_Idx06_MReal = 0; { - à≥óÕ2 - }
+   G0092_Used_Idx07_MReal = 0; { - èdó  - }
+   G0092_Used_Idx08_MReal = 0; { - îZìx - }
+   G0092_Used_Idx09_MReal = 0; { - Ω◊ÿ∞”∆¿ - }
+   G0092_Used_Idx10_MReal = 0; { - èdó 2 - }
+ENDIF;
+IF ChemNo == 2 THEN
+   G0092_Used_Idx01_MReal = 1;
+   G0092_Used_Idx02_MReal = 1;
+   G0092_Used_Idx03_MReal = 1;
+   G0092_Used_Idx04_MReal = 1;
+   G0092_Used_Idx05_MReal = 1;
+   G0092_Used_Idx06_MReal = 0;
+   G0092_Used_Idx07_MReal = 0;
+   G0092_Used_Idx08_MReal = 0;
+   G0092_Used_Idx09_MReal = 0;
+   G0092_Used_Idx10_MReal = 0;
+ENDIF;
+IF ChemNo == 3 THEN
+   G0092_Used_Idx01_MReal = 1;
+   G0092_Used_Idx02_MReal = 1;
+   G0092_Used_Idx03_MReal = 1;
+   G0092_Used_Idx04_MReal = 1;
+   G0092_Used_Idx05_MReal = 1;
+   G0092_Used_Idx06_MReal = 0;
+   G0092_Used_Idx07_MReal = 0;
+   G0092_Used_Idx08_MReal = 0;
+   G0092_Used_Idx09_MReal = 0;
+   G0092_Used_Idx10_MReal = 0;
+ENDIF;
+IF ChemNo == 4 THEN
+   G0092_Used_Idx01_MReal = 1;
+   G0092_Used_Idx02_MReal = 1;
+   G0092_Used_Idx03_MReal = 1;
+   G0092_Used_Idx04_MReal = 1;
+   G0092_Used_Idx05_MReal = 1;
+   G0092_Used_Idx06_MReal = 0;
+   G0092_Used_Idx07_MReal = 0;
+   G0092_Used_Idx08_MReal = 0;
+   G0092_Used_Idx09_MReal = 0;
+   G0092_Used_Idx10_MReal = 0;
+ENDIF;
+IF ChemNo == 5 THEN
+   G0092_Used_Idx01_MReal = 1;
+   G0092_Used_Idx02_MReal = 1;
+   G0092_Used_Idx03_MReal = 1;
+   G0092_Used_Idx04_MReal = 1;
+   G0092_Used_Idx05_MReal = 1;
+   G0092_Used_Idx06_MReal = 0;
+   G0092_Used_Idx07_MReal = 0;
+   G0092_Used_Idx08_MReal = 0;
+   G0092_Used_Idx09_MReal = 0;
+   G0092_Used_Idx10_MReal = 0;
+ENDIF;
+IF ChemNo == 6 THEN
+   G0092_Used_Idx01_MReal = 1;
+   G0092_Used_Idx02_MReal = 0;
+   G0092_Used_Idx03_MReal = 0;
+   G0092_Used_Idx04_MReal = 0;
+   G0092_Used_Idx05_MReal = 1;
+   G0092_Used_Idx06_MReal = 0;
+   G0092_Used_Idx07_MReal = 0;
+   G0092_Used_Idx08_MReal = 0;
+   G0092_Used_Idx09_MReal = 0;
+   G0092_Used_Idx10_MReal = 0;
+ENDIF;
+IF ChemNo == 7 THEN
+   G0092_Used_Idx01_MReal = 0;
+   G0092_Used_Idx02_MReal = 1;
+   G0092_Used_Idx03_MReal = 1;
+   G0092_Used_Idx04_MReal = 1;
+   G0092_Used_Idx05_MReal = 1;
+   G0092_Used_Idx06_MReal = 0;
+   G0092_Used_Idx07_MReal = 1;
+   G0092_Used_Idx08_MReal = 0;
+   G0092_Used_Idx09_MReal = 0;
+   G0092_Used_Idx10_MReal = 0;
+ENDIF;
+IF ChemNo == 8 THEN
+   G0092_Used_Idx01_MReal = 0;
+   G0092_Used_Idx02_MReal = 1;
+   G0092_Used_Idx03_MReal = 1;
+   G0092_Used_Idx04_MReal = 1;
+   G0092_Used_Idx05_MReal = 1;
+   G0092_Used_Idx06_MReal = 0;
+   G0092_Used_Idx07_MReal = 1;
+   G0092_Used_Idx08_MReal = 0;
+   G0092_Used_Idx09_MReal = 0;
+   G0092_Used_Idx10_MReal = 0;
+ENDIF;
+IF ChemNo == 9 THEN
+   G0092_Used_Idx01_MReal = 0;
+   G0092_Used_Idx02_MReal = 1;
+   G0092_Used_Idx03_MReal = 1;
+   G0092_Used_Idx04_MReal = 1;
+   G0092_Used_Idx05_MReal = 1;
+   G0092_Used_Idx06_MReal = 0;
+   G0092_Used_Idx07_MReal = 1;
+   G0092_Used_Idx08_MReal = 0;
+   G0092_Used_Idx09_MReal = 0;
+   G0092_Used_Idx10_MReal = 0;
+ENDIF;
+IF ChemNo == 10 THEN
+   G0092_Used_Idx01_MReal = 1;
+   G0092_Used_Idx02_MReal = 1;
+   G0092_Used_Idx03_MReal = 1;
+   G0092_Used_Idx04_MReal = 1;
+   G0092_Used_Idx05_MReal = 1;
+   G0092_Used_Idx06_MReal = 0;
+   G0092_Used_Idx07_MReal = 1;
+   G0092_Used_Idx08_MReal = 0;
+   G0092_Used_Idx09_MReal = 0;
+   G0092_Used_Idx10_MReal = 0;
+ENDIF;
+IF ChemNo == 11 THEN
+   G0092_Used_Idx01_MReal = 1;
+   G0092_Used_Idx02_MReal = 1;
+   G0092_Used_Idx03_MReal = 1;
+   G0092_Used_Idx04_MReal = 1;
+   G0092_Used_Idx05_MReal = 1;
+   G0092_Used_Idx06_MReal = 0;
+   G0092_Used_Idx07_MReal = 1;
+   G0092_Used_Idx08_MReal = 0;
+   G0092_Used_Idx09_MReal = 0;
+   G0092_Used_Idx10_MReal = 0;
+ENDIF;
+IF ChemNo == 12 THEN
+   G0092_Used_Idx01_MReal = 1;
+   G0092_Used_Idx02_MReal = 1;
+   G0092_Used_Idx03_MReal = 1;
+   G0092_Used_Idx04_MReal = 1;
+   G0092_Used_Idx05_MReal = 1;
+   G0092_Used_Idx06_MReal = 0;
+   G0092_Used_Idx07_MReal = 1;
+   G0092_Used_Idx08_MReal = 0;
+   G0092_Used_Idx09_MReal = 0;
+   G0092_Used_Idx10_MReal = 0;
+ENDIF;
+IF ChemNo == 13 THEN
+   G0092_Used_Idx01_MReal = 0;
+   G0092_Used_Idx02_MReal = 1;
+   G0092_Used_Idx03_MReal = 1;
+   G0092_Used_Idx04_MReal = 1;
+   G0092_Used_Idx05_MReal = 1;
+   G0092_Used_Idx06_MReal = 0;
+   G0092_Used_Idx07_MReal = 1;
+   G0092_Used_Idx08_MReal = 0;
+   G0092_Used_Idx09_MReal = 0;
+   G0092_Used_Idx10_MReal = 0;
+ENDIF;
+IF ChemNo == 14 THEN
+   G0092_Used_Idx01_MReal = 0;
+   G0092_Used_Idx02_MReal = 1;
+   G0092_Used_Idx03_MReal = 1;
+   G0092_Used_Idx04_MReal = 1;
+   G0092_Used_Idx05_MReal = 1;
+   G0092_Used_Idx06_MReal = 0;
+   G0092_Used_Idx07_MReal = 1;
+   G0092_Used_Idx08_MReal = 0;
+   G0092_Used_Idx09_MReal = 0;
+   G0092_Used_Idx10_MReal = 0;
+ENDIF;
+IF ChemNo == 15 THEN
+   G0092_Used_Idx01_MReal = 0;
+   G0092_Used_Idx02_MReal = 1;
+   G0092_Used_Idx03_MReal = 1;
+   G0092_Used_Idx04_MReal = 1;
+   G0092_Used_Idx05_MReal = 1;
+   G0092_Used_Idx06_MReal = 0;
+   G0092_Used_Idx07_MReal = 1;
+   G0092_Used_Idx08_MReal = 1;
+   G0092_Used_Idx09_MReal = 0;
+   G0092_Used_Idx10_MReal = 0;
+ENDIF;
+IF ChemNo == 16 THEN
+   G0092_Used_Idx01_MReal = 0;
+   G0092_Used_Idx02_MReal = 1;
+   G0092_Used_Idx03_MReal = 1;
+   G0092_Used_Idx04_MReal = 1;
+   G0092_Used_Idx05_MReal = 1;
+   G0092_Used_Idx06_MReal = 0;
+   G0092_Used_Idx07_MReal = 1;
+   G0092_Used_Idx08_MReal = 0;
+   G0092_Used_Idx09_MReal = 0;
+   G0092_Used_Idx10_MReal = 0;
+ENDIF;
+IF ChemNo == 17 THEN
+   G0092_Used_Idx01_MReal = 0;
+   G0092_Used_Idx02_MReal = 1;
+   G0092_Used_Idx03_MReal = 1;
+   G0092_Used_Idx04_MReal = 1;
+   G0092_Used_Idx05_MReal = 1;
+   G0092_Used_Idx06_MReal = 0;
+   G0092_Used_Idx07_MReal = 1;
+   G0092_Used_Idx08_MReal = 1;
+   G0092_Used_Idx09_MReal = 0;
+   G0092_Used_Idx10_MReal = 0;
+ENDIF;
+IF ChemNo == 18 THEN
+   G0092_Used_Idx01_MReal = 0;
+   G0092_Used_Idx02_MReal = 1;
+   G0092_Used_Idx03_MReal = 1;
+   G0092_Used_Idx04_MReal = 1;
+   G0092_Used_Idx05_MReal = 1;
+   G0092_Used_Idx06_MReal = 0;
+   G0092_Used_Idx07_MReal = 1;
+   G0092_Used_Idx08_MReal = 1;
+   G0092_Used_Idx09_MReal = 0;
+   G0092_Used_Idx10_MReal = 0;
+ENDIF;
+IF ChemNo == 19 THEN
+   G0092_Used_Idx01_MReal = 0;
+   G0092_Used_Idx02_MReal = 1;
+   G0092_Used_Idx03_MReal = 1;
+   G0092_Used_Idx04_MReal = 1;
+   G0092_Used_Idx05_MReal = 1;
+   G0092_Used_Idx06_MReal = 0;
+   G0092_Used_Idx07_MReal = 1;
+   G0092_Used_Idx08_MReal = 1;
+   G0092_Used_Idx09_MReal = 0;
+   G0092_Used_Idx10_MReal = 0;
+ENDIF;
+IF ChemNo == 21 THEN
+   G0092_Used_Idx01_MReal = 1;
+   G0092_Used_Idx02_MReal = 1;
+   G0092_Used_Idx03_MReal = 1;
+   G0092_Used_Idx04_MReal = 1;
+   G0092_Used_Idx05_MReal = 1;
+   G0092_Used_Idx06_MReal = 0;
+   G0092_Used_Idx07_MReal = 0;
+   G0092_Used_Idx08_MReal = 0;
+   G0092_Used_Idx09_MReal = 0;
+   G0092_Used_Idx10_MReal = 0;
+ENDIF;
+IF ChemNo == 22 THEN
+   G0092_Used_Idx01_MReal = 0;
+   G0092_Used_Idx02_MReal = 1;
+   G0092_Used_Idx03_MReal = 1;
+   G0092_Used_Idx04_MReal = 1;
+   G0092_Used_Idx05_MReal = 1;
+   G0092_Used_Idx06_MReal = 0;
+   G0092_Used_Idx07_MReal = 1;
+   G0092_Used_Idx08_MReal = 0;
+   G0092_Used_Idx09_MReal = 0;
+   G0092_Used_Idx10_MReal = 0;
+ENDIF;
+IF ChemNo == 23 THEN
+   G0092_Used_Idx01_MReal = 0;
+   G0092_Used_Idx02_MReal = 1;
+   G0092_Used_Idx03_MReal = 1;
+   G0092_Used_Idx04_MReal = 1;
+   G0092_Used_Idx05_MReal = 1;
+   G0092_Used_Idx06_MReal = 0;
+   G0092_Used_Idx07_MReal = 1;
+   G0092_Used_Idx08_MReal = 0;
+   G0092_Used_Idx09_MReal = 0;
+   G0092_Used_Idx10_MReal = 0;
+ENDIF;
+IF ChemNo == 24 THEN    { 2005/05 ADD. }
+   G0092_Used_Idx01_MReal = 0;
+   G0092_Used_Idx02_MReal = 1;
+   G0092_Used_Idx03_MReal = 1;
+   G0092_Used_Idx04_MReal = 1;
+   G0092_Used_Idx05_MReal = 1;
+   G0092_Used_Idx06_MReal = 0;
+   G0092_Used_Idx07_MReal = 1;
+   G0092_Used_Idx08_MReal = 0;
+   G0092_Used_Idx09_MReal = 0;
+   G0092_Used_Idx10_MReal = 0;
+ENDIF;
+IF ChemNo == 25 THEN    { 2005/05 ADD. }
+   G0092_Used_Idx01_MReal = 0;
+   G0092_Used_Idx02_MReal = 1;
+   G0092_Used_Idx03_MReal = 1;
+   G0092_Used_Idx04_MReal = 1;
+   G0092_Used_Idx05_MReal = 1;
+   G0092_Used_Idx06_MReal = 0;
+   G0092_Used_Idx07_MReal = 1;
+   G0092_Used_Idx08_MReal = 0;
+   G0092_Used_Idx09_MReal = 0;
+   G0092_Used_Idx10_MReal = 0;
+ENDIF;
+IF ChemNo == 26 THEN    { 2005/05 ADD. }
+   G0092_Used_Idx01_MReal = 0;
+   G0092_Used_Idx02_MReal = 1;
+   G0092_Used_Idx03_MReal = 1;
+   G0092_Used_Idx04_MReal = 1;
+   G0092_Used_Idx05_MReal = 1;
+   G0092_Used_Idx06_MReal = 0;
+   G0092_Used_Idx07_MReal = 1;
+   G0092_Used_Idx08_MReal = 0;
+   G0092_Used_Idx09_MReal = 0;
+   G0092_Used_Idx10_MReal = 0;
+ENDIF;
+IF ChemNo == 27 THEN    { 2008/05 ADD. }
+   G0092_Used_Idx01_MReal = 0;
+   G0092_Used_Idx02_MReal = 1;
+   G0092_Used_Idx03_MReal = 1;
+   G0092_Used_Idx04_MReal = 1;
+   G0092_Used_Idx05_MReal = 1;
+   G0092_Used_Idx06_MReal = 0;
+   G0092_Used_Idx07_MReal = 1;
+   G0092_Used_Idx08_MReal = 1;
+   G0092_Used_Idx09_MReal = 0;
+   G0092_Used_Idx10_MReal = 0;
+ENDIF;
+IF ChemNo == 28 THEN    { 2008/05 ADD. }
+   G0092_Used_Idx01_MReal = 0;
+   G0092_Used_Idx02_MReal = 1;
+   G0092_Used_Idx03_MReal = 1;
+   G0092_Used_Idx04_MReal = 1;
+   G0092_Used_Idx05_MReal = 1;
+   G0092_Used_Idx06_MReal = 0;
+   G0092_Used_Idx07_MReal = 1;
+   G0092_Used_Idx08_MReal = 0;
+   G0092_Used_Idx09_MReal = 0;
+   G0092_Used_Idx10_MReal = 0;
+ENDIF;
+IF ChemNo == 29 THEN    { 2008/05 ADD. }
+   G0092_Used_Idx01_MReal = 0;
+   G0092_Used_Idx02_MReal = 1;
+   G0092_Used_Idx03_MReal = 1;
+   G0092_Used_Idx04_MReal = 1;
+   G0092_Used_Idx05_MReal = 1;
+   G0092_Used_Idx06_MReal = 0;
+   G0092_Used_Idx07_MReal = 1;
+   G0092_Used_Idx08_MReal = 0;
+   G0092_Used_Idx09_MReal = 0;
+   G0092_Used_Idx10_MReal = 0;
+ENDIF;
+
+IF ChemNo == 40 THEN
+   G0092_Used_Idx01_MReal = 0;
+   G0092_Used_Idx02_MReal = 1;
+   G0092_Used_Idx03_MReal = 0;
+   G0092_Used_Idx04_MReal = 1;
+   G0092_Used_Idx05_MReal = 1;
+   G0092_Used_Idx06_MReal = 0;
+   G0092_Used_Idx07_MReal = 1;
+   G0092_Used_Idx08_MReal = 0;
+   G0092_Used_Idx09_MReal = 1;
+   G0092_Used_Idx10_MReal = 0;
+ENDIF;
+IF ChemNo == 41 THEN
+   G0092_Used_Idx01_MReal = 0;
+   G0092_Used_Idx02_MReal = 1;
+   G0092_Used_Idx03_MReal = 0;
+   G0092_Used_Idx04_MReal = 1;
+   G0092_Used_Idx05_MReal = 1;
+   G0092_Used_Idx06_MReal = 0;
+   G0092_Used_Idx07_MReal = 1;
+   G0092_Used_Idx08_MReal = 0;
+   G0092_Used_Idx09_MReal = 0;
+   G0092_Used_Idx10_MReal = 0;
+ENDIF;
+IF ChemNo == 42 THEN
+   G0092_Used_Idx01_MReal = 0;
+   G0092_Used_Idx02_MReal = 1;
+   G0092_Used_Idx03_MReal = 0;
+   G0092_Used_Idx04_MReal = 1;
+   G0092_Used_Idx05_MReal = 1;
+   G0092_Used_Idx06_MReal = 0;
+   G0092_Used_Idx07_MReal = 1;
+   G0092_Used_Idx08_MReal = 1;
+   G0092_Used_Idx09_MReal = 1;
+   G0092_Used_Idx10_MReal = 0;
+ENDIF;
+IF ChemNo == 43 THEN
+   G0092_Used_Idx01_MReal = 0;
+   G0092_Used_Idx02_MReal = 1;
+   G0092_Used_Idx03_MReal = 0;
+   G0092_Used_Idx04_MReal = 1;
+   G0092_Used_Idx05_MReal = 1;
+   G0092_Used_Idx06_MReal = 0;
+   G0092_Used_Idx07_MReal = 1;
+   G0092_Used_Idx08_MReal = 0;
+   G0092_Used_Idx09_MReal = 1;
+   G0092_Used_Idx10_MReal = 0;
+ENDIF;
+IF ChemNo == 44 THEN
+   G0092_Used_Idx01_MReal = 0;
+   G0092_Used_Idx02_MReal = 1;
+   G0092_Used_Idx03_MReal = 0;
+   G0092_Used_Idx04_MReal = 1;
+   G0092_Used_Idx05_MReal = 1;
+   G0092_Used_Idx06_MReal = 0;
+   G0092_Used_Idx07_MReal = 1;
+   G0092_Used_Idx08_MReal = 0;
+   G0092_Used_Idx09_MReal = 1;
+   G0092_Used_Idx10_MReal = 0;
+ENDIF;
+IF ChemNo == 45 THEN
+   G0092_Used_Idx01_MReal = 0;
+   G0092_Used_Idx02_MReal = 1;
+   G0092_Used_Idx03_MReal = 0;
+   G0092_Used_Idx04_MReal = 1;
+   G0092_Used_Idx05_MReal = 1;
+   G0092_Used_Idx06_MReal = 1;
+   G0092_Used_Idx07_MReal = 1;
+   G0092_Used_Idx08_MReal = 1;
+   G0092_Used_Idx09_MReal = 1;
+   G0092_Used_Idx10_MReal = 0;
+ENDIF;
+IF ChemNo == 46 THEN
+   G0092_Used_Idx01_MReal = 0;
+   G0092_Used_Idx02_MReal = 1;
+   G0092_Used_Idx03_MReal = 0;
+   G0092_Used_Idx04_MReal = 1;
+   G0092_Used_Idx05_MReal = 1;
+   G0092_Used_Idx06_MReal = 1;
+   G0092_Used_Idx07_MReal = 1;
+   G0092_Used_Idx08_MReal = 1;
+   G0092_Used_Idx09_MReal = 1;
+   G0092_Used_Idx10_MReal = 0;
+ENDIF;
+IF ChemNo == 47 THEN
+   G0092_Used_Idx01_MReal = 0;
+   G0092_Used_Idx02_MReal = 1;
+   G0092_Used_Idx03_MReal = 0;
+   G0092_Used_Idx04_MReal = 1;
+   G0092_Used_Idx05_MReal = 1;
+   G0092_Used_Idx06_MReal = 1;
+   G0092_Used_Idx07_MReal = 1;
+   G0092_Used_Idx08_MReal = 1;
+   G0092_Used_Idx09_MReal = 1;
+   G0092_Used_Idx10_MReal = 1;
+ENDIF;
+IF ChemNo == 48 THEN
+   G0092_Used_Idx01_MReal = 0;
+   G0092_Used_Idx02_MReal = 1;
+   G0092_Used_Idx03_MReal = 0;
+   G0092_Used_Idx04_MReal = 1;
+   G0092_Used_Idx05_MReal = 1;
+   G0092_Used_Idx06_MReal = 1;
+   G0092_Used_Idx07_MReal = 1;
+   G0092_Used_Idx08_MReal = 0;
+   G0092_Used_Idx09_MReal = 1;
+   G0092_Used_Idx10_MReal = 1;
+ENDIF;
+IF ChemNo == 49 THEN    { 2008/05 ADD. }
+   G0092_Used_Idx01_MReal = 0;
+   G0092_Used_Idx02_MReal = 1;
+   G0092_Used_Idx03_MReal = 0;
+   G0092_Used_Idx04_MReal = 1;
+   G0092_Used_Idx05_MReal = 1;
+   G0092_Used_Idx06_MReal = 1;
+   G0092_Used_Idx07_MReal = 1;
+   G0092_Used_Idx08_MReal = 1;
+   G0092_Used_Idx09_MReal = 1;
+   G0092_Used_Idx10_MReal = 0;
+ENDIF;
+IF ChemNo == 50 THEN
+   G0092_Used_Idx01_MReal = 0;
+   G0092_Used_Idx02_MReal = 0;
+   G0092_Used_Idx03_MReal = 0;
+   G0092_Used_Idx04_MReal = 0;
+   G0092_Used_Idx05_MReal = 0;
+   G0092_Used_Idx06_MReal = 0;
+   G0092_Used_Idx07_MReal = 0;
+   G0092_Used_Idx08_MReal = 0;
+   G0092_Used_Idx09_MReal = 0;
+   G0092_Used_Idx10_MReal = 0;
+ENDIF;

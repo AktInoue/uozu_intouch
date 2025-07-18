@@ -1,0 +1,321 @@
+{ --- DIM --- }
+DIM BlockNo AS REAL;
+
+DIM POU_ST AS REAL;
+DIM POU_LEN AS REAL;
+
+DIM VMax1 AS REAL;
+DIM VMax2 AS REAL;
+
+DIM ArmNo AS REAL;
+
+{ --- –¼Ì ŒÄo --- }
+CALL G0501LoadData(ChemNo, PageNo);
+CALL G0501VCntLoadData(ChemNo);
+
+{ --- Set Block 1 --- }
+BlockNo = (PageNo - 1) * 4 + 1;
+POU_ST  = CALL G0501GetVMBBlockNo(BlockNo,1);
+POU_LEN = CALL G0501GetVMBBlockNo(BlockNo,2);
+VMax1   = CALL G0501GetVMBBlockNo(BlockNo,3);
+VMax2   = CALL G0501GetVMBBlockNo(BlockNo,4);
+
+ArmNo = StArmNo + POU_ST - 1;
+
+IF VMax1 >= 1 THEN
+   Com_ArmNameSet_Idisc.Name = "CH" + Text(ChemNo,"00") + "_ALM" + Text( ArmNo, "000");
+   Com_ArmPouNameSet_Mmseg = G0501_Column0101_Mmesg + StringSpace(17);
+   Com_ArmNameSet_Idisc.AlarmComment = StringLeft(Com_ArmNameSet_Idisc.AlarmComment,16) +
+                                       Com_ArmPouNameSet_Mmseg +
+                                       BackNM;
+   ArmNo = ArmNo + 1;
+ENDIF;
+IF VMax1 >= 2 THEN
+   Com_ArmNameSet_Idisc.Name = "CH" + Text(ChemNo,"00") + "_ALM" + Text( ArmNo, "000");
+   Com_ArmPouNameSet_Mmseg = G0501_Column0102_Mmesg + StringSpace(17);
+   Com_ArmNameSet_Idisc.AlarmComment = StringLeft(Com_ArmNameSet_Idisc.AlarmComment,16) +
+                                       Com_ArmPouNameSet_Mmseg +
+                                       BackNM;
+   ArmNo = ArmNo + 1;
+ENDIF;
+IF VMax1 >= 3 THEN
+   Com_ArmNameSet_Idisc.Name = "CH" + Text(ChemNo,"00") + "_ALM" + Text( ArmNo, "000");
+   Com_ArmPouNameSet_Mmseg = G0501_Column0103_Mmesg + StringSpace(17);
+   Com_ArmNameSet_Idisc.AlarmComment = StringLeft(Com_ArmNameSet_Idisc.AlarmComment,16) +
+                                       Com_ArmPouNameSet_Mmseg +
+                                       BackNM;
+   ArmNo = ArmNo + 1;
+ENDIF;
+IF VMax1 >= 4 THEN
+   Com_ArmNameSet_Idisc.Name = "CH" + Text(ChemNo,"00") + "_ALM" + Text( ArmNo, "000");
+   Com_ArmPouNameSet_Mmseg = G0501_Column0104_Mmesg + StringSpace(17);
+   Com_ArmNameSet_Idisc.AlarmComment = StringLeft(Com_ArmNameSet_Idisc.AlarmComment,16) +
+                                       Com_ArmPouNameSet_Mmseg +
+                                       BackNM;
+   ArmNo = ArmNo + 1;
+ENDIF;
+
+IF VMax2 >= 1 THEN
+   Com_ArmNameSet_Idisc.Name = "CH" + Text(ChemNo,"00") + "_ALM" + Text( ArmNo, "000");
+   Com_ArmPouNameSet_Mmseg = G0501_Column0105_Mmesg + StringSpace(17);
+   Com_ArmNameSet_Idisc.AlarmComment = StringLeft(Com_ArmNameSet_Idisc.AlarmComment,16) +
+                                       Com_ArmPouNameSet_Mmseg +
+                                       BackNM;
+   ArmNo = ArmNo + 1;
+ENDIF;
+IF VMax2 >= 2 THEN
+   Com_ArmNameSet_Idisc.Name = "CH" + Text(ChemNo,"00") + "_ALM" + Text( ArmNo, "000");
+   Com_ArmPouNameSet_Mmseg = G0501_Column0106_Mmesg + StringSpace(17);
+   Com_ArmNameSet_Idisc.AlarmComment = StringLeft(Com_ArmNameSet_Idisc.AlarmComment,16) +
+                                       Com_ArmPouNameSet_Mmseg +
+                                       BackNM;
+   ArmNo = ArmNo + 1;
+ENDIF;
+IF VMax2 >= 3 THEN
+   Com_ArmNameSet_Idisc.Name = "CH" + Text(ChemNo,"00") + "_ALM" + Text( ArmNo, "000");
+   Com_ArmPouNameSet_Mmseg = G0501_Column0107_Mmesg + StringSpace(17);
+   Com_ArmNameSet_Idisc.AlarmComment = StringLeft(Com_ArmNameSet_Idisc.AlarmComment,16) +
+                                       Com_ArmPouNameSet_Mmseg +
+                                       BackNM;
+   ArmNo = ArmNo + 1;
+ENDIF;
+IF VMax2 >= 4 THEN
+   Com_ArmNameSet_Idisc.Name = "CH" + Text(ChemNo,"00") + "_ALM" + Text( ArmNo, "000");
+   Com_ArmPouNameSet_Mmseg = G0501_Column0108_Mmesg + StringSpace(17);
+   Com_ArmNameSet_Idisc.AlarmComment = StringLeft(Com_ArmNameSet_Idisc.AlarmComment,16) +
+                                       Com_ArmPouNameSet_Mmseg +
+                                       BackNM;
+   ArmNo = ArmNo + 1;
+ENDIF;
+
+{ --- Set Block 2 --- }
+BlockNo = (PageNo - 1) * 4 + 2;
+POU_ST  = CALL G0501GetVMBBlockNo(BlockNo,1);
+POU_LEN = CALL G0501GetVMBBlockNo(BlockNo,2);
+VMax1   = CALL G0501GetVMBBlockNo(BlockNo,3);
+VMax2   = CALL G0501GetVMBBlockNo(BlockNo,4);
+
+ArmNo = StArmNo + POU_ST - 1;
+
+IF VMax1 >= 1 THEN
+   Com_ArmNameSet_Idisc.Name = "CH" + Text(ChemNo,"00") + "_ALM" + Text( ArmNo, "000");
+   Com_ArmPouNameSet_Mmseg = G0501_Column0109_Mmesg + StringSpace(17);
+   Com_ArmNameSet_Idisc.AlarmComment = StringLeft(Com_ArmNameSet_Idisc.AlarmComment,16) +
+                                       Com_ArmPouNameSet_Mmseg +
+                                       BackNM;
+   ArmNo = ArmNo + 1;
+ENDIF;
+
+IF VMax1 >= 2 THEN
+   Com_ArmNameSet_Idisc.Name = "CH" + Text(ChemNo,"00") + "_ALM" + Text( ArmNo, "000");
+   Com_ArmPouNameSet_Mmseg = G0501_Column0110_Mmesg + StringSpace(17);
+   Com_ArmNameSet_Idisc.AlarmComment = StringLeft(Com_ArmNameSet_Idisc.AlarmComment,16) +
+                                       Com_ArmPouNameSet_Mmseg +
+                                       BackNM;
+   ArmNo = ArmNo + 1;
+ENDIF;
+IF VMax1 >= 3 THEN
+   Com_ArmNameSet_Idisc.Name = "CH" + Text(ChemNo,"00") + "_ALM" + Text( ArmNo, "000");
+   Com_ArmPouNameSet_Mmseg = G0501_Column0111_Mmesg + StringSpace(17);
+   Com_ArmNameSet_Idisc.AlarmComment = StringLeft(Com_ArmNameSet_Idisc.AlarmComment,16) +
+                                       Com_ArmPouNameSet_Mmseg +
+                                       BackNM;
+   ArmNo = ArmNo + 1;
+ENDIF;
+IF VMax1 >= 4 THEN
+   Com_ArmNameSet_Idisc.Name = "CH" + Text(ChemNo,"00") + "_ALM" + Text( ArmNo, "000");
+   Com_ArmPouNameSet_Mmseg = G0501_Column0112_Mmesg + StringSpace(17);
+   Com_ArmNameSet_Idisc.AlarmComment = StringLeft(Com_ArmNameSet_Idisc.AlarmComment,16) +
+                                       Com_ArmPouNameSet_Mmseg +
+                                       BackNM;
+   ArmNo = ArmNo + 1;
+ENDIF;
+
+IF VMax2 >= 1 THEN
+   Com_ArmNameSet_Idisc.Name = "CH" + Text(ChemNo,"00") + "_ALM" + Text( ArmNo, "000");
+   Com_ArmPouNameSet_Mmseg = G0501_Column0113_Mmesg + StringSpace(17);
+   Com_ArmNameSet_Idisc.AlarmComment = StringLeft(Com_ArmNameSet_Idisc.AlarmComment,16) +
+                                       Com_ArmPouNameSet_Mmseg +
+                                       BackNM;
+   ArmNo = ArmNo + 1;
+ENDIF;
+IF VMax2 >= 2 THEN
+   Com_ArmNameSet_Idisc.Name = "CH" + Text(ChemNo,"00") + "_ALM" + Text( ArmNo, "000");
+   Com_ArmPouNameSet_Mmseg = G0501_Column0114_Mmesg + StringSpace(17);
+   Com_ArmNameSet_Idisc.AlarmComment = StringLeft(Com_ArmNameSet_Idisc.AlarmComment,16) +
+                                       Com_ArmPouNameSet_Mmseg +
+                                       BackNM;
+   ArmNo = ArmNo + 1;
+ENDIF;
+IF VMax2 >= 3 THEN
+   Com_ArmNameSet_Idisc.Name = "CH" + Text(ChemNo,"00") + "_ALM" + Text( ArmNo, "000");
+   Com_ArmPouNameSet_Mmseg = G0501_Column0115_Mmesg + StringSpace(17);
+   Com_ArmNameSet_Idisc.AlarmComment = StringLeft(Com_ArmNameSet_Idisc.AlarmComment,16) +
+                                       Com_ArmPouNameSet_Mmseg +
+                                       BackNM;
+   ArmNo = ArmNo + 1;
+ENDIF;
+IF VMax2 >= 4 THEN
+   Com_ArmNameSet_Idisc.Name = "CH" + Text(ChemNo,"00") + "_ALM" + Text( ArmNo, "000");
+   Com_ArmPouNameSet_Mmseg = G0501_Column0116_Mmesg + StringSpace(17);
+   Com_ArmNameSet_Idisc.AlarmComment = StringLeft(Com_ArmNameSet_Idisc.AlarmComment,16) +
+                                       Com_ArmPouNameSet_Mmseg +
+                                       BackNM;
+   ArmNo = ArmNo + 1;
+ENDIF;
+
+{ --- Set Block 3 --- }
+IF PageNo <= 2 THEN
+
+BlockNo = (PageNo - 1) * 4 + 3;
+POU_ST  = CALL G0501GetVMBBlockNo(BlockNo,1);
+POU_LEN = CALL G0501GetVMBBlockNo(BlockNo,2);
+VMax1   = CALL G0501GetVMBBlockNo(BlockNo,3);
+VMax2   = CALL G0501GetVMBBlockNo(BlockNo,4);
+
+ArmNo = StArmNo + POU_ST - 1;
+
+IF VMax1 >= 1 THEN
+   Com_ArmNameSet_Idisc.Name = "CH" + Text(ChemNo,"00") + "_ALM" + Text( ArmNo, "000");
+   Com_ArmPouNameSet_Mmseg = G0501_Column0117_Mmesg + StringSpace(17);
+   Com_ArmNameSet_Idisc.AlarmComment = StringLeft(Com_ArmNameSet_Idisc.AlarmComment,16) +
+                                       Com_ArmPouNameSet_Mmseg +
+                                       BackNM;
+   ArmNo = ArmNo + 1;
+ENDIF;
+IF VMax1 >= 2 THEN
+   Com_ArmNameSet_Idisc.Name = "CH" + Text(ChemNo,"00") + "_ALM" + Text( ArmNo, "000");
+   Com_ArmPouNameSet_Mmseg = G0501_Column0118_Mmesg + StringSpace(17);
+   Com_ArmNameSet_Idisc.AlarmComment = StringLeft(Com_ArmNameSet_Idisc.AlarmComment,16) +
+                                       Com_ArmPouNameSet_Mmseg +
+                                       BackNM;
+   ArmNo = ArmNo + 1;
+ENDIF;
+IF VMax1 >= 3 THEN
+   Com_ArmNameSet_Idisc.Name = "CH" + Text(ChemNo,"00") + "_ALM" + Text( ArmNo, "000");
+   Com_ArmPouNameSet_Mmseg = G0501_Column0119_Mmesg + StringSpace(17);
+   Com_ArmNameSet_Idisc.AlarmComment = StringLeft(Com_ArmNameSet_Idisc.AlarmComment,16) +
+                                       Com_ArmPouNameSet_Mmseg +
+                                       BackNM;
+   ArmNo = ArmNo + 1;
+ENDIF;
+IF VMax1 >= 4 THEN
+   Com_ArmNameSet_Idisc.Name = "CH" + Text(ChemNo,"00") + "_ALM" + Text( ArmNo, "000");
+   Com_ArmPouNameSet_Mmseg = G0501_Column0120_Mmesg + StringSpace(17);
+   Com_ArmNameSet_Idisc.AlarmComment = StringLeft(Com_ArmNameSet_Idisc.AlarmComment,16) +
+                                       Com_ArmPouNameSet_Mmseg +
+                                       BackNM;
+   ArmNo = ArmNo + 1;
+ENDIF;
+
+IF VMax2 >= 1 THEN
+   Com_ArmNameSet_Idisc.Name = "CH" + Text(ChemNo,"00") + "_ALM" + Text( ArmNo, "000");
+   Com_ArmPouNameSet_Mmseg = G0501_Column0121_Mmesg + StringSpace(17);
+   Com_ArmNameSet_Idisc.AlarmComment = StringLeft(Com_ArmNameSet_Idisc.AlarmComment,16) +
+                                       Com_ArmPouNameSet_Mmseg +
+                                       BackNM;
+   ArmNo = ArmNo + 1;
+ENDIF;
+IF VMax2 >= 2 THEN
+   Com_ArmNameSet_Idisc.Name = "CH" + Text(ChemNo,"00") + "_ALM" + Text( ArmNo, "000");
+   Com_ArmPouNameSet_Mmseg = G0501_Column0122_Mmesg + StringSpace(17);
+   Com_ArmNameSet_Idisc.AlarmComment = StringLeft(Com_ArmNameSet_Idisc.AlarmComment,16) +
+                                       Com_ArmPouNameSet_Mmseg +
+                                       BackNM;
+   ArmNo = ArmNo + 1;
+ENDIF;
+IF VMax2 >= 3 THEN
+   Com_ArmNameSet_Idisc.Name = "CH" + Text(ChemNo,"00") + "_ALM" + Text( ArmNo, "000");
+   Com_ArmPouNameSet_Mmseg = G0501_Column0123_Mmesg + StringSpace(17);
+   Com_ArmNameSet_Idisc.AlarmComment = StringLeft(Com_ArmNameSet_Idisc.AlarmComment,16) +
+                                       Com_ArmPouNameSet_Mmseg +
+                                       BackNM;
+   ArmNo = ArmNo + 1;
+ENDIF;
+IF VMax2 >= 4 THEN
+   Com_ArmNameSet_Idisc.Name = "CH" + Text(ChemNo,"00") + "_ALM" + Text( ArmNo, "000");
+   Com_ArmPouNameSet_Mmseg = G0501_Column0124_Mmesg + StringSpace(17);
+   Com_ArmNameSet_Idisc.AlarmComment = StringLeft(Com_ArmNameSet_Idisc.AlarmComment,16) +
+                                       Com_ArmPouNameSet_Mmseg +
+                                       BackNM;
+   ArmNo = ArmNo + 1;
+ENDIF;
+
+{ --- Set Block 4 --- }
+BlockNo = (PageNo - 1) * 4 + 4;
+POU_ST  = CALL G0501GetVMBBlockNo(BlockNo,1);
+POU_LEN = CALL G0501GetVMBBlockNo(BlockNo,2);
+VMax1   = CALL G0501GetVMBBlockNo(BlockNo,3);
+VMax2   = CALL G0501GetVMBBlockNo(BlockNo,4);
+
+ArmNo = StArmNo + POU_ST - 1;
+
+IF VMax1 >= 1 THEN
+   Com_ArmNameSet_Idisc.Name = "CH" + Text(ChemNo,"00") + "_ALM" + Text( ArmNo, "000");
+   Com_ArmPouNameSet_Mmseg = G0501_Column0125_Mmesg + StringSpace(17);
+   Com_ArmNameSet_Idisc.AlarmComment = StringLeft(Com_ArmNameSet_Idisc.AlarmComment,16) +
+                                       Com_ArmPouNameSet_Mmseg +
+                                       BackNM;
+   ArmNo = ArmNo + 1;
+ENDIF;
+IF VMax1 >= 2 THEN
+   Com_ArmNameSet_Idisc.Name = "CH" + Text(ChemNo,"00") + "_ALM" + Text( ArmNo, "000");
+   Com_ArmPouNameSet_Mmseg = G0501_Column0126_Mmesg + StringSpace(17);
+   Com_ArmNameSet_Idisc.AlarmComment = StringLeft(Com_ArmNameSet_Idisc.AlarmComment,16) +
+                                       Com_ArmPouNameSet_Mmseg +
+                                       BackNM;
+   ArmNo = ArmNo + 1;
+ENDIF;
+IF VMax1 >= 3 THEN
+   Com_ArmNameSet_Idisc.Name = "CH" + Text(ChemNo,"00") + "_ALM" + Text( ArmNo, "000");
+   Com_ArmPouNameSet_Mmseg = G0501_Column0127_Mmesg + StringSpace(17);
+   Com_ArmNameSet_Idisc.AlarmComment = StringLeft(Com_ArmNameSet_Idisc.AlarmComment,16) +
+                                       Com_ArmPouNameSet_Mmseg +
+                                       BackNM;
+   ArmNo = ArmNo + 1;
+ENDIF;
+IF VMax1 >= 4 THEN
+   Com_ArmNameSet_Idisc.Name = "CH" + Text(ChemNo,"00") + "_ALM" + Text( ArmNo, "000");
+   Com_ArmPouNameSet_Mmseg = G0501_Column0128_Mmesg + StringSpace(17);
+   Com_ArmNameSet_Idisc.AlarmComment = StringLeft(Com_ArmNameSet_Idisc.AlarmComment,16) +
+                                       Com_ArmPouNameSet_Mmseg +
+                                       BackNM;
+   ArmNo = ArmNo + 1;
+ENDIF;
+
+IF VMax2 >= 1 THEN
+   Com_ArmNameSet_Idisc.Name = "CH" + Text(ChemNo,"00") + "_ALM" + Text( ArmNo, "000");
+   Com_ArmPouNameSet_Mmseg = G0501_Column0129_Mmesg + StringSpace(17);
+   Com_ArmNameSet_Idisc.AlarmComment = StringLeft(Com_ArmNameSet_Idisc.AlarmComment,16) +
+                                       Com_ArmPouNameSet_Mmseg +
+                                       BackNM;
+   ArmNo = ArmNo + 1;
+ENDIF;
+IF VMax2 >= 2 THEN
+   Com_ArmNameSet_Idisc.Name = "CH" + Text(ChemNo,"00") + "_ALM" + Text( ArmNo, "000");
+   Com_ArmPouNameSet_Mmseg = G0501_Column0130_Mmesg + StringSpace(17);
+   Com_ArmNameSet_Idisc.AlarmComment = StringLeft(Com_ArmNameSet_Idisc.AlarmComment,16) +
+                                       Com_ArmPouNameSet_Mmseg +
+                                       BackNM;
+   ArmNo = ArmNo + 1;
+ENDIF;
+IF VMax2 >= 3 THEN
+   Com_ArmNameSet_Idisc.Name = "CH" + Text(ChemNo,"00") + "_ALM" + Text( ArmNo, "000");
+   Com_ArmPouNameSet_Mmseg = G0501_Column0131_Mmesg + StringSpace(17);
+   Com_ArmNameSet_Idisc.AlarmComment = StringLeft(Com_ArmNameSet_Idisc.AlarmComment,16) +
+                                       Com_ArmPouNameSet_Mmseg +
+                                       BackNM;
+   ArmNo = ArmNo + 1;
+ENDIF;
+IF VMax2 >= 4 THEN
+   Com_ArmNameSet_Idisc.Name = "CH" + Text(ChemNo,"00") + "_ALM" + Text( ArmNo, "000");
+   Com_ArmPouNameSet_Mmseg = G0501_Column0132_Mmesg + StringSpace(17);
+   Com_ArmNameSet_Idisc.AlarmComment = StringLeft(Com_ArmNameSet_Idisc.AlarmComment,16) +
+                                       Com_ArmPouNameSet_Mmseg +
+                                       BackNM;
+   ArmNo = ArmNo + 1;
+ENDIF;
+
+ENDIF;
+
+RETURN ArmNo;

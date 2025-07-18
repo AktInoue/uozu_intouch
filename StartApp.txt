@@ -1,0 +1,57 @@
+{ ---- DIM ---- }
+DIM ExeName AS MESSAGE;
+DIM AppName AS MESSAGE;
+DIM ExeWait AS REAL;
+DIM MinWait AS REAL;
+DIM MinFlg AS REAL;
+
+{ ---- Initialize ----}
+
+{ ---- Main.Prg ---- }
+IF StartAPP_NowApp_Mreal < 20 THEN
+
+    { -- 1 -- }
+    IF StartAPP_NowApp_Mreal == 1 THEN
+        { --- OPC Server --- }
+        ExeName = SYS_M014;
+        AppName = "OPCLink";
+        ExeWait = 5;
+        MinWait = 3;
+        MinFlg = 1;
+    ENDIF;
+   
+    { -- 2 -- }
+    IF StartAPP_NowApp_Mreal == 2 THEN
+        { --- FileCre --- }
+        ExeName = SYS_M020 + "\FileCre.exe";
+        AppName = "FileCre";
+        ExeWait = 5;
+        MinWait = 3;
+        MinFlg = 0;
+    ENDIF;
+
+    { -- Exe PrgChk -- }
+    IF StartAPP_StepCnt_Mreal == 0 THEN
+        StartAPP_Cnt_Mreal = StartAPP_Cnt_Mreal + 1;
+        IF StartAPP_Cnt_Mreal > ExeWait THEN
+            { -- Prgram Exe Chk -- }
+            StartApp "" + ExeName;
+            StartAPP_Cnt_Mreal = 0;
+            StartAPP_StepCnt_Mreal = StartAPP_StepCnt_Mreal + 1;
+        ENDIF;
+    ENDIF;
+
+    IF StartAPP_StepCnt_Mreal == 1 THEN
+        StartAPP_Cnt_Mreal = StartAPP_Cnt_Mreal + 1;
+        IF StartAPP_Cnt_Mreal > ExeWait THEN
+            { -- Prgram Exe Chk -- }
+            IF MinFlg == 1 THEN
+                WWControl(InfoAppTitle(AppName), "Minimize"); 
+            ENDIF;
+            StartAPP_Cnt_Mreal = 0;
+            StartAPP_StepCnt_Mreal = 0;
+            StartAPP_NowApp_Mreal = StartAPP_NowApp_Mreal + 1;
+        ENDIF;
+    ENDIF;
+
+ENDIF;

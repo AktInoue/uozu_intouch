@@ -1,0 +1,8 @@
+{ --- DIM --- }
+DIM FileName AS MESSAGE;
+
+FileName = SYS_M026 + "\TrendMaxMin";
+FileName = FileName + "\I" + Text(Index , "00" ) ;
+FileName = FileName + "\CHEM" + Text(ChemNo , "00" ) +".csv";
+
+RecipeSave( FileName ,"U001", "R001" ); 

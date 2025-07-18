@@ -1,0 +1,211 @@
+{ --- DIM --- }
+DIM RET AS REAL;
+
+{ *** VB *** }
+RET = 0;
+RET = RET + CALL SubDspWindow( ChgDspNo , 10001 , "Charge" , 3 , Param);
+RET = RET + CALL SubDspWindow( ChgDspNo , 10011 , "Supply" , 3 , Param);
+RET = RET + CALL SubDspWindow( ChgDspNo , 10016 , "SupBach" , 3 , Param);
+RET = RET + CALL SubDspWindow( ChgDspNo , 10018 , "Washing" , 3 , Param);
+
+RET = RET + CALL SubDspWindow( ChgDspNo , 10021 , "Lorry"  , 3 , Param);
+RET = RET + CALL SubDspWindow( ChgDspNo , 10031 , "CNod"  , 3 , Param);
+RET = RET + CALL SubDspWindow( ChgDspNo , 10035 , "SNod"  , 3 , Param);
+RET = RET + CALL SubDspWindow( ChgDspNo , 10036 , "SRecover"  , 3 , Param);
+
+RET = RET + CALL SubDspWindow( ChgDspNo , 10101 , "Dayrep" , 3 , Param);
+RET = RET + CALL SubDspWindow( ChgDspNo , 10201 , "Wekrep" , 3 , Param);
+RET = RET + CALL SubDspWindow( ChgDspNo , 10301 , "Monrep" , 3 , Param);
+
+RET = RET + CALL SubDspWindow( ChgDspNo , 10501 , "MaintSet" , 3 , Param);
+RET = RET + CALL SubDspWindow( ChgDspNo , 10502 , "MaintHist" , 3 , Param);
+RET = RET + CALL SubDspWindow( ChgDspNo , 10601 , "TrendLine" , 3 , Param);
+RET = RET + CALL SubDspWindow( ChgDspNo , 10901 , "AlarmEdit" , 3 , Param);
+
+RET = RET + CALL SubDspWindow( ChgDspNo , 10911 , "HistCSV" , 3 , Param);
+
+IF RET == 0 THEN
+    { *** InTouch *** }
+
+    { --- Base Change --- }
+    CALL SubDspWindow( ChgDspNo , 51  , "G0051_VIEW" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 52  , "G0052_VIEW" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 56  , "G0056_TREEVIEW" , 1 , Param);
+
+    CALL SubDspWindow( ChgDspNo , 61  , "G0061_TankStatus_CDS" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 62  , "G0062_TankStatus_SDS" , 1 , Param);
+
+    CALL SubDspWindow( ChgDspNo , 71  , "G0071_AlarmHistory" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 81  , "G0081_AlarmSummary" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 82  , "G0082_EventSummary" , 1 , Param);
+
+    CALL SubDspWindow( ChgDspNo , 90  , "G0090_TrendMenu01" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 91  , "G0091_TrendMenu02" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 92  , "G0092_Trend01" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 93  , "G0093_TrendMenu03" , 1 , Param);
+
+    CALL SubDspWindow( ChgDspNo , 101 , "G0101_NetWork" , 1 , Param);
+
+    CALL SubDspWindow( ChgDspNo , 111 , "G0111_MaintSetMenu" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 115 , "G0115_MaintHistMenu" , 1 , Param);
+
+    CALL SubDspWindow( ChgDspNo , 121 , "G0121_MaintHist_EJB1" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 122 , "G0122_MaintHist_EJB2" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 123 , "G0123_MaintHist_EJB3" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 124 , "G0124_MaintHist_EJB4" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 125 , "G0125_MaintHist_EJB5" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 126 , "G0126_MaintHist_EJB6" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 127 , "G0127_MaintHist_EJB7" , 1 , Param);
+
+    CALL SubDspWindow( ChgDspNo , 151 , "G0151_EMS" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 152 , "G0152_EMS" , 1 , Param);
+
+    CALL SubDspWindow( ChgDspNo , 501 , "G0501_POUReName01" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 502 , "G0502_POUReName02" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 503 , "G0503_POUReName03" , 1 , Param);
+
+    CALL SubDspWindow( ChgDspNo , 506 , "G0506_POUReName06" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 507 , "G0507_POUReName07" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 508 , "G0508_POUReName08" , 1 , Param);
+
+    CALL SubDspWindow( ChgDspNo , 9001, "G9001_ChemName01" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 9002, "G9002_ChemName02" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 9003, "G9003_ChemName03" , 1 , Param);
+
+    { *** PFD *** }
+    CALL SubDspWindow( ChgDspNo , 1010 , "G1010_PFD_CHEM01" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 1020 , "G1020_PFD_CHEM02" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 1030 , "G1030_PFD_CHEM03" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 1040 , "G1040_PFD_CHEM04" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 1050 , "G1050_PFD_CHEM05" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 1060 , "G1060_PFD_CHEM06" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 1070 , "G1070_PFD_CHEM07" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 1080 , "G1080_PFD_CHEM08" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 1090 , "G1090_PFD_CHEM09" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 1100 , "G1100_PFD_CHEM10" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 1101 , "G1101_PFD_CHEM10" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 1110 , "G1110_PFD_CHEM11" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 1120 , "G1120_PFD_CHEM12" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 1121 , "G1121_PFD_CHEM12" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 1130 , "G1130_PFD_CHEM13" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 1140 , "G1140_PFD_CHEM14" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 1150 , "G1150_PFD_CHEM15" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 1160 , "G1160_PFD_CHEM16" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 1170 , "G1170_PFD_CHEM17" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 1180 , "G1180_PFD_CHEM18" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 1190 , "G1190_PFD_CHEM19" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 1210 , "G1210_PFD_CHEM21" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 1220 , "G1220_PFD_CHEM22" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 1230 , "G1230_PFD_CHEM23" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 1240 , "G1240_PFD_CHEM24" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 1250 , "G1250_PFD_CHEM25" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 1260 , "G1260_PFD_CHEM26" , 1 , Param);    { 2006/04 ADD. }
+    CALL SubDspWindow( ChgDspNo , 1270 , "G1270_PFD_CHEM27" , 1 , Param);    { 2008/05 ADD. }
+    CALL SubDspWindow( ChgDspNo , 1280 , "G1280_PFD_CHEM28" , 1 , Param);    { 2008/05 ADD. }
+    CALL SubDspWindow( ChgDspNo , 1290 , "G1290_PFD_CHEM29" , 1 , Param);    { 2008/05 ADD. }
+
+    CALL SubDspWindow( ChgDspNo , 1400 , "G1400_PFD_CHEM40" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 1401 , "G1401_PFD_CHEM40" , 1 , Param);
+
+    CALL SubDspWindow( ChgDspNo , 1410 , "G1410_PFD_CHEM41" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 1411 , "G1411_PFD_CHEM41" , 1 , Param);
+
+    CALL SubDspWindow( ChgDspNo , 1421 , "G1421_PFD_CHEM42" , 1 , Param);
+
+    CALL SubDspWindow( ChgDspNo , 1430 , "G1430_PFD_CHEM43" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 1431 , "G1431_PFD_CHEM43" , 1 , Param);
+
+    CALL SubDspWindow( ChgDspNo , 1440 , "G1440_PFD_CHEM44" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 1441 , "G1441_PFD_CHEM44" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 1442 , "G1442_PFD_CHEM44" , 1 , Param);
+
+    CALL SubDspWindow( ChgDspNo , 1450 , "G1450_PFD_CHEM45" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 1451 , "G1451_PFD_CHEM45" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 1452 , "G1452_PFD_CHEM45" , 1 , Param);
+    {CALL SubDspWindow( ChgDspNo , 1453 , "G1453_PFD_CHEM45" , 1 , Param);}
+
+    CALL SubDspWindow( ChgDspNo , 1460 , "G1460_PFD_CHEM46" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 1461 , "G1461_PFD_CHEM46" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 1462 , "G1462_PFD_CHEM46" , 1 , Param);
+
+    CALL SubDspWindow( ChgDspNo , 1470 , "G1470_PFD_CHEM47" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 1471 , "G1471_PFD_CHEM47" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 1472 , "G1472_PFD_CHEM47" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 1473 , "G1473_PFD_CHEM47" , 1 , Param);
+
+    CALL SubDspWindow( ChgDspNo , 1480 , "G1480_PFD_CHEM48" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 1481 , "G1481_PFD_CHEM48" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 1482 , "G1482_PFD_CHEM48" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 1483 , "G1483_PFD_CHEM48" , 1 , Param);
+
+    CALL SubDspWindow( ChgDspNo , 1490 , "G1490_PFD_CHEM49" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 1491 , "G1491_PFD_CHEM49" , 1 , Param);
+
+    CALL SubDspWindow( ChgDspNo , 1500 , "G1500_PFD_CHEM50" , 1 , Param);
+
+    { *** Leak Map *** }
+    CALL SubDspWindow( ChgDspNo , 2010 , "G2010_LeakMap01_CHEM01" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 2020 , "G2020_LeakMap01_CHEM02" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 2030 , "G2030_LeakMap01_CHEM03" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 2040 , "G2040_LeakMap01_CHEM04" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 2050 , "G2050_LeakMap01_CHEM05" , 1 , Param);
+
+    CALL SubDspWindow( ChgDspNo , 2070 , "G2070_LeakMap01_CHEM07" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 2080 , "G2080_LeakMap01_CHEM08" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 2090 , "G2090_LeakMap01_CHEM09" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 2100 , "G2100_LeakMap01_CHEM10" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 2110 , "G2110_LeakMap01_CHEM11" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 2120 , "G2120_LeakMap01_CHEM12" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 2130 , "G2130_LeakMap01_CHEM13" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 2140 , "G2140_LeakMap01_CHEM14" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 2150 , "G2150_LeakMap01_CHEM15" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 2160 , "G2160_LeakMap01_CHEM16" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 2170 , "G2170_LeakMap01_CHEM17" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 2180 , "G2180_LeakMap01_CHEM18" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 2190 , "G2190_LeakMap01_CHEM19" , 1 , Param);
+
+    CALL SubDspWindow( ChgDspNo , 2210 , "G2210_LeakMap01_CHEM21" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 2220 , "G2220_LeakMap01_CHEM22" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 2230 , "G2230_LeakMap01_CHEM23" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 2240 , "G2240_LeakMap01_CHEM24" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 2250 , "G2250_LeakMap01_CHEM25" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 2260 , "G2260_LeakMap01_CHEM26" , 1 , Param);    { 2006/04 ADD. }
+    CALL SubDspWindow( ChgDspNo , 2270 , "G2270_LeakMap01_CHEM27" , 1 , Param);    { 2008/05 ADD. }
+    CALL SubDspWindow( ChgDspNo , 2280 , "G2280_LeakMap01_CHEM28" , 1 , Param);    { 2008/05 ADD. }
+    CALL SubDspWindow( ChgDspNo , 2290 , "G2290_LeakMap01_CHEM29" , 1 , Param);    { 2008/05 ADD. }
+
+    CALL SubDspWindow( ChgDspNo , 2400 , "G2400_LeakMap01_CHEM40" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 2410 , "G2410_LeakMap01_CHEM41" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 2420 , "G2420_LeakMap01_CHEM42" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 2430 , "G2430_LeakMap01_CHEM43" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 2440 , "G2440_LeakMap01_CHEM44" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 2450 , "G2450_LeakMap01_CHEM45" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 2460 , "G2460_LeakMap01_CHEM46" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 2470 , "G2470_LeakMap01_CHEM47" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 2480 , "G2480_LeakMap01_CHEM48" , 1 , Param);
+    CALL SubDspWindow( ChgDspNo , 2490 , "G2490_LeakMap01_CHEM49" , 1 , Param);    { 2008/05 ADD. }
+
+ENDIF;
+
+COM_DspBefNo_Mreal = COM_DspNo_Mreal;
+COM_DspBefParam_Mmesg = COM_DspParam_Mmesg;
+CALL GetDspName(COM_DspBefNo_Mreal);
+
+COM_DspNo_Mreal = ChgDspNo;
+COM_DspParam_Mmesg = Param;
+
+CALL OutPutLog("<DspScreen> ," + Text(COM_DspNo_Mreal,"0"));
+
+{ -- Close Pop Window ------------------------------------}
+CALL DspWindow(0);
+
+{ -- Close VB Program ------------------------------------}
+
+{ -- Back Ground Pg Window --------------------------}
+
+{ -- InitProgram --------------------------}
+
+
+
+
+CALL DspScreenView();

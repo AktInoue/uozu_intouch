@@ -1,0 +1,28 @@
+{--- Pato Light Sound No ---}
+IF StringTrim(SYS_M001,3) == "1" THEN
+    IF MNo == 1 THEN
+        StartApp SYS_M020 + "\DIO_PCI2503.exe 8,1";
+        StartApp SYS_M020 + "\DIO_PCI2503.exe 7,1";
+    ENDIF;
+    
+    IF MNo == 2 THEN
+        StartApp SYS_M020 + "\DIO_PCI2503.exe 8,1";
+        StartApp SYS_M020 + "\DIO_PCI2503.exe 7,1";
+    ENDIF;
+    
+    IF MNo == 3 THEN
+        StartApp SYS_M020 + "\DIO_PCI2503.exe 8,1";
+        StartApp SYS_M020 + "\DIO_PCI2503.exe 7,1";
+    ENDIF;
+    
+    IF MNo == 4 THEN
+        StartApp SYS_M020 + "\DIO_PCI2503.exe 8,1";
+        StartApp SYS_M020 + "\DIO_PCI2503.exe 7,1";
+    ENDIF;
+    
+    IF MNo == 9 THEN
+        StartApp SYS_M020 + "\DIO_PCI2503.exe 8,0";
+        StartApp SYS_M020 + "\DIO_PCI2503.exe 7,0";
+    ENDIF;
+
+ENDIF;

@@ -1,0 +1,83 @@
+{ --- DIM --- }
+DIM RetPage AS REAL;
+
+RetPage = 1;
+CALL G0501DspVMBName( G0501_ChemNo_Mreal, 1);
+IF G0501_Column1001_Idisc.Comment == ActiveVMB THEN
+   RetPage = 1;
+ENDIF;
+IF G0501_Column1002_Idisc.Comment == ActiveVMB THEN
+   RetPage = 1;
+ENDIF;
+IF G0501_Column1003_Idisc.Comment == ActiveVMB THEN
+   RetPage = 1;
+ENDIF;
+IF G0501_Column1004_Idisc.Comment == ActiveVMB THEN
+   RetPage = 1;
+ENDIF;
+IF G0501_Column1005_Idisc.Comment == ActiveVMB THEN
+   RetPage = 1;
+ENDIF;
+IF G0501_Column1006_Idisc.Comment == ActiveVMB THEN
+   RetPage = 1;
+ENDIF;
+IF G0501_Column1007_Idisc.Comment == ActiveVMB THEN
+   RetPage = 1;
+ENDIF;
+IF G0501_Column1008_Idisc.Comment == ActiveVMB THEN
+   RetPage = 1;
+ENDIF;
+
+CALL G0501DspVMBName( G0501_ChemNo_Mreal, 2);
+IF G0501_Column1001_Idisc.Comment == ActiveVMB THEN
+   RetPage = 2;
+ENDIF;
+IF G0501_Column1002_Idisc.Comment == ActiveVMB THEN
+   RetPage = 2;
+ENDIF;
+IF G0501_Column1003_Idisc.Comment == ActiveVMB THEN
+   RetPage = 2;
+ENDIF;
+IF G0501_Column1004_Idisc.Comment == ActiveVMB THEN
+   RetPage = 2;
+ENDIF;
+IF G0501_Column1005_Idisc.Comment == ActiveVMB THEN
+   RetPage = 2;
+ENDIF;
+IF G0501_Column1006_Idisc.Comment == ActiveVMB THEN
+   RetPage = 2;
+ENDIF;
+IF G0501_Column1007_Idisc.Comment == ActiveVMB THEN
+   RetPage = 2;
+ENDIF;
+IF G0501_Column1008_Idisc.Comment == ActiveVMB THEN
+   RetPage = 2;
+ENDIF;
+
+CALL G0501DspVMBName( G0501_ChemNo_Mreal, 3);
+IF G0501_Column1001_Idisc.Comment == ActiveVMB THEN
+   RetPage = 3;
+ENDIF;
+IF G0501_Column1002_Idisc.Comment == ActiveVMB THEN
+   RetPage = 3;
+ENDIF;
+IF G0501_Column1003_Idisc.Comment == ActiveVMB THEN
+   RetPage = 3;
+ENDIF;
+IF G0501_Column1004_Idisc.Comment == ActiveVMB THEN
+   RetPage = 3;
+ENDIF;
+IF G0501_Column1005_Idisc.Comment == ActiveVMB THEN
+   RetPage = 3;
+ENDIF;
+IF G0501_Column1006_Idisc.Comment == ActiveVMB THEN
+   RetPage = 3;
+ENDIF;
+IF G0501_Column1007_Idisc.Comment == ActiveVMB THEN
+   RetPage = 3;
+ENDIF;
+IF G0501_Column1008_Idisc.Comment == ActiveVMB THEN
+   RetPage = 3;
+ENDIF;
+
+RETURN RetPage;

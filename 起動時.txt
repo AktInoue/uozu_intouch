@@ -1,0 +1,465 @@
+{ --- Log --- }
+LogMessage("Chemical System Stating Date Set...");
+
+{ --- DIM --- }
+DIM AlmBaseNM AS MESSAGE;
+DIM FileName AS MESSAGE;
+DIM I AS REAL;
+
+{ --- Initialize --- }
+ON  = 1;
+OFF = 0;
+SYS_R999 = 0;
+CH38_ALM997=0;
+CH38_ALM998=0;
+
+CH01_ALM990=0;
+CH02_ALM990=0;
+CH03_ALM990=0;
+CH04_ALM990=0;
+CH05_ALM990=0;
+CH06_ALM990=0;
+CH07_ALM990=0;
+CH08_ALM990=0;
+CH09_ALM990=0;
+CH10_ALM990=0;
+CH11_ALM990=0;
+CH12_ALM990=0;
+CH13_ALM990=0;
+CH14_ALM990=0;
+CH16_ALM990=0;
+CH17_ALM990=0;
+CH18_ALM990=0;
+CH19_ALM990=0;
+CH21_ALM990=0;
+CH22_ALM990=0;
+CH23_ALM990=0;
+CH24_ALM990=0;
+CH25_ALM990=0;
+CH26_ALM990=0;
+CH27_ALM990=0;    {2008.07.01 ADD}
+CH28_ALM990=0;    {2008.07.01 ADD}
+CH29_ALM990=0;    {2008.07.01 ADD}
+CH38_ALM991=0;
+CH38_ALM992=0;
+CH38_ALM993=0;
+CH38_ALM994=0;
+CH38_ALM995=0;
+CH38_ALM990=0;
+CH38_ALM996=0;
+CH15_ALM990=0;
+CH39_ALM990=0;
+CH40_ALM990=0;
+CH41_ALM990=0;
+CH43_ALM990=0;
+CH44_ALM990=0;
+CH45_ALM990=0;
+CH46_ALM990=0;
+CH47_ALM990=0;
+CH48_ALM990=0;
+CH49_ALM990=0;    {2008.07.01 ADD}
+CH50_ALM990=0;
+
+{ --- Load System --- }
+SYS_M501 = "C:\Monitor\Profiles";
+SYS_M990 = "1234";                 { --- EMS Password --- }
+SYS_M999 = "SU";                   { --- Super User Password --- }
+RecipeLoad( SYS_M501 + "\SetSYS.csv" ,"U001", "R001" ); 
+
+SYS_M025 = SYS_M015 + SYS_M025;
+SYS_M026 = SYS_M015 + SYS_M026;
+
+{
+SYS_M020 = "C:\Monitor\VB\EXE";
+
+SYS_M014 = "C:\Program Files\FactorySuite\IOServer\OPCLink\OPClink.exe";
+SYS_M015 = "C:\Monitor\ComFiles\BIN";
+SYS_M026 = "C:\Monitor\ComFiles\Text";
+
+SYS_M022 = "C:\Monitor\SOUNDS";
+
+SYS_M029 = "C:\Monitor\ComFiles\Log";
+}
+
+{ --- Load Recipe --- }
+CALL G9001LoadData();
+CALL DramWaitLoad();
+CALL MelodyNoLoad();
+CALL SetPatoMelody(W5201_PatoMNo_Mreal);
+
+{ --- Load Trend Max,Min --- }
+CALL LoadTrendMaxMin(  1 );
+CALL LoadTrendMaxMin(  2 );
+CALL LoadTrendMaxMin(  3 );
+CALL LoadTrendMaxMin(  4 );
+CALL LoadTrendMaxMin(  5 );
+CALL LoadTrendMaxMin(  6 );
+CALL LoadTrendMaxMin(  7 );
+CALL LoadTrendMaxMin(  8 );
+CALL LoadTrendMaxMin(  9 );
+CALL LoadTrendMaxMin( 10 );
+CALL LoadTrendMaxMin( 11 );
+CALL LoadTrendMaxMin( 12 );
+CALL LoadTrendMaxMin( 13 );
+CALL LoadTrendMaxMin( 14 );
+CALL LoadTrendMaxMin( 15 );
+CALL LoadTrendMaxMin( 16 );
+CALL LoadTrendMaxMin( 17 );
+CALL LoadTrendMaxMin( 18 );
+CALL LoadTrendMaxMin( 19 );
+CALL LoadTrendMaxMin( 21 );
+CALL LoadTrendMaxMin( 22 );
+CALL LoadTrendMaxMin( 23 );
+CALL LoadTrendMaxMin( 24 );    { 2005/05 ADD. }    
+CALL LoadTrendMaxMin( 25 );    { 2005/05 ADD. }
+CALL LoadTrendMaxMin( 26 );    { 2005/05 ADD. }
+CALL LoadTrendMaxMin( 27 );    { 2008/05 ADD. }
+CALL LoadTrendMaxMin( 28 );    { 2008/05 ADD. }
+CALL LoadTrendMaxMin( 29 );    { 2008/05 ADD. }
+CALL LoadTrendMaxMin( 40 );
+CALL LoadTrendMaxMin( 41 );
+CALL LoadTrendMaxMin( 42 );
+CALL LoadTrendMaxMin( 43 );
+CALL LoadTrendMaxMin( 44 );
+CALL LoadTrendMaxMin( 45 );
+CALL LoadTrendMaxMin( 46 );
+CALL LoadTrendMaxMin( 47 );
+CALL LoadTrendMaxMin( 48 );
+CALL LoadTrendMaxMin( 49 );    { 2008/05 ADD. }
+CALL LoadTrendMaxMin( 50 );
+
+{ --- Log Out --- }
+$OperatorEntered = "None";
+$PasswordEntered = "";
+SYS_R999 = 0;
+
+{ --- Alarm Chemical Name --- }
+CALL SetAlarmChemNM();
+
+{ --- Set Alarm PouNM  --- }
+AlmBaseNM = " ãüãã¿≤—µ∞ ﬁ∞";
+CALL SetAlarmPouName(  1, 1, 500, AlmBaseNM);
+CALL SetAlarmPouName(  1, 2, 500, AlmBaseNM);
+CALL SetAlarmPouName(  1, 3, 500, AlmBaseNM);
+
+CALL SetAlarmPouName(  2, 1, 500, AlmBaseNM);
+CALL SetAlarmPouName(  2, 2, 500, AlmBaseNM);
+CALL SetAlarmPouName(  2, 3, 500, AlmBaseNM);
+
+CALL SetAlarmPouName(  3, 1, 500, AlmBaseNM);
+CALL SetAlarmPouName(  3, 2, 500, AlmBaseNM);
+CALL SetAlarmPouName(  3, 3, 500, AlmBaseNM);
+
+CALL SetAlarmPouName(  4, 1, 500, AlmBaseNM);
+CALL SetAlarmPouName(  4, 2, 500, AlmBaseNM);
+CALL SetAlarmPouName(  4, 3, 500, AlmBaseNM);
+
+CALL SetAlarmPouName(  5, 1, 500, AlmBaseNM);
+CALL SetAlarmPouName(  5, 2, 500, AlmBaseNM);
+CALL SetAlarmPouName(  5, 3, 500, AlmBaseNM);
+
+CALL SetAlarmPouName(  6, 1, 500, AlmBaseNM);
+CALL SetAlarmPouName(  6, 2, 500, AlmBaseNM);
+CALL SetAlarmPouName(  6, 3, 500, AlmBaseNM);
+
+CALL SetAlarmPouName(  7, 1, 500, AlmBaseNM);
+CALL SetAlarmPouName(  7, 2, 500, AlmBaseNM);
+CALL SetAlarmPouName(  7, 3, 500, AlmBaseNM);
+
+CALL SetAlarmPouName(  8, 1, 500, AlmBaseNM);
+CALL SetAlarmPouName(  8, 2, 500, AlmBaseNM);
+CALL SetAlarmPouName(  8, 3, 500, AlmBaseNM);
+
+CALL SetAlarmPouName(  9, 1, 500, AlmBaseNM);
+CALL SetAlarmPouName(  9, 2, 500, AlmBaseNM);
+CALL SetAlarmPouName(  9, 3, 500, AlmBaseNM);
+
+CALL SetAlarmPouName( 10, 1, 500, AlmBaseNM);
+CALL SetAlarmPouName( 10, 2, 500, AlmBaseNM);
+CALL SetAlarmPouName( 10, 3, 500, AlmBaseNM);
+
+CALL SetAlarmPouName( 11, 1, 500, AlmBaseNM);
+CALL SetAlarmPouName( 11, 2, 500, AlmBaseNM);
+CALL SetAlarmPouName( 11, 3, 500, AlmBaseNM);
+
+CALL SetAlarmPouName( 12, 1, 500, AlmBaseNM);
+CALL SetAlarmPouName( 12, 2, 500, AlmBaseNM);
+CALL SetAlarmPouName( 12, 3, 500, AlmBaseNM);
+
+CALL SetAlarmPouName( 13, 1, 500, AlmBaseNM);
+CALL SetAlarmPouName( 13, 2, 500, AlmBaseNM);
+CALL SetAlarmPouName( 13, 3, 500, AlmBaseNM);
+
+CALL SetAlarmPouName( 14, 1, 500, AlmBaseNM);
+CALL SetAlarmPouName( 14, 2, 500, AlmBaseNM);
+CALL SetAlarmPouName( 14, 3, 500, AlmBaseNM);
+
+CALL SetAlarmPouName( 15, 1, 500, AlmBaseNM);
+CALL SetAlarmPouName( 15, 2, 500, AlmBaseNM);
+CALL SetAlarmPouName( 15, 3, 500, AlmBaseNM);
+
+CALL SetAlarmPouName( 16, 1, 500, AlmBaseNM);
+CALL SetAlarmPouName( 16, 2, 500, AlmBaseNM);
+CALL SetAlarmPouName( 16, 3, 500, AlmBaseNM);
+
+CALL SetAlarmPouName( 17, 1, 500, AlmBaseNM);
+CALL SetAlarmPouName( 17, 2, 500, AlmBaseNM);
+CALL SetAlarmPouName( 17, 3, 500, AlmBaseNM);
+
+CALL SetAlarmPouName( 18, 1, 500, AlmBaseNM);
+CALL SetAlarmPouName( 18, 2, 500, AlmBaseNM);
+CALL SetAlarmPouName( 18, 3, 500, AlmBaseNM);
+
+CALL SetAlarmPouName( 19, 1, 500, AlmBaseNM);
+CALL SetAlarmPouName( 19, 2, 500, AlmBaseNM);
+CALL SetAlarmPouName( 19, 3, 500, AlmBaseNM);
+
+CALL SetAlarmPouName( 21, 1, 500, AlmBaseNM);
+CALL SetAlarmPouName( 21, 2, 500, AlmBaseNM);
+CALL SetAlarmPouName( 21, 3, 500, AlmBaseNM);
+
+CALL SetAlarmPouName( 22, 1, 500, AlmBaseNM);
+CALL SetAlarmPouName( 22, 2, 500, AlmBaseNM);
+CALL SetAlarmPouName( 22, 3, 500, AlmBaseNM);
+
+CALL SetAlarmPouName( 23, 1, 500, AlmBaseNM);
+CALL SetAlarmPouName( 23, 2, 500, AlmBaseNM);
+CALL SetAlarmPouName( 23, 3, 500, AlmBaseNM);
+
+CALL SetAlarmPouName( 24, 1, 500, AlmBaseNM);    { 2005/05 ADD. }
+CALL SetAlarmPouName( 24, 2, 500, AlmBaseNM);
+CALL SetAlarmPouName( 24, 3, 500, AlmBaseNM);
+
+CALL SetAlarmPouName( 25, 1, 500, AlmBaseNM);    { 2005/05 ADD. }
+CALL SetAlarmPouName( 25, 2, 500, AlmBaseNM);
+CALL SetAlarmPouName( 25, 3, 500, AlmBaseNM);
+
+CALL SetAlarmPouName( 26, 1, 500, AlmBaseNM);    { 2005/05 ADD. }
+CALL SetAlarmPouName( 26, 2, 500, AlmBaseNM);
+CALL SetAlarmPouName( 26, 3, 500, AlmBaseNM);
+
+CALL SetAlarmPouName( 27, 1, 500, AlmBaseNM);    { 2008/05 ADD. }
+CALL SetAlarmPouName( 27, 2, 500, AlmBaseNM);
+CALL SetAlarmPouName( 27, 3, 500, AlmBaseNM);
+
+CALL SetAlarmPouName( 28, 1, 500, AlmBaseNM);    { 2008/05 ADD. }
+CALL SetAlarmPouName( 28, 2, 500, AlmBaseNM);
+CALL SetAlarmPouName( 28, 3, 500, AlmBaseNM);
+
+CALL SetAlarmPouName( 29, 1, 500, AlmBaseNM);    { 2008/05 ADD. }
+CALL SetAlarmPouName( 29, 2, 500, AlmBaseNM);
+CALL SetAlarmPouName( 29, 3, 500, AlmBaseNM);
+
+CALL SetAlarmPouName( 40, 1, 500, AlmBaseNM);
+CALL SetAlarmPouName( 40, 2, 500, AlmBaseNM);
+CALL SetAlarmPouName( 40, 3, 500, AlmBaseNM);
+
+CALL SetAlarmPouName( 41, 1, 500, AlmBaseNM);
+CALL SetAlarmPouName( 41, 2, 500, AlmBaseNM);
+CALL SetAlarmPouName( 41, 3, 500, AlmBaseNM);
+
+CALL SetAlarmPouName( 42, 1, 500, AlmBaseNM);
+CALL SetAlarmPouName( 42, 2, 500, AlmBaseNM);
+CALL SetAlarmPouName( 42, 3, 500, AlmBaseNM);
+
+CALL SetAlarmPouName( 43, 1, 500, AlmBaseNM);
+CALL SetAlarmPouName( 43, 2, 500, AlmBaseNM);
+CALL SetAlarmPouName( 43, 3, 500, AlmBaseNM);
+
+CALL SetAlarmPouName( 44, 1, 500, AlmBaseNM);
+CALL SetAlarmPouName( 44, 2, 500, AlmBaseNM);
+CALL SetAlarmPouName( 44, 3, 500, AlmBaseNM);
+
+CALL SetAlarmPouName( 45, 1, 500, AlmBaseNM);
+CALL SetAlarmPouName( 45, 2, 500, AlmBaseNM);
+CALL SetAlarmPouName( 45, 3, 500, AlmBaseNM);
+
+CALL SetAlarmPouName( 46, 1, 500, AlmBaseNM);
+CALL SetAlarmPouName( 46, 2, 500, AlmBaseNM);
+CALL SetAlarmPouName( 46, 3, 500, AlmBaseNM);
+
+CALL SetAlarmPouName( 47, 1, 500, AlmBaseNM);
+CALL SetAlarmPouName( 47, 2, 500, AlmBaseNM);
+CALL SetAlarmPouName( 47, 3, 500, AlmBaseNM);
+
+CALL SetAlarmPouName( 48, 1, 500, AlmBaseNM);
+CALL SetAlarmPouName( 48, 2, 500, AlmBaseNM);
+CALL SetAlarmPouName( 48, 3, 500, AlmBaseNM);
+
+CALL SetAlarmPouName( 49, 1, 500, AlmBaseNM);    { 2008/05 ADD. }
+CALL SetAlarmPouName( 49, 2, 500, AlmBaseNM);
+CALL SetAlarmPouName( 49, 3, 500, AlmBaseNM);
+
+AlmBaseNM = " ãŸã}í‚é~";
+CALL SetAlarmPouName(  1, 1, 564, AlmBaseNM);
+CALL SetAlarmPouName(  1, 2, 564, AlmBaseNM);
+CALL SetAlarmPouName(  1, 3, 564, AlmBaseNM);
+
+CALL SetAlarmPouName(  2, 1, 564, AlmBaseNM);
+CALL SetAlarmPouName(  2, 2, 564, AlmBaseNM);
+CALL SetAlarmPouName(  2, 3, 564, AlmBaseNM);
+
+CALL SetAlarmPouName(  3, 1, 564, AlmBaseNM);
+CALL SetAlarmPouName(  3, 2, 564, AlmBaseNM);
+CALL SetAlarmPouName(  3, 3, 564, AlmBaseNM);
+
+CALL SetAlarmPouName(  4, 1, 564, AlmBaseNM);
+CALL SetAlarmPouName(  4, 2, 564, AlmBaseNM);
+CALL SetAlarmPouName(  4, 3, 564, AlmBaseNM);
+
+CALL SetAlarmPouName(  5, 1, 564, AlmBaseNM);
+CALL SetAlarmPouName(  5, 2, 564, AlmBaseNM);
+CALL SetAlarmPouName(  5, 3, 564, AlmBaseNM);
+
+CALL SetAlarmPouName(  6, 1, 564, AlmBaseNM);
+CALL SetAlarmPouName(  6, 2, 564, AlmBaseNM);
+CALL SetAlarmPouName(  6, 3, 564, AlmBaseNM);
+
+CALL SetAlarmPouName(  7, 1, 564, AlmBaseNM);
+CALL SetAlarmPouName(  7, 2, 564, AlmBaseNM);
+CALL SetAlarmPouName(  7, 3, 564, AlmBaseNM);
+
+CALL SetAlarmPouName(  8, 1, 564, AlmBaseNM);
+CALL SetAlarmPouName(  8, 2, 564, AlmBaseNM);
+CALL SetAlarmPouName(  8, 3, 564, AlmBaseNM);
+
+CALL SetAlarmPouName(  9, 1, 564, AlmBaseNM);
+CALL SetAlarmPouName(  9, 2, 564, AlmBaseNM);
+CALL SetAlarmPouName(  9, 3, 564, AlmBaseNM);
+
+CALL SetAlarmPouName( 10, 1, 564, AlmBaseNM);
+CALL SetAlarmPouName( 10, 2, 564, AlmBaseNM);
+CALL SetAlarmPouName( 10, 3, 564, AlmBaseNM);
+
+CALL SetAlarmPouName( 11, 1, 564, AlmBaseNM);
+CALL SetAlarmPouName( 11, 2, 564, AlmBaseNM);
+CALL SetAlarmPouName( 11, 3, 564, AlmBaseNM);
+
+CALL SetAlarmPouName( 12, 1, 564, AlmBaseNM);
+CALL SetAlarmPouName( 12, 2, 564, AlmBaseNM);
+CALL SetAlarmPouName( 12, 3, 564, AlmBaseNM);
+
+CALL SetAlarmPouName( 13, 1, 564, AlmBaseNM);
+CALL SetAlarmPouName( 13, 2, 564, AlmBaseNM);
+CALL SetAlarmPouName( 13, 3, 564, AlmBaseNM);
+
+CALL SetAlarmPouName( 14, 1, 564, AlmBaseNM);
+CALL SetAlarmPouName( 14, 2, 564, AlmBaseNM);
+CALL SetAlarmPouName( 14, 3, 564, AlmBaseNM);
+
+CALL SetAlarmPouName( 15, 1, 564, AlmBaseNM);
+CALL SetAlarmPouName( 15, 2, 564, AlmBaseNM);
+CALL SetAlarmPouName( 15, 3, 564, AlmBaseNM);
+
+CALL SetAlarmPouName( 16, 1, 564, AlmBaseNM);
+CALL SetAlarmPouName( 16, 2, 564, AlmBaseNM);
+CALL SetAlarmPouName( 16, 3, 564, AlmBaseNM);
+
+CALL SetAlarmPouName( 17, 1, 564, AlmBaseNM);
+CALL SetAlarmPouName( 17, 2, 564, AlmBaseNM);
+CALL SetAlarmPouName( 17, 3, 564, AlmBaseNM);
+
+CALL SetAlarmPouName( 18, 1, 564, AlmBaseNM);
+CALL SetAlarmPouName( 18, 2, 564, AlmBaseNM);
+CALL SetAlarmPouName( 18, 3, 564, AlmBaseNM);
+
+CALL SetAlarmPouName( 19, 1, 564, AlmBaseNM);
+CALL SetAlarmPouName( 19, 2, 564, AlmBaseNM);
+CALL SetAlarmPouName( 19, 3, 564, AlmBaseNM);
+
+CALL SetAlarmPouName( 21, 1, 564, AlmBaseNM);
+CALL SetAlarmPouName( 21, 2, 564, AlmBaseNM);
+CALL SetAlarmPouName( 21, 3, 564, AlmBaseNM);
+
+CALL SetAlarmPouName( 22, 1, 564, AlmBaseNM);
+CALL SetAlarmPouName( 22, 2, 564, AlmBaseNM);
+CALL SetAlarmPouName( 22, 3, 564, AlmBaseNM);
+
+CALL SetAlarmPouName( 23, 1, 564, AlmBaseNM);
+CALL SetAlarmPouName( 23, 2, 564, AlmBaseNM);
+CALL SetAlarmPouName( 23, 3, 564, AlmBaseNM);
+
+CALL SetAlarmPouName( 24, 1, 564, AlmBaseNM);    { 2005/05 ADD. }
+CALL SetAlarmPouName( 24, 2, 564, AlmBaseNM);
+CALL SetAlarmPouName( 24, 3, 564, AlmBaseNM);
+
+CALL SetAlarmPouName( 25, 1, 564, AlmBaseNM);    { 2005/05 ADD. }
+CALL SetAlarmPouName( 25, 2, 564, AlmBaseNM);
+CALL SetAlarmPouName( 25, 3, 564, AlmBaseNM);
+
+CALL SetAlarmPouName( 26, 1, 564, AlmBaseNM);    { 2005/05 ADD. }
+CALL SetAlarmPouName( 26, 2, 564, AlmBaseNM);
+CALL SetAlarmPouName( 26, 3, 564, AlmBaseNM);
+
+CALL SetAlarmPouName( 27, 1, 564, AlmBaseNM);    { 2008/05 ADD. }
+CALL SetAlarmPouName( 27, 2, 564, AlmBaseNM);
+CALL SetAlarmPouName( 27, 3, 564, AlmBaseNM);
+
+CALL SetAlarmPouName( 28, 1, 564, AlmBaseNM);    { 2008/05 ADD. }
+CALL SetAlarmPouName( 28, 2, 564, AlmBaseNM);
+CALL SetAlarmPouName( 28, 3, 564, AlmBaseNM);
+
+CALL SetAlarmPouName( 29, 1, 564, AlmBaseNM);    { 2008/05 ADD. }
+CALL SetAlarmPouName( 29, 2, 564, AlmBaseNM);
+CALL SetAlarmPouName( 29, 3, 564, AlmBaseNM);
+
+CALL SetAlarmPouName( 40, 1, 564, AlmBaseNM);
+CALL SetAlarmPouName( 40, 2, 564, AlmBaseNM);
+CALL SetAlarmPouName( 40, 3, 564, AlmBaseNM);
+
+CALL SetAlarmPouName( 41, 1, 564, AlmBaseNM);
+CALL SetAlarmPouName( 41, 2, 564, AlmBaseNM);
+CALL SetAlarmPouName( 41, 3, 564, AlmBaseNM);
+
+CALL SetAlarmPouName( 42, 1, 564, AlmBaseNM);
+CALL SetAlarmPouName( 42, 2, 564, AlmBaseNM);
+CALL SetAlarmPouName( 42, 3, 564, AlmBaseNM);
+
+CALL SetAlarmPouName( 43, 1, 564, AlmBaseNM);
+CALL SetAlarmPouName( 43, 2, 564, AlmBaseNM);
+CALL SetAlarmPouName( 43, 3, 564, AlmBaseNM);
+
+CALL SetAlarmPouName( 44, 1, 564, AlmBaseNM);
+CALL SetAlarmPouName( 44, 2, 564, AlmBaseNM);
+CALL SetAlarmPouName( 44, 3, 564, AlmBaseNM);
+
+CALL SetAlarmPouName( 45, 1, 564, AlmBaseNM);
+CALL SetAlarmPouName( 45, 2, 564, AlmBaseNM);
+CALL SetAlarmPouName( 45, 3, 564, AlmBaseNM);
+
+CALL SetAlarmPouName( 46, 1, 564, AlmBaseNM);
+CALL SetAlarmPouName( 46, 2, 564, AlmBaseNM);
+CALL SetAlarmPouName( 46, 3, 564, AlmBaseNM);
+
+CALL SetAlarmPouName( 47, 1, 564, AlmBaseNM);
+CALL SetAlarmPouName( 47, 2, 564, AlmBaseNM);
+CALL SetAlarmPouName( 47, 3, 564, AlmBaseNM);
+
+CALL SetAlarmPouName( 48, 1, 564, AlmBaseNM);
+CALL SetAlarmPouName( 48, 2, 564, AlmBaseNM);
+CALL SetAlarmPouName( 48, 3, 564, AlmBaseNM);
+
+CALL SetAlarmPouName( 49, 1, 564, AlmBaseNM);    { 2008/05 ADD. }
+CALL SetAlarmPouName( 49, 2, 564, AlmBaseNM);
+CALL SetAlarmPouName( 49, 3, 564, AlmBaseNM);
+
+{ --- í êM ñ¢ämóß --- }
+CH30_ETHER_Mdisc = 1;
+CH31_ETHER_Mdisc = 1;
+G0051_SystemStarting_Mreal = 0;
+
+{ --- Pato Light --- }
+COM_AFlgH_Mdisc = 0;
+COM_AFlgL_Mdisc = 0;
+COM_EFlg_Mdisc = 0;
+IF StringTrim(SYS_M001,3) == "1" THEN
+    StartApp SYS_M020 + "\DIO_PCI2503.exe 0,0";
+ENDIF;
+
+{ --- Start APP --- }
+StartAPP_NowApp_Mreal = 0;
+StartAPP_StepCnt_Mreal = 0;
+StartAPP_Cnt_Mreal = 0;
+
+{ --- Log --- }
+LogMessage("Chemical System Stating OK!");

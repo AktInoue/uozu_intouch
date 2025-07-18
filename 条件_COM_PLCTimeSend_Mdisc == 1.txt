@@ -1,0 +1,64 @@
+{---- DIM ----}
+DIM SYYMM AS MESSAGE;
+DIM SDDHH AS MESSAGE;
+DIM SMMSS AS MESSAGE;
+DIM SWEK AS MESSAGE;
+
+DIM RYYMM AS REAL;
+DIM RDDHH AS REAL;
+DIM RMMSS AS REAL;
+DIM RWEK AS REAL;
+
+DIM W AS REAL;
+DIM YY AS REAL;
+DIM MM AS REAL;
+DIM DD AS REAL;
+
+{ ---- 変数設定 ---- }
+SYYMM = StringMid(Text($Year  ,"0000"),3,2) + Text($Month ,"00");
+SDDHH =           Text($Day   ,"00")        + Text($Hour  ,"00");
+SMMSS =           Text($Minute,"00")        + Text($Second,"00");
+
+LogMessage(SYYMM);
+
+{ ---- 曜日計算 ---- }
+{ ---- Zellerの公式 ---- }
+YY = $Year;
+MM = $Month;
+DD = $Day;
+IF (MM == 1 OR MM == 2) THEN
+   YY = YY - 1;
+   MM = MM + 12;
+ENDIF;
+W = ( 5 * YY / 4 - YY / 100 + YY / 400 + ( 26 * MM + 16 ) / 10 + DD ) MOD 7;
+
+SWEK = Text( W , "00" ) + "00";
+
+{ ---- BCDコードで出力 ---- }
+RYYMM = CALL StrToBCD(SYYMM);
+RYYMM = CALL MarkCnv( RYYMM,0);
+
+RDDHH = CALL StrToBCD(SDDHH);
+RDDHH = CALL MarkCnv( RDDHH,0);
+
+RMMSS = CALL StrToBCD(SMMSS);
+RMMSS = CALL MarkCnv( RMMSS,0);
+
+RWEK  = CALL StrToBCD(SWEK);
+RWEK  = CALL MarkCnv( RWEK,0);
+
+{ --- CDS Master --- }
+IF StringTrim(SYS_M001,3) == "1" THEN
+    CH30_YYMM = RYYMM;
+    CH30_DDHH = RDDHH;
+    CH30_MMSS = RMMSS;
+    CH30_WEK  = RWEK;
+    { --- SDS Master --- }
+    CH31_YYMM = RYYMM;
+    CH31_DDHH = RDDHH;
+    CH31_MMSS = RMMSS;
+    CH31_WEK  = RWEK;
+    
+    { --- Flg ON --- }
+    W1000_SendFlg_Mreal = 1;
+ENDIF;

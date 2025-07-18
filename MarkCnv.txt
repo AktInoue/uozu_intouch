@@ -1,0 +1,17 @@
+{--- DIM ---}
+DIM Ret AS REAL;
+
+IF CnvFlg == 0 THEN
+    Ret = CnvDat;
+    IF CnvDat > 32767 THEN
+        Ret = Ret - 65536;
+    ENDIF;
+ENDIF;
+IF CnvFlg == 1 THEN
+    Ret = CnvDat;
+    IF CnvDat < 0 THEN
+        Ret = Ret + 65536;
+    ENDIF;
+ENDIF;
+
+RETURN Ret;

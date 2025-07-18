@@ -1,0 +1,9 @@
+{--- DIM ---}
+DIM Ret AS REAL;
+
+Ret =       StringToIntg(StringMid(SetStr,1,1)) * 4096;
+Ret = Ret + StringToIntg(StringMid(SetStr,2,1)) * 256;
+Ret = Ret + StringToIntg(StringMid(SetStr,3,1)) * 16;
+Ret = Ret + StringToIntg(StringMid(SetStr,4,1));
+
+RETURN Ret;

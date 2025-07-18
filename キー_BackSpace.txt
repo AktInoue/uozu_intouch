@@ -1,0 +1,2 @@
+{ --- Dsp Before --- }
+CALL DspScreen( COM_DspBefNo_Mreal, COM_DspBefParam_Mmesg);

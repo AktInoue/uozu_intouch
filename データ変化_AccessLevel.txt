@@ -1,0 +1,5 @@
+IF $AccessLevel < 9000 THEN
+   { --- Tank Level Save --- }
+   CALL DramWaitSave();
+ENDIF;
+CALL OutPutLog("<User•ÏX> , ID : " + $Operator + " LV : " + Text($AccessLevel,"0"));

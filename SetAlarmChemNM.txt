@@ -1,0 +1,141 @@
+{ --- Alarm Start(Unit) --- }
+CALL SetAlarmName( 1, COM_ChemNM_L01_Mmesg ,   1, 128, 1);
+CALL SetAlarmName( 2, COM_ChemNM_L02_Mmesg ,   1, 128, 1);
+CALL SetAlarmName( 3, COM_ChemNM_L03_Mmesg ,   1, 128, 1);
+CALL SetAlarmName( 4, COM_ChemNM_L04_Mmesg ,   1, 128, 1);
+CALL SetAlarmName( 5, COM_ChemNM_L05_Mmesg ,   1, 128, 1);
+CALL SetAlarmName( 6, COM_ChemNM_L06_Mmesg ,   1, 128, 1);
+CALL SetAlarmName( 7, COM_ChemNM_L07_Mmesg ,   1, 128, 1);
+CALL SetAlarmName( 8, COM_ChemNM_L08_Mmesg ,   1, 128, 1);
+CALL SetAlarmName( 9, COM_ChemNM_L09_Mmesg ,   1, 128, 1);
+CALL SetAlarmName(10, COM_ChemNM_L10_Mmesg ,   1, 128, 1);
+CALL SetAlarmName(10, COM_ChemNM_L10_Mmesg ,   201, 328, 3);    { 2008/01 ADD. }
+CALL SetAlarmName(11, COM_ChemNM_L11_Mmesg ,   1, 128, 1);
+CALL SetAlarmName(12, COM_ChemNM_L12_Mmesg ,   1, 128, 1);
+CALL SetAlarmName(12, COM_ChemNM_L12_Mmesg ,   201, 328, 3);    { 2008/01 ADD. }
+CALL SetAlarmName(13, COM_ChemNM_L13_Mmesg ,   1, 128, 1);
+CALL SetAlarmName(14, COM_ChemNM_L14_Mmesg ,   1, 128, 1);
+CALL SetAlarmName(15, COM_ChemNM_L15_Mmesg ,   1, 128, 1);
+CALL SetAlarmName(16, COM_ChemNM_L16_Mmesg ,   1, 128, 1);
+CALL SetAlarmName(17, COM_ChemNM_L17_Mmesg ,   1, 128, 1);
+CALL SetAlarmName(18, COM_ChemNM_L18_Mmesg ,   1, 128, 1);
+CALL SetAlarmName(19, COM_ChemNM_L19_Mmesg ,   1, 128, 1);
+CALL SetAlarmName(21, COM_ChemNM_L21_Mmesg ,   1, 128, 1);
+CALL SetAlarmName(22, COM_ChemNM_L22_Mmesg ,   1, 128, 1);
+CALL SetAlarmName(23, COM_ChemNM_L23_Mmesg ,   1, 128, 1);
+CALL SetAlarmName(24, COM_ChemNM_L24_Mmesg ,   1, 128, 1);    { 2005/05 ADD. }
+CALL SetAlarmName(25, COM_ChemNM_L25_Mmesg ,   1, 128, 1);    { 2005/05 ADD. }
+CALL SetAlarmName(26, COM_ChemNM_L26_Mmesg ,   1, 128, 1);    { 2005/05 ADD. }
+CALL SetAlarmName(27, COM_ChemNM_L27_Mmesg ,   1, 128, 1);    { 2008/05 ADD. }
+CALL SetAlarmName(28, COM_ChemNM_L28_Mmesg ,   1, 128, 1);    { 2008/05 ADD. }
+CALL SetAlarmName(29, COM_ChemNM_L29_Mmesg ,   1, 128, 1);    { 2008/05 ADD. }
+CALL SetAlarmName(40, COM_ChemNM_L40_Mmesg ,   1, 128, 1);
+CALL SetAlarmName(41, COM_ChemNM_L41_Mmesg ,   1, 144, 1);
+CALL SetAlarmName(43, COM_ChemNM_L43_Mmesg ,   1, 128, 1);
+CALL SetAlarmName(44, COM_ChemNM_L44_Mmesg ,   1, 128, 1);
+CALL SetAlarmName(45, COM_ChemNM_L45_Mmesg ,   1, 144, 1);
+CALL SetAlarmName(46, COM_ChemNM_L46_Mmesg ,   1, 144, 1);
+CALL SetAlarmName(47, COM_ChemNM_L47_Mmesg ,   1, 144, 1);
+CALL SetAlarmName(48, COM_ChemNM_L48_Mmesg ,   1, 128, 1);
+CALL SetAlarmName(49, COM_ChemNM_L49_Mmesg ,   1, 144, 1);    { 2008/05 ADD. }
+CALL SetAlarmName(50, COM_ChemNM_L50_Mmesg ,   1,  64, 1);
+
+CALL SetAlarmName(39, COM_ChemNM_L39_Mmesg ,   1,  16, 1);
+CALL SetAlarmName(39, COM_ChemNM_L47_Mmesg ,  17,  48, 1);
+CALL SetAlarmName(39, COM_ChemNM_L45_Mmesg ,  49,  80, 1);
+CALL SetAlarmName(39, COM_ChemNM_L44_Mmesg ,  81, 112, 1);
+CALL SetAlarmName(39, COM_ChemNM_L48_Mmesg , 113, 140, 1);
+CALL SetAlarmName(39, COM_ChemNM_L39_Mmesg , 141, 144, 1);
+
+{ --- Alarm Start(EJB) --- }
+CALL SetAlarmName( 1, COM_ChemNM_L01_Mmesg , 500, 691, 1);
+CALL SetAlarmName( 2, COM_ChemNM_L02_Mmesg , 500, 691, 1);
+CALL SetAlarmName( 3, COM_ChemNM_L03_Mmesg , 500, 691, 1);
+CALL SetAlarmName( 4, COM_ChemNM_L04_Mmesg , 500, 691, 1);
+CALL SetAlarmName( 5, COM_ChemNM_L05_Mmesg , 500, 691, 1);
+CALL SetAlarmName( 7, COM_ChemNM_L07_Mmesg , 500, 691, 1);
+CALL SetAlarmName( 8, COM_ChemNM_L08_Mmesg , 500, 691, 1);
+CALL SetAlarmName( 9, COM_ChemNM_L09_Mmesg , 500, 691, 1);
+CALL SetAlarmName(10, COM_ChemNM_L10_Mmesg , 500, 691, 1);
+CALL SetAlarmName(11, COM_ChemNM_L11_Mmesg , 500, 691, 1);
+CALL SetAlarmName(12, COM_ChemNM_L12_Mmesg , 500, 691, 1);
+CALL SetAlarmName(13, COM_ChemNM_L13_Mmesg , 500, 691, 1);
+CALL SetAlarmName(14, COM_ChemNM_L14_Mmesg , 500, 691, 1);
+CALL SetAlarmName(15, COM_ChemNM_L15_Mmesg , 500, 691, 1);
+CALL SetAlarmName(16, COM_ChemNM_L16_Mmesg , 500, 691, 1);
+CALL SetAlarmName(17, COM_ChemNM_L17_Mmesg , 500, 691, 1);
+CALL SetAlarmName(18, COM_ChemNM_L18_Mmesg , 500, 691, 1);
+CALL SetAlarmName(19, COM_ChemNM_L19_Mmesg , 500, 691, 1);
+CALL SetAlarmName(21, COM_ChemNM_L21_Mmesg , 500, 691, 1);
+CALL SetAlarmName(22, COM_ChemNM_L22_Mmesg , 500, 691, 1);
+CALL SetAlarmName(23, COM_ChemNM_L23_Mmesg , 500, 691, 1);
+CALL SetAlarmName(24, COM_ChemNM_L24_Mmesg , 500, 691, 1);    { 2005/05 ADD. }
+CALL SetAlarmName(25, COM_ChemNM_L25_Mmesg , 500, 691, 1);    { 2005/05 ADD. }
+CALL SetAlarmName(26, COM_ChemNM_L26_Mmesg , 500, 691, 1);    { 2005/05 ADD. }
+CALL SetAlarmName(27, COM_ChemNM_L27_Mmesg , 500, 691, 1);    { 2008/05 ADD. }
+CALL SetAlarmName(28, COM_ChemNM_L28_Mmesg , 500, 691, 1);    { 2008/05 ADD. }
+CALL SetAlarmName(29, COM_ChemNM_L29_Mmesg , 500, 691, 1);    { 2008/05 ADD. }
+CALL SetAlarmName(40, COM_ChemNM_L40_Mmesg , 500, 691, 1);
+CALL SetAlarmName(41, COM_ChemNM_L41_Mmesg , 500, 691, 1);
+CALL SetAlarmName(42, COM_ChemNM_L42_Mmesg , 500, 691, 1);
+CALL SetAlarmName(43, COM_ChemNM_L43_Mmesg , 500, 691, 1);
+CALL SetAlarmName(44, COM_ChemNM_L44_Mmesg , 500, 691, 1);
+CALL SetAlarmName(45, COM_ChemNM_L45_Mmesg , 500, 691, 1);
+CALL SetAlarmName(46, COM_ChemNM_L46_Mmesg , 500, 691, 1);
+CALL SetAlarmName(47, COM_ChemNM_L47_Mmesg , 500, 691, 1);
+CALL SetAlarmName(48, COM_ChemNM_L48_Mmesg , 500, 691, 1);
+CALL SetAlarmName(49, COM_ChemNM_L49_Mmesg , 500, 691, 1);    { 2008/05 ADD. }
+
+{ --- SDS Event --- }
+CALL SetAlarmName(40, COM_ChemNM_L40_Mmesg ,   1,   1, 2);
+CALL SetAlarmName(41, COM_ChemNM_L41_Mmesg ,   1,   1, 2);
+CALL SetAlarmName(42, COM_ChemNM_L42_Mmesg ,   1,   1, 2);
+CALL SetAlarmName(43, COM_ChemNM_L43_Mmesg ,   1,   1, 2);
+CALL SetAlarmName(44, COM_ChemNM_L44_Mmesg ,   1,   1, 2);
+CALL SetAlarmName(45, COM_ChemNM_L45_Mmesg ,   1,   1, 2);
+CALL SetAlarmName(46, COM_ChemNM_L46_Mmesg ,   1,   1, 2);
+CALL SetAlarmName(47, COM_ChemNM_L47_Mmesg ,   1,   2, 2);
+CALL SetAlarmName(48, COM_ChemNM_L48_Mmesg ,   1,   1, 2);
+CALL SetAlarmName(49, COM_ChemNM_L49_Mmesg ,   1,   1, 2);    { 2008/05 ADD. }
+
+{ --- Alarm Start(EtherNet) --- }
+CALL SetAlarmName( 1, COM_ChemNM_L01_Mmesg , 990, 990, 1);
+CALL SetAlarmName( 2, COM_ChemNM_L02_Mmesg , 990, 990, 1);
+CALL SetAlarmName( 3, COM_ChemNM_L03_Mmesg , 990, 990, 1);
+CALL SetAlarmName( 4, COM_ChemNM_L04_Mmesg , 990, 990, 1);
+CALL SetAlarmName( 5, COM_ChemNM_L05_Mmesg , 990, 990, 1);
+CALL SetAlarmName( 6, COM_ChemNM_L06_Mmesg , 990, 990, 1);
+CALL SetAlarmName( 7, COM_ChemNM_L07_Mmesg , 990, 990, 1);
+CALL SetAlarmName( 8, COM_ChemNM_L08_Mmesg , 990, 990, 1);
+CALL SetAlarmName( 9, COM_ChemNM_L09_Mmesg , 990, 990, 1);
+CALL SetAlarmName(10, COM_ChemNM_L10_Mmesg , 990, 990, 1);
+CALL SetAlarmName(11, COM_ChemNM_L11_Mmesg , 990, 990, 1);
+CALL SetAlarmName(12, COM_ChemNM_L12_Mmesg , 990, 990, 1);
+CALL SetAlarmName(13, COM_ChemNM_L13_Mmesg , 990, 990, 1);
+CALL SetAlarmName(14, COM_ChemNM_L14_Mmesg , 990, 990, 1);
+CALL SetAlarmName(15, COM_ChemNM_L15_Mmesg , 990, 990, 1);
+CALL SetAlarmName(16, COM_ChemNM_L16_Mmesg , 990, 990, 1);
+CALL SetAlarmName(17, COM_ChemNM_L17_Mmesg , 990, 990, 1);
+CALL SetAlarmName(18, COM_ChemNM_L18_Mmesg , 990, 990, 1);
+CALL SetAlarmName(19, COM_ChemNM_L19_Mmesg , 990, 990, 1);
+CALL SetAlarmName(21, COM_ChemNM_L21_Mmesg , 990, 990, 1);
+CALL SetAlarmName(22, COM_ChemNM_L22_Mmesg , 990, 990, 1);
+CALL SetAlarmName(23, COM_ChemNM_L23_Mmesg , 990, 990, 1);
+CALL SetAlarmName(24, COM_ChemNM_L24_Mmesg , 990, 990, 1);
+CALL SetAlarmName(25, COM_ChemNM_L25_Mmesg , 990, 990, 1);
+CALL SetAlarmName(26, COM_ChemNM_L26_Mmesg , 990, 990, 1);
+CALL SetAlarmName(27, COM_ChemNM_L27_Mmesg , 990, 990, 1);    {2008/05 ADD}
+CALL SetAlarmName(28, COM_ChemNM_L28_Mmesg , 990, 990, 1);    {2008/05 ADD}
+CALL SetAlarmName(29, COM_ChemNM_L29_Mmesg , 990, 990, 1);    {2008/05 ADD}
+CALL SetAlarmName(39, COM_ChemNM_L39_Mmesg , 990, 990, 1);
+CALL SetAlarmName(40, COM_ChemNM_L40_Mmesg , 990, 990, 1);
+CALL SetAlarmName(41, COM_ChemNM_L41_Mmesg , 990, 990, 1);
+CALL SetAlarmName(42, COM_ChemNM_L42_Mmesg , 990, 990, 1);
+CALL SetAlarmName(43, COM_ChemNM_L43_Mmesg , 990, 990, 1);
+CALL SetAlarmName(44, COM_ChemNM_L44_Mmesg , 990, 990, 1);
+CALL SetAlarmName(45, COM_ChemNM_L45_Mmesg , 990, 990, 1);
+CALL SetAlarmName(46, COM_ChemNM_L46_Mmesg , 990, 990, 1);
+CALL SetAlarmName(47, COM_ChemNM_L47_Mmesg , 990, 990, 1);
+CALL SetAlarmName(48, COM_ChemNM_L48_Mmesg , 990, 990, 1);
+CALL SetAlarmName(49, COM_ChemNM_L49_Mmesg , 990, 990, 1);    {2008/05 ADD}
+CALL SetAlarmName(50, COM_ChemNM_L50_Mmesg , 990, 990, 1);

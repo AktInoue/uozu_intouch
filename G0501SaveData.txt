@@ -1,0 +1,11 @@
+{ --- DIM --- }
+DIM FileNamePOU AS MESSAGE;
+DIM Recipe AS MESSAGE;
+
+FileNamePOU = SYS_M026 + "\PouName";
+FileNamePOU = FileNamePOU + "\CHEM" + Text(ChemNo , "00" ) + ".csv";
+
+Recipe = "R" + Text(PageNo , "000" ) ;
+
+{ --- Data Load --- }
+RecipeSave( FileNamePOU ,"U001", Recipe ); 

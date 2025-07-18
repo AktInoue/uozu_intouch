@@ -1,0 +1,39 @@
+CALL G0092LoadMaxMin( StNo, 1);
+CALL G0092PenSet( StNo, 1);
+G0092_SetPenMax_Ianlg = G5092_SetMax_MReal;
+G0092_SetPenMin_Ianlg = G5092_SetMin_MReal;
+
+CALL G0092LoadMaxMin( StNo, 2);
+CALL G0092PenSet( StNo, 2);
+G0092_SetPenMax_Ianlg = G5092_SetMax_MReal;
+G0092_SetPenMin_Ianlg = G5092_SetMin_MReal;
+
+CALL G0092LoadMaxMin( StNo, 3);
+CALL G0092PenSet( StNo, 3);
+G0092_SetPenMax_Ianlg = G5092_SetMax_MReal;
+G0092_SetPenMin_Ianlg = G5092_SetMin_MReal;
+
+CALL G0092LoadMaxMin( StNo, 4);
+CALL G0092PenSet( StNo, 4);
+G0092_SetPenMax_Ianlg = G5092_SetMax_MReal;
+G0092_SetPenMin_Ianlg = G5092_SetMin_MReal;
+
+CALL G0092LoadMaxMin( StNo, 5);
+CALL G0092PenSet( StNo, 5);
+G0092_SetPenMax_Ianlg = G5092_SetMax_MReal;
+G0092_SetPenMin_Ianlg = G5092_SetMin_MReal;
+
+CALL G0092LoadMaxMin( StNo, 6);
+CALL G0092PenSet( StNo, 6);
+G0092_SetPenMax_Ianlg = G5092_SetMax_MReal;
+G0092_SetPenMin_Ianlg = G5092_SetMin_MReal;
+
+CALL G0092LoadMaxMin( StNo, 7);
+CALL G0092PenSet( StNo, 7);
+G0092_SetPenMax_Ianlg = G5092_SetMax_MReal;
+G0092_SetPenMin_Ianlg = G5092_SetMin_MReal;
+
+CALL G0092LoadMaxMin( StNo, 8);
+CALL G0092PenSet( StNo, 8);
+G0092_SetPenMax_Ianlg = G5092_SetMax_MReal;
+G0092_SetPenMin_Ianlg = G5092_SetMin_MReal;

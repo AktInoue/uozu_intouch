@@ -1,0 +1,75 @@
+{ --- DIM --- }
+DIM KName AS MESSAGE;
+
+{ --- éÌóﬁê›íË --- }
+IF Index == 1 THEN
+    KName = "LIA";
+    G0092_Unit_Mmesg = "(Lit)";
+ENDIF;
+IF Index == 2 THEN
+    KName = "FI";
+    G0092_Unit_Mmesg = "(Lit/Min)";
+
+    IF chemno == 40 AND (PenNo == 3 OR PenNo == 4) THEN
+        G0092_Unit_Mmesg = "(cc/Min)";
+    ENDIF;
+    IF chemno == 41 AND (PenNo == 2) THEN
+        G0092_Unit_Mmesg = "(cc/Min)";
+    ENDIF;
+    IF chemno == 42 AND (PenNo == 2) THEN
+        G0092_Unit_Mmesg = "(cc/Min)";
+    ENDIF;
+    IF chemno == 43 AND (PenNo == 2) THEN
+        G0092_Unit_Mmesg = "(cc/Min)";
+    ENDIF;
+    IF chemno == 44 AND (PenNo == 2) THEN
+        G0092_Unit_Mmesg = "(cc/Min)";
+    ENDIF;
+    IF chemno == 45 AND (PenNo == 3 OR PenNo == 4) THEN
+        G0092_Unit_Mmesg = "(cc/Min)";
+    ENDIF;
+    IF chemno == 46 AND (PenNo == 3 OR PenNo == 4) THEN
+        G0092_Unit_Mmesg = "(cc/Min)";
+    ENDIF;
+    IF chemno == 47 AND (PenNo == 3 OR PenNo == 4) THEN
+        G0092_Unit_Mmesg = "(cc/Min)";
+    ENDIF;
+    IF chemno == 48 AND (PenNo == 2) THEN
+        G0092_Unit_Mmesg = "(cc/Min)";
+    ENDIF;
+    IF chemno == 49 AND (PenNo == 3 OR PenNo == 4) THEN
+        G0092_Unit_Mmesg = "(cc/Min)";
+    ENDIF;
+ENDIF;
+IF Index == 3 THEN
+    KName = "EFS";
+    G0092_Unit_Mmesg = "(Lit)";
+ENDIF;
+IF Index == 4 THEN
+    KName = "TI";
+    G0092_Unit_Mmesg = "(Åé)";
+ENDIF;
+IF Index == 5 THEN
+    KName = "PIA1";
+    G0092_Unit_Mmesg = "(KPa)";
+ENDIF;
+IF Index == 6 THEN
+    KName = "PIA2";
+    G0092_Unit_Mmesg = "(KPa)";
+ENDIF;
+IF Index == 7 THEN
+    KName = "WI";
+    G0092_Unit_Mmesg = "(Kg)";
+ENDIF;
+IF Index == 8 THEN
+    KName = "AIC";
+    G0092_Unit_Mmesg = "(wt%)";
+ENDIF;
+IF Index == 9 THEN
+    KName = "MON";
+    G0092_Unit_Mmesg = "(å¬)";
+ENDIF;
+IF Index == 10 THEN
+    KName = "WI";
+    G0092_Unit_Mmesg = "(Kg)";
+ENDIF;

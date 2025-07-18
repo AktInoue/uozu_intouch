@@ -1,0 +1,47 @@
+{---- DIM ----}
+DIM UnitName AS MESSAGE;
+DIM RecipeName AS MESSAGE;
+
+DIM FileName AS MESSAGE;
+DIM WM001 AS MESSAGE;
+DIM ChemNo AS REAL;
+DIM AlmNo AS REAL;
+
+DIM Ret AS REAL;
+
+{ ---- Initialization ---- }
+UnitName = "U001";
+RecipeName = "R001";
+
+{ ---- Main Prg ---- }
+GetPropertyM ( ActiveXName, W2000_AlarmTagName_Mmesg );
+
+{ ---- Dsp AlarmHelp ---- }
+W2000_AlarmTagName_Mmesg = StringTrim( W2000_AlarmTagName_Mmesg , 3 );
+IF W2000_AlarmTagName_Mmesg <> "" THEN
+
+    W2000_AlarmTagName_ldisc.Name = W2000_AlarmTagName_Mmesg;
+    W2000_Msg00_Mmesg = W2000_AlarmTagName_ldisc.AlarmComment;
+    WM001 = StringTrim( W2000_AlarmTagName_ldisc.Comment , 3);
+    ChemNo = StringToReal(StringMid(WM001 , 2,2));
+    AlmNo  = StringToReal(StringRight(WM001 , 3));
+
+    FileName = SYS_M026 + "\Alarm\" + Text( ChemNo , "00" );
+    FileName = FileName + "\H" + Text( AlmNo , "000" ) + ".TXT";
+
+    W2000_LoadFileName_Mmesg = FileName;
+
+    { --- Dsp Window --- }
+    IF COM_DspNo_Mreal >= 10000 THEN
+       CALL DspScreen( 51, "");
+    ENDIF;
+
+    CALL DspWindow(0);
+    IF $AccessLevel >= 9999 THEN
+        { --- DeBug Mode --- }
+        CALL DspWindow(2001);
+    ELSE
+        CALL DspWindow(2000);
+    ENDIF;
+
+ENDIF;

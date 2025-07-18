@@ -1,0 +1,67 @@
+{ --- DIM --- }
+DIM GetChemName AS MESSAGE;
+DIM GetNo AS REAL;
+
+IF StringTrim(W0050_ChemicalName_Mmesg,3) <> "" THEN
+
+    IF COM_DspNo_Mreal == 71 THEN
+    
+        { --- Set Chemical Name --- }
+        GetChemName = StringTrim(StringLeft(W0050_ChemicalName_Mmesg,40),3);
+        GetNo = StringToReal(StringRight(W0050_ChemicalName_Mmesg,2));
+    
+        { --- GetChemNo --- }
+        G0071_ChemicalName_Mmesg = GetChemName;
+        G0071_ChemNo_Mreal = GetNo;
+   
+        { --- Windows Close --- }
+        CALL DspWindow(0);
+        G0071_ListDsp_Mreal = 0;
+    
+    ENDIF;
+
+    IF COM_DspNo_Mreal == 81 OR COM_DspNo_Mreal == 82 THEN
+    
+        { --- Set Chemical Name --- }
+        GetChemName = StringTrim(StringLeft(W0050_ChemicalName_Mmesg,40),3);
+        GetNo = StringToReal(StringRight(W0050_ChemicalName_Mmesg,2));
+    
+        { --- GetChemNo --- }
+        G0081_ChemicalName_Mmesg = GetChemName;
+        G0081_ChemNo_Mreal = GetNo;
+   
+        { --- Windows Close --- }
+        CALL DspWindow(0);
+        G0081_ListDsp_Mreal = 0;
+    
+    ENDIF;
+
+    IF COM_DspNo_Mreal == 501 OR COM_DspNo_Mreal == 502 OR COM_DspNo_Mreal == 503 OR
+       COM_DspNo_Mreal == 506 OR COM_DspNo_Mreal == 507 OR COM_DspNo_Mreal == 508 THEN
+    
+        { --- Set Chemical Name --- }
+        GetChemName = StringTrim(StringLeft(W0050_ChemicalName_Mmesg,40),3);
+        GetNo = StringToReal(StringRight(W0050_ChemicalName_Mmesg,2));
+    
+        { --- GetChemNo --- }
+        G0501_ChemicalName_Mmesg = GetChemName;
+        G0501_ChemNo_Mreal = GetNo;
+    
+        { --- LoadData --- }
+        CALL G0501LoadData( G0501_ChemNo_Mreal, G0501_PageNo_Mreal);
+        CALL G0501SetChemcalStyle();
+
+        IF 1 <= G0501_ChemNo_Mreal AND G0501_ChemNo_Mreal <= 29 THEN {2008.09 modify}{ 2005/05 Modify }
+            CALL DspScreen( 501,"");
+        ENDIF;
+        IF 40 <= G0501_ChemNo_Mreal AND G0501_ChemNo_Mreal <= 50 THEN 
+            CALL DspScreen( 506,"");
+        ENDIF;
+
+        { --- Windows Close --- }
+        CALL DspWindow(0);
+        G0501_ListDsp_Mreal = 0;
+    
+    ENDIF;
+
+ENDIF;

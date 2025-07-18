@@ -1,0 +1,52 @@
+IF 1 <= G0501_ChemNo_Mreal AND G0501_ChemNo_Mreal <= 29 THEN    {26 2008.07 modified}
+    G0502_ChemicalMode_Mreal = 1;
+    G0501_SDSLineMax_Mreal = 1;
+    CALL G0501DspCDSPouStatus(G0501_ChemNo_Mreal, G0501_PageNo_Mreal);
+    CALL G0501DspVMBName(G0501_ChemNo_Mreal, G0501_PageNo_Mreal);
+    CALL G0501VCntLoadData(G0501_ChemNo_Mreal);
+{
+    CALL DspScreen( 501 + G0501_PageNo_Mreal - 1, "");
+}
+ENDIF;
+IF 40 <= G0501_ChemNo_Mreal AND G0501_ChemNo_Mreal <= 50 THEN
+    G0502_ChemicalMode_Mreal = 2;
+
+    IF G0501_ChemNo_Mreal == 40 THEN
+       G0501_SDSLineMax_Mreal = 2;
+    ENDIF;
+    IF G0501_ChemNo_Mreal == 41 THEN
+       G0501_SDSLineMax_Mreal = 1;
+    ENDIF;
+    IF G0501_ChemNo_Mreal == 42 THEN
+       G0501_SDSLineMax_Mreal = 1;
+    ENDIF;
+    IF G0501_ChemNo_Mreal == 43 THEN
+       G0501_SDSLineMax_Mreal = 1;
+    ENDIF;
+    IF G0501_ChemNo_Mreal == 44 THEN
+       G0501_SDSLineMax_Mreal = 2;
+    ENDIF;
+    IF G0501_ChemNo_Mreal == 45 THEN
+       G0501_SDSLineMax_Mreal = 2;
+    ENDIF;
+    IF G0501_ChemNo_Mreal == 46 THEN
+       G0501_SDSLineMax_Mreal = 2;
+    ENDIF;
+    IF G0501_ChemNo_Mreal == 47 THEN
+       G0501_SDSLineMax_Mreal = 2;
+    ENDIF;
+    IF G0501_ChemNo_Mreal == 48 THEN
+       G0501_SDSLineMax_Mreal = 2;
+    ENDIF;
+    IF G0501_ChemNo_Mreal == 49 THEN    {2008.07 ADD}
+       G0501_SDSLineMax_Mreal = 2;
+    ENDIF;
+
+
+    CALL G0501DspSDSPouStatus(G0501_ChemNo_Mreal, G0501_PageNo_Mreal);
+    CALL G0501DspVMBName(G0501_ChemNo_Mreal, G0501_PageNo_Mreal);
+    CALL G0501VCntLoadData(G0501_ChemNo_Mreal);
+{
+    CALL DspScreen( 506 + G0501_PageNo_Mreal - 1, "");
+}
+ENDIF;

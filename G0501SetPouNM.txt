@@ -1,0 +1,37 @@
+IF SetNo == 0 THEN
+    CH30_POU_NM01 = "";
+    CH30_POU_NM02 = "";
+    CH30_POU_NM03 = "";
+    CH30_POU_NM04 = "";
+    CH30_POU_NM05 = "";
+    CH30_POU_NM06 = "";
+    CH30_POU_NM07 = "";
+    CH30_POU_NM08 = "";
+ENDIF;
+IF SetNo == 1 THEN
+    CH30_POU_NM01 = SetPouNM;
+ENDIF;
+IF SetNo == 2 THEN
+    CH30_POU_NM02 = SetPouNM;
+ENDIF;
+IF SetNo == 3 THEN
+    CH30_POU_NM03 = SetPouNM;
+ENDIF;
+IF SetNo == 4 THEN
+    CH30_POU_NM04 = SetPouNM;
+ENDIF;
+IF SetNo == 5 THEN
+    CH30_POU_NM05 = SetPouNM;
+ENDIF;
+IF SetNo == 6 THEN
+    CH30_POU_NM06 = SetPouNM;
+ENDIF;
+IF SetNo == 7 THEN
+    CH30_POU_NM07 = SetPouNM;
+ENDIF;
+IF SetNo == 8 THEN
+    CH30_POU_NM08 = SetPouNM;
+ENDIF;
+
+SetNo = SetNo + 1;
+RETURN SetNo;

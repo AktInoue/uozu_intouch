@@ -1,0 +1,157 @@
+{--- DIM --- }
+DIM AFlg AS REAL;
+
+IF $System.UnAck == 1 THEN
+  {Start Alarm Sound Flag ON}
+
+  AFlg = 0;
+  IF CH00A_H.UnAck == 1 THEN
+      AFlg = 1;
+  ENDIF;
+  IF CH01A_H.UnAck == 1 THEN
+      AFlg = 1;
+  ENDIF;
+  IF CH02A_H.UnAck == 1 THEN
+      AFlg = 1;
+  ENDIF;
+  IF CH03A_H.UnAck == 1 THEN
+      AFlg = 1;
+  ENDIF;
+  IF CH04A_H.UnAck == 1 THEN
+      AFlg = 1;
+  ENDIF;
+  IF CH05A_H.UnAck == 1 THEN
+      AFlg = 1;
+  ENDIF;
+  IF CH06A_H.UnAck == 1 THEN
+      AFlg = 1;
+  ENDIF;
+  IF CH07A_H.UnAck == 1 THEN
+      AFlg = 1;
+  ENDIF;
+  IF CH08A_H.UnAck == 1 THEN
+      AFlg = 1;
+  ENDIF;
+  IF CH09A_H.UnAck == 1 THEN
+      AFlg = 1;
+  ENDIF;
+  IF CH10A_H.UnAck == 1 THEN
+      AFlg = 1;
+  ENDIF;
+  IF CH11A_H.UnAck == 1 THEN
+      AFlg = 1;
+  ENDIF;
+
+  IF CH12A_H.UnAck == 1 THEN
+      AFlg = 1;
+  ENDIF;
+  IF CH12A_P.UnAck == 1 THEN
+      AFlg = 1;
+  ENDIF;
+
+  IF CH13A_H.UnAck == 1 THEN
+      AFlg = 1;
+  ENDIF;
+  IF CH14A_H.UnAck == 1 THEN
+      AFlg = 1;
+  ENDIF;
+
+  IF CH15A_H.UnAck == 1 THEN
+      AFlg = 1;
+  ENDIF;
+  IF CH15A_P.UnAck == 1 THEN
+      AFlg = 1;
+  ENDIF;
+
+  IF CH16A_H.UnAck == 1 THEN
+      AFlg = 1;
+  ENDIF;
+  IF CH17A_H.UnAck == 1 THEN
+      AFlg = 1;
+  ENDIF;
+  IF CH18A_H.UnAck == 1 THEN
+      AFlg = 1;
+  ENDIF;
+  IF CH19A_H.UnAck == 1 THEN
+      AFlg = 1;
+  ENDIF;
+  IF CH21A_H.UnAck == 1 THEN
+      AFlg = 1;
+  ENDIF;
+  IF CH22A_H.UnAck == 1 THEN
+      AFlg = 1;
+  ENDIF;
+  IF CH23A_H.UnAck == 1 THEN
+      AFlg = 1;
+  ENDIF;
+  IF CH24A_H.UnAck == 1 THEN    { 2005/05 ADD. }
+      AFlg = 1;
+  ENDIF;
+  IF CH25A_H.UnAck == 1 THEN    { 2005/05 ADD. }
+      AFlg = 1;
+  ENDIF;
+  IF CH26A_H.UnAck == 1 THEN    { 2005/05 ADD. }
+      AFlg = 1;
+  ENDIF;
+  IF CH27A_H.UnAck == 1 THEN    { 2008/06 ADD. }
+      AFlg = 1;
+  ENDIF;
+  IF CH27A_P.UnAck == 1 THEN
+      AFlg = 1;
+  ENDIF;
+  IF CH28A_H.UnAck == 1 THEN    { 2008/06 ADD. }
+      AFlg = 1;
+  ENDIF;
+  IF CH29A_H.UnAck == 1 THEN    { 2008/06 ADD. }
+      AFlg = 1;
+  ENDIF;
+  IF CH38A_H.UnAck == 1 THEN
+      AFlg = 1;
+  ENDIF;
+  IF CH39A_H.UnAck == 1 THEN
+      AFlg = 1;
+  ENDIF;
+  IF CH40A_H.UnAck == 1 THEN
+      AFlg = 1;
+  ENDIF;
+  IF CH41A_H.UnAck == 1 THEN
+      AFlg = 1;
+  ENDIF;
+  IF CH42A_H.UnAck == 1 THEN
+      AFlg = 1;
+  ENDIF;
+  IF CH43A_H.UnAck == 1 THEN
+      AFlg = 1;
+  ENDIF;
+  IF CH44A_H.UnAck == 1 THEN
+      AFlg = 1;
+  ENDIF;
+  IF CH45A_H.UnAck == 1 THEN
+      AFlg = 1;
+  ENDIF;
+  IF CH46A_H.UnAck == 1 THEN
+      AFlg = 1;
+  ENDIF;
+  IF CH47A_H.UnAck == 1 THEN
+      AFlg = 1;
+  ENDIF;
+  IF CH48A_H.UnAck == 1 THEN
+      AFlg = 1;
+  ENDIF;
+  IF CH49A_H.UnAck == 1 THEN    { 2008/06 ADD. }
+      AFlg = 1;
+  ENDIF;
+  IF CH50A_H.UnAck == 1 THEN
+      AFlg = 1;
+  ENDIF;
+
+  IF AFlg == 1 THEN
+     IF COM_AlmSoundEnable_Mdisc == 0 THEN
+         PlaySound( SYS_M022 + "\ALARM.WAV",1 );
+     ENDIF;
+     COM_AlmSoundEnable_Mdisc = 1 ;
+  ENDIF;
+
+ENDIF;
+{Reset New Alarm Tag (System) }
+$NewAlarm = 0;

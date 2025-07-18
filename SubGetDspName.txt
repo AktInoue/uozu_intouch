@@ -1,0 +1,5 @@
+{ --- ChgMessage --- }
+IF ActDspNo == ChgDspNo THEN
+    COM_DspName_Mmesg = GamenNM;
+ENDIF;
+

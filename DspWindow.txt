@@ -1,0 +1,64 @@
+{--- DIM ---}
+DIM TFlg AS REAL;
+
+TFlg = 0;
+
+{--- “ÁŽê Dsp PopUp Window ---}
+CALL SubDspWindow( WindowNo ,    4 , "W0004_SetValueDebug" , 1 , "");
+IF WindowNo == 4 THEN TFlg = 1; ENDIF;
+
+IF WindowNo == 5 THEN
+    CALL SubDspWindow( 4 , 4 , "W0004_SetValueDebug" , 1 , "");
+    TFlg = 1;
+ENDIF;
+CALL SubDspWindow( WindowNo ,    5 , "W0005_SetValueSuper" , 1 , "");
+
+{---- Dsp PopUp Window ---}
+IF TFlg == 0 THEN
+
+    CALL SubDspWindow( WindowNo ,    1 , "W0001_LogIn" , 1 , "");
+    CALL SubDspWindow( WindowNo ,    2 , "W0002_SelectRep" , 1 , "");
+    CALL SubDspWindow( WindowNo ,    3 , "W0003_SetValue" , 1 , "");
+    
+    CALL SubDspWindow( WindowNo ,   50 , "W0050_ChemicalList" , 1 , "");
+
+    CALL SubDspWindow( WindowNo ,  601 , "W0601_TankStatus_CDS1" , 1 , "");
+    CALL SubDspWindow( WindowNo ,  602 , "W0602_TankStatus_CDS3" , 1 , "");
+    CALL SubDspWindow( WindowNo ,  603 , "W0603_TankStatus_CDSK" , 1 , "");
+
+    CALL SubDspWindow( WindowNo ,  605 , "W0605_TankStatus_SDSMA" , 1 , "");
+    CALL SubDspWindow( WindowNo ,  606 , "W0606_TankStatus_SDSCU" , 1 , "");
+    CALL SubDspWindow( WindowNo ,  607 , "W0607_TankStatus_SDSTU" , 1 , "");
+
+    CALL SubDspWindow( WindowNo ,  612 , "W0612_TankStatus_CDS3" , 1 , "");
+    CALL SubDspWindow( WindowNo ,  616 , "W0616_TankStatus_SDSCU" , 1 , "");
+    CALL SubDspWindow( WindowNo ,  617 , "W0617_TankStatus_SDSTU" , 1 , "");
+
+    CALL SubDspWindow( WindowNo , 1000 , "W1000_SetTime" , 2 , "");
+    CALL SubDspWindow( WindowNo , 1001 , "W1001_SetPCTime" , 2 , "");
+
+    CALL SubDspWindow( WindowNo , 2000 , "W2000_AlarmHelp" , 1 , "");
+    CALL SubDspWindow( WindowNo , 2001 , "W2001_AlarmHelpEdit" , 1 , "");
+
+    CALL SubDspWindow( WindowNo , 5092 , "W5092_TrendRangeSet" , 2 , "");
+    CALL SubDspWindow( WindowNo , 5115 , "W5115_MaintHistChkSet" , 2 , "");
+
+    CALL SubDspWindow( WindowNo , 5150 , "W5150_EMS_Select" , 2 , "");
+    CALL SubDspWindow( WindowNo , 5151 , "W5151_EMS_StopSet" , 2 , "");
+
+    CALL SubDspWindow( WindowNo , 5201 , "W5201_PatoLightSet" , 2 , "");
+
+    CALL SubDspWindow( WindowNo , 5501 , "W5501_SendPouData" , 2 , "");
+
+    CALL SubDspWindow( WindowNo , 9001 , "W9001_SaveChemName" , 2 , "");
+
+    CALL SubDspWindow( WindowNo , 9801 , "W9801_AccessAauthority" , 2 , "");
+    CALL SubDspWindow( WindowNo , 9999 , "W9999_NotKey" , 2 , "");
+
+ENDIF;
+
+{ --- Last Window No --- }
+COM_DspBefWinNo_Mreal = WindowNo;
+IF COM_DspBefWinNo_Mreal <> 0 THEN
+    CALL OutPutLog("<DspWindow> ," + Text(COM_DspBefWinNo_Mreal,"0"));
+ENDIF;
