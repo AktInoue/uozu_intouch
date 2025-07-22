@@ -1,14 +1,14 @@
 IF ChemNo == 1 THEN
-   G0092_Used_Idx01_MReal = 1; { - ƒ^ƒ“ƒN—Ê -}
-   G0092_Used_Idx02_MReal = 1; { - uzŠÂ—¬—Ê - }
-   G0092_Used_Idx03_MReal = 1; { - ÏZ—¬—Ê - }
-   G0092_Used_Idx04_MReal = 1; { - ‰·“x - }
-   G0092_Used_Idx05_MReal = 1; { - ˆ³—Í1 - }
-   G0092_Used_Idx06_MReal = 0; { - ˆ³—Í2 - }
-   G0092_Used_Idx07_MReal = 0; { - d—Ê - }
-   G0092_Used_Idx08_MReal = 0; { - ”Z“x - }
-   G0092_Used_Idx09_MReal = 0; { - ½×Ø°ÓÆÀ - }
-   G0092_Used_Idx10_MReal = 0; { - d—Ê2 - }
+   G0092_Used_Idx01_MReal = 1; { - ã‚¿ãƒ³ã‚¯é‡ -}
+   G0092_Used_Idx02_MReal = 1; { - ç¬æ™‚å¾ªç’°æµé‡ - }
+   G0092_Used_Idx03_MReal = 1; { - ç©ç®—æµé‡ - }
+   G0092_Used_Idx04_MReal = 1; { - æ¸©åº¦ - }
+   G0092_Used_Idx05_MReal = 1; { - åœ§åŠ›1 - }
+   G0092_Used_Idx06_MReal = 0; { - åœ§åŠ›2 - }
+   G0092_Used_Idx07_MReal = 0; { - é‡é‡ - }
+   G0092_Used_Idx08_MReal = 0; { - æ¿ƒåº¦ - }
+   G0092_Used_Idx09_MReal = 0; { - ã‚¹ãƒ©ãƒªãƒ¼ãƒ¢ãƒ‹ã‚¿ - }
+   G0092_Used_Idx10_MReal = 0; { - é‡é‡2 - }
 ENDIF;
 IF ChemNo == 2 THEN
    G0092_Used_Idx01_MReal = 1;

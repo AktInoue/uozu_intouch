@@ -20,7 +20,7 @@ G0092_PenNM06_Mmesg = "";
 G0092_PenNM07_Mmesg = "";
 G0092_PenNM08_Mmesg = "";
 
-{ --- ��ސݒ� --- }
+{ --- 種類設定 --- }
 IF Index == 1 THEN
     KName = "LIA";
 ENDIF;

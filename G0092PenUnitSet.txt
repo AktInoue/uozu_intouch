@@ -1,7 +1,7 @@
 { --- DIM --- }
 DIM KName AS MESSAGE;
 
-{ --- éÌóﬁê›íË --- }
+{ --- Á®ÆÈ°ûË®≠ÂÆö --- }
 IF Index == 1 THEN
     KName = "LIA";
     G0092_Unit_Mmesg = "(Lit)";
@@ -47,7 +47,7 @@ IF Index == 3 THEN
 ENDIF;
 IF Index == 4 THEN
     KName = "TI";
-    G0092_Unit_Mmesg = "(Åé)";
+    G0092_Unit_Mmesg = "(‚ÑÉ)";
 ENDIF;
 IF Index == 5 THEN
     KName = "PIA1";
@@ -67,7 +67,7 @@ IF Index == 8 THEN
 ENDIF;
 IF Index == 9 THEN
     KName = "MON";
-    G0092_Unit_Mmesg = "(å¬)";
+    G0092_Unit_Mmesg = "(ÂÄã)";
 ENDIF;
 IF Index == 10 THEN
     KName = "WI";

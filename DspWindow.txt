@@ -3,7 +3,7 @@ DIM TFlg AS REAL;
 
 TFlg = 0;
 
-{--- “ÁŽê Dsp PopUp Window ---}
+{--- ç‰¹æ®Š Dsp PopUp Window ---}
 CALL SubDspWindow( WindowNo ,    4 , "W0004_SetValueDebug" , 1 , "");
 IF WindowNo == 4 THEN TFlg = 1; ENDIF;
 

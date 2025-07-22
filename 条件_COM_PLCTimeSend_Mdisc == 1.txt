@@ -14,15 +14,15 @@ DIM YY AS REAL;
 DIM MM AS REAL;
 DIM DD AS REAL;
 
-{ ---- •Ï”İ’è ---- }
+{ ---- å¤‰æ•°è¨­å®š ---- }
 SYYMM = StringMid(Text($Year  ,"0000"),3,2) + Text($Month ,"00");
 SDDHH =           Text($Day   ,"00")        + Text($Hour  ,"00");
 SMMSS =           Text($Minute,"00")        + Text($Second,"00");
 
 LogMessage(SYYMM);
 
-{ ---- —j“úŒvZ ---- }
-{ ---- Zeller‚ÌŒö® ---- }
+{ ---- æ›œæ—¥è¨ˆç®— ---- }
+{ ---- Zellerã®å…¬å¼ ---- }
 YY = $Year;
 MM = $Month;
 DD = $Day;
@@ -34,7 +34,7 @@ W = ( 5 * YY / 4 - YY / 100 + YY / 400 + ( 26 * MM + 16 ) / 10 + DD ) MOD 7;
 
 SWEK = Text( W , "00" ) + "00";
 
-{ ---- BCDƒR[ƒh‚Åo—Í ---- }
+{ ---- BCDã‚³ãƒ¼ãƒ‰ã§å‡ºåŠ› ---- }
 RYYMM = CALL StrToBCD(SYYMM);
 RYYMM = CALL MarkCnv( RYYMM,0);
 

@@ -125,7 +125,7 @@ SYS_R999 = 0;
 CALL SetAlarmChemNM();
 
 { --- Set Alarm PouNM  --- }
-AlmBaseNM = " ãüãã¿≤—µ∞ ﬁ∞";
+AlmBaseNM = " ‰æõÁµ¶„Çø„Ç§„É†„Ç™„Éº„Éê„Éº";
 CALL SetAlarmPouName(  1, 1, 500, AlmBaseNM);
 CALL SetAlarmPouName(  1, 2, 500, AlmBaseNM);
 CALL SetAlarmPouName(  1, 3, 500, AlmBaseNM);
@@ -278,7 +278,7 @@ CALL SetAlarmPouName( 49, 1, 500, AlmBaseNM);    { 2008/05 ADD. }
 CALL SetAlarmPouName( 49, 2, 500, AlmBaseNM);
 CALL SetAlarmPouName( 49, 3, 500, AlmBaseNM);
 
-AlmBaseNM = " ãŸã}í‚é~";
+AlmBaseNM = " Á∑äÊÄ•ÂÅúÊ≠¢";
 CALL SetAlarmPouName(  1, 1, 564, AlmBaseNM);
 CALL SetAlarmPouName(  1, 2, 564, AlmBaseNM);
 CALL SetAlarmPouName(  1, 3, 564, AlmBaseNM);
@@ -431,7 +431,7 @@ CALL SetAlarmPouName( 49, 1, 564, AlmBaseNM);    { 2008/05 ADD. }
 CALL SetAlarmPouName( 49, 2, 564, AlmBaseNM);
 CALL SetAlarmPouName( 49, 3, 564, AlmBaseNM);
 
-{ --- í êM ñ¢ämóß --- }
+{ --- ÈÄö‰ø° Êú™Á¢∫Á´ã --- }
 CH30_ETHER_Mdisc = 1;
 CH31_ETHER_Mdisc = 1;
 G0051_SystemStarting_Mreal = 0;

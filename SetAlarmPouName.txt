@@ -9,7 +9,7 @@ DIM VMax2 AS REAL;
 
 DIM ArmNo AS REAL;
 
-{ --- –¼Ì ŒÄo --- }
+{ --- åç§° å‘¼å‡º --- }
 CALL G0501LoadData(ChemNo, PageNo);
 CALL G0501VCntLoadData(ChemNo);
 

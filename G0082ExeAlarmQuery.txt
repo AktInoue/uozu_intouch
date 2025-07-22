@@ -17,7 +17,7 @@ almQuery("G0082_EventSummary",
                 "Summ");
 
 { --- List Default --- }
-G0081_ChemicalName_Mmesg = "ëSÇƒ";
+G0081_ChemicalName_Mmesg = "ÂÖ®„Å¶";
 IF G0081_ChemNo_Mreal <> 0 THEN
     G0081_Work01_Lmesg.Name = "COM_ChemNM_L" + Text(G0081_ChemNo_Mreal , "00" ) + "_Mmesg";
     G0081_ChemicalName_Mmesg = StringTrim(G0081_Work01_Lmesg,3);
