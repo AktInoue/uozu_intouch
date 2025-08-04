@@ -1,0 +1,23 @@
+ŠJ‚­Žž
+
+{ --- DIM --- }
+DIM Head AS MESSAGE;
+DIM YMD AS MESSAGE;
+DIM HMS AS MESSAGE;
+
+DIM FileNM AS MESSAGE;
+DIM OutLog AS MESSAGE;
+DIM GetDat AS MESSAGE;
+DIM FP AS REAL;
+
+FileNM = SYS_M004 + "\Monitor\ComFiles\Temp\TimeOut.TXT";
+FP = FileReadMessage (FileNM, 0, GetDat, 0);
+
+Head = StringMid(GetDat,2,8);
+YMD = StringMid(GetDat,10,10);
+HMS = StringMid(GetDat,20,8);
+
+IF Head == "TimeOut:" THEN
+   W1001_PCYMD =YMD;
+   W1001_PCHMS =HMS;
+ENDIF;

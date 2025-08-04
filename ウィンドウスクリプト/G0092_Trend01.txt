@@ -1,0 +1,54 @@
+開く時
+
+{ --- Initialize --- }
+G0092_Refresh_MReal = 0;    { -- 自動更新 -- }
+G0092_TrendGraph_Mtrnd.DisplayMode = 1;
+
+{ --- 最新時間へ --- }
+HTUpdateToCurrentTime( G0092_TrendGraph_Mtrnd.Name );
+
+G0092_ValueFormat_Mmesg = G0092_ValueFormat01_Mmesg;
+CALL G0092LoadPenRange(G0092_ChemNo_MReal,G0092_Index_MReal,G0092_TrendGraph_Pen_Mint);
+
+{ --- Range設定 --- }
+G0092_MaxRenge_MReal = HTGetScaleValue(G0092_TrendGraph_Mtrnd.Name, G0092_TrendGraph_Mtrnd.UpdateCount, G0092_TrendGraph_Pen_Mint, G0092_TrendGraph_Mtrnd.MinRange, G0092_TrendGraph_Mtrnd.MaxRange, 100.00);
+G0092_MinRenge_MReal = HTGetScaleValue(G0092_TrendGraph_Mtrnd.Name, G0092_TrendGraph_Mtrnd.UpdateCount, G0092_TrendGraph_Pen_Mint, G0092_TrendGraph_Mtrnd.MinRange, G0092_TrendGraph_Mtrnd.MaxRange, 0.00);
+
+G0092_BefMaxRenge_MReal = G0092_MaxRenge_MReal;
+G0092_BefMinRenge_MReal = G0092_MinRenge_MReal;
+----------------------------------------
+表示中
+
+{ --- DIM --- }
+DIM MaxRenge AS REAL;
+
+{ --- 自動更新 --- }
+IF G0092_Refresh_MReal == 1 THEN
+    IF G0092_TrendGraph_Mtrnd.UpdateInProgress == 0 THEN
+        HTUpdateToCurrentTime( G0092_TrendGraph_Mtrnd.Name );
+    ENDIF;
+ENDIF;
+
+{ --- レンジ幅変更 --- }
+IF G0092_BefMaxRenge_MReal <> G0092_MaxRenge_MReal OR
+   G0092_BefMinRenge_MReal <> G0092_MinRenge_MReal THEN
+    MaxRenge = HTGetScaleValue(G0092_TrendGraph_Mtrnd.Name, 
+                               G0092_TrendGraph_Mtrnd.UpdateCount, 
+                               G0092_TrendGraph_Pen_Mint, 0.00, 100.00, 100.00);
+    
+    G0092_TrendGraph_Mtrnd.MaxRange = (G0092_MaxRenge_MReal / MaxRenge)*100;
+    G0092_TrendGraph_Mtrnd.MinRange = (G0092_MinRenge_MReal / MaxRenge)*100;
+
+ENDIF;
+
+G0092_MaxRenge_MReal = HTGetScaleValue(G0092_TrendGraph_Mtrnd.Name, G0092_TrendGraph_Mtrnd.UpdateCount, G0092_TrendGraph_Pen_Mint, G0092_TrendGraph_Mtrnd.MinRange, G0092_TrendGraph_Mtrnd.MaxRange, 100.00);
+G0092_MinRenge_MReal = HTGetScaleValue(G0092_TrendGraph_Mtrnd.Name, G0092_TrendGraph_Mtrnd.UpdateCount, G0092_TrendGraph_Pen_Mint, G0092_TrendGraph_Mtrnd.MinRange, G0092_TrendGraph_Mtrnd.MaxRange, 0.00);
+
+G0092_BefMaxRenge_MReal = G0092_MaxRenge_MReal;
+G0092_BefMinRenge_MReal = G0092_MinRenge_MReal;
+
+
+{ --- 逆レンジ禁止 --- }
+IF G0092_TrendGraph_Mtrnd.MinRange >= G0092_TrendGraph_Mtrnd.MaxRange THEN
+    G0092_TrendGraph_Mtrnd.MaxRange = G0092_TrendGraph_Mtrnd.MinRange;
+ENDIF;

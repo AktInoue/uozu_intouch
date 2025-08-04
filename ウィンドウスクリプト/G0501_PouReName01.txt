@@ -1,0 +1,13 @@
+ŠJ‚­Žž
+
+{ --- Initialize --- }
+G0501_ListDsp_Mreal = 0;
+
+{ --- List Default --- }
+G0501_PageNo_Mreal = 1;
+G0501_Work01_Lmesg.Name = "COM_ChemNM_L" + Text(G0501_ChemNo_Mreal , "00" ) + "_Mmesg";
+G0501_ChemicalName_Mmesg = StringTrim(G0501_Work01_Lmesg,3);
+
+{ --- LoadData --- }
+CALL G0501LoadData(G0501_ChemNo_Mreal, G0501_PageNo_Mreal);
+CALL G0501SetChemcalStyle();

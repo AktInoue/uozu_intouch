@@ -1,0 +1,255 @@
+{--- DIM --- }	
+DIM SetDat AS REAL;	
+	
+{ --- CDS Lorry Call --- }	
+SetDat = 0;	
+IF CH01E_L.Alarm OR	
+   CH02E_L.Alarm OR	
+   CH03E_L.Alarm OR	
+   CH04E_L.Alarm OR	
+   CH05E_L.Alarm OR	
+   CH06E_L.Alarm OR	
+   CH07E_L.Alarm OR	
+   CH08E_L.Alarm OR	
+   CH09E_L.Alarm OR	
+   CH10E_L.Alarm OR	
+   CH11E_L.Alarm OR	
+   CH12E_L.Alarm OR	
+   CH13E_L.Alarm OR	
+   CH14E_L.Alarm OR	
+   CH15E_L.Alarm OR	
+   CH16E_L.Alarm OR	
+   CH17E_L.Alarm OR	
+   CH18E_L.Alarm OR	
+   CH19E_L.Alarm OR	
+   CH21E_L.Alarm OR	
+   CH22E_L.Alarm OR	
+   CH23E_L.Alarm OR	
+   CH24E_L.Alarm OR	
+   CH25E_L.Alarm OR	
+   CH26E_L.Alarm OR	
+   CH27E_L.Alarm OR	{2008.06 ADD}
+   CH28E_L.Alarm OR	{2008.06 ADD}
+   CH29E_L.Alarm	{2008.06 ADD}
+THEN	
+    SetDat = 2;	
+ENDIF;	
+IF CH01E_H.Alarm OR	
+   CH02E_H.Alarm OR	
+   CH03E_H.Alarm OR	
+   CH04E_H.Alarm OR	
+   CH05E_H.Alarm OR	
+   CH06E_H.Alarm OR	
+   CH07E_H.Alarm OR	
+   CH08E_H.Alarm OR	
+   CH09E_H.Alarm OR	
+   CH10E_H.Alarm OR	
+   CH11E_H.Alarm OR	
+   CH12E_H.Alarm OR	
+   CH13E_H.Alarm OR	
+   CH14E_H.Alarm OR	
+   CH15E_H.Alarm OR	
+   CH16E_H.Alarm OR	
+   CH17E_H.Alarm OR	
+   CH18E_H.Alarm OR	
+   CH19E_H.Alarm OR	
+   CH21E_H.Alarm OR	
+   CH22E_H.Alarm OR	
+   CH23E_H.Alarm OR	
+   CH24E_H.Alarm OR	
+   CH25E_H.Alarm OR	
+   CH26E_H.Alarm OR	
+   CH27E_H.Alarm OR	{2008.06 ADD}
+   CH28E_H.Alarm OR	{2008.06 ADD}
+   CH29E_H.Alarm	{2008.06 ADD}
+THEN  	
+    SetDat = 2;	
+ENDIF;	
+IF CH01_REP_LRL_TRG OR	
+   CH02_REP_LRL_TRG OR 	
+   CH03_REP_LRL_TRG OR 	
+   CH04_REP_LRL_TRG OR 	
+   CH05_REP_LRL_TRG OR 	
+   CH06_REP_LRL_TRG OR 	
+   CH07_REP_LRA_TRG OR 	
+   CH08_REP_LRA_TRG OR CH08_REP_LRB_TRG OR 	
+   CH09_REP_LRA_TRG OR CH09_REP_LRB_TRG OR 	
+   CH10_REP_LRA_TRG OR CH10_REP_LRB_TRG OR CH10P_REP_LRL_TRG OR 	
+   CH11_REP_LRA_TRG OR CH11_REP_LRB_TRG OR 	
+   CH12_REP_LRA_TRG OR CH12_REP_LRB_TRG OR CH12P_REP_LRL_TRG OR 	
+   CH13_REP_LRA_TRG OR CH13_REP_LRB_TRG OR 	
+   CH14_REP_LRA_TRG OR CH14_REP_LRB_TRG OR 	
+   CH15_REP_LRA_TRG OR CH15_REP_LRB_TRG OR 	
+   CH16_REP_LRA_TRG OR 	
+   CH17_REP_LRA_TRG OR 	
+   CH18_REP_LRA_TRG OR 	
+   CH19_REP_LRA_TRG OR 	
+   CH21_REP_LRL_TRG OR  	
+   CH22_REP_LRA_TRG OR CH22_REP_LRB_TRG OR	
+   CH23_REP_LRA_TRG OR	
+   CH24_REP_LRA_TRG OR CH24_REP_LRB_TRG OR	
+   CH25_REP_LRA_TRG OR CH25_REP_LRB_TRG OR	
+   CH26_REP_LRA_TRG OR CH26_REP_LRB_TRG OR	
+   CH27_REP_LRA_TRG OR CH27_REP_LRB_TRG OR 	{2008.06 ADD}
+   CH28_REP_LRA_TRG OR CH28_REP_LRB_TRG OR	{2008.06 ADD}
+   CH29_REP_LRA_TRG OR CH29_REP_LRB_TRG	{2008.06 ADD}
+THEN	
+   SetDat = 1;	
+ENDIF;	
+G0021_CDS_LORRY_Mreal = SetDat;	
+G0022_CDS_LORRY_Mreal = SetDat;	
+	
+{ --- SDS Lorry Call --- }	
+SetDat = 0;	
+IF CH39E_L.Alarm OR	
+   CH40E_L.Alarm OR	
+   CH41E_L.Alarm OR	
+   CH42E_L.Alarm OR	
+   CH43E_L.Alarm OR	
+   CH44E_L.Alarm OR	
+   CH45E_L.Alarm OR	
+   CH46E_L.Alarm OR	
+   CH47E_L.Alarm OR	
+   CH48E_L.Alarm OR	
+   CH49E_L.Alarm OR	{2008.06 ADD}
+   CH50E_L.Alarm	
+THEN	
+    SetDat = 2;    {1-->2 (2008.06 modified)}
+ENDIF;	
+IF CH39E_H.Alarm OR	
+   CH40E_H.Alarm OR	
+   CH41E_H.Alarm OR	
+   CH42E_H.Alarm OR	
+   CH43E_H.Alarm OR	
+   CH44E_H.Alarm OR	
+   CH45E_H.Alarm OR	
+   CH46E_H.Alarm OR	
+   CH47E_H.Alarm OR	
+   CH48E_H.Alarm OR	
+   CH49E_H.Alarm OR	{2008.06 ADD}
+   CH50E_H.Alarm	
+THEN   	
+    SetDat = 2;    {1-->2 (2008.06 modified)}
+ENDIF;	
+IF CH40_REP_LRA_TRG OR CH40_REP_LRB_TRG OR	
+   CH41_REP_LRA_TRG OR CH41_REP_LRB_TRG OR	
+	
+   CH43_REP_LRA_TRG OR CH43_REP_LRB_TRG OR	
+   CH44_REP_LRA_TRG OR CH44_REP_LRB_TRG OR	
+   CH45_REP_LRA_TRG OR CH45_REP_LRB_TRG OR	
+   CH46_REP_LRA_TRG OR CH46_REP_LRB_TRG OR	
+   CH47_REP_LRA_TRG OR CH47_REP_LRB_TRG OR	
+   CH48_REP_LRA_TRG OR CH48_REP_LRB_TRG OR	
+   CH49_REP_LRA_TRG OR CH49_REP_LRB_TRG	{2008.06 ADD}
+THEN	
+    SetDat = 1;    {2-->1 (2008.06 modified)}	
+ENDIF;	
+G0021_SDS_LORRY_Mreal = SetDat;	
+G0022_SDS_LORRY_Mreal = SetDat;	
+	
+{ --- CDS Alarm --- }	
+G0021_CDS_ALM_Mreal = 0;	
+G0022_CDS_ALM_Mreal = 0;	
+IF CH01A_L.Alarm OR	
+   CH02A_L.Alarm OR	
+   CH03A_L.Alarm OR	
+   CH04A_L.Alarm OR	
+   CH05A_L.Alarm OR	
+   CH06A_L.Alarm OR	
+   CH07A_L.Alarm OR	
+   CH08A_L.Alarm OR	
+   CH09A_L.Alarm OR	
+   CH10A_L.Alarm OR	
+   CH11A_L.Alarm OR	
+   CH12A_L.Alarm OR	
+   CH13A_L.Alarm OR	
+   CH14A_L.Alarm OR	
+   CH15A_L.Alarm OR	
+   CH16A_L.Alarm OR	
+   CH17A_L.Alarm OR	
+   CH18A_L.Alarm OR	
+   CH19A_L.Alarm OR	
+   CH21A_L.Alarm OR	
+   CH22A_L.Alarm OR	
+   CH23A_L.Alarm OR	
+   CH24A_L.Alarm OR	
+   CH25A_L.Alarm OR	
+   CH26A_L.Alarm OR	
+   CH27A_L.Alarm OR	{2008.06 ADD}
+   CH28A_L.Alarm OR	{2008.06 ADD}
+   CH29A_L.Alarm	{2008.06 ADD}
+THEN   	
+    G0021_CDS_ALM_Mreal = 1;	
+    G0022_CDS_ALM_Mreal = 1;	
+ENDIF;	
+IF CH01A_H.Alarm OR	
+   CH02A_H.Alarm OR	
+   CH03A_H.Alarm OR	
+   CH04A_H.Alarm OR	
+   CH05A_H.Alarm OR	
+   CH06A_H.Alarm OR	
+   CH07A_H.Alarm OR	
+   CH08A_H.Alarm OR	
+   CH09A_H.Alarm OR	
+   CH10A_H.Alarm OR	
+   CH11A_H.Alarm OR	
+   CH12A_H.Alarm OR	
+   CH12A_P.Alarm OR	
+   CH13A_H.Alarm OR	
+   CH14A_H.Alarm OR	
+   CH15A_H.Alarm OR	
+   CH15A_P.Alarm OR	
+   CH16A_H.Alarm OR	
+   CH17A_H.Alarm OR	
+   CH18A_H.Alarm OR	
+   CH19A_H.Alarm OR	
+   CH21A_H.Alarm OR	
+   CH22A_H.Alarm OR	
+   CH23A_H.Alarm OR	
+   CH24A_H.Alarm OR	
+   CH25A_H.Alarm OR	
+   CH26A_H.Alarm OR	
+   CH27A_H.Alarm OR	{2008.06 ADD}
+   CH27A_P.Alarm OR	{2008.06 ADD}
+   CH28A_H.Alarm OR	{2008.06 ADD}
+   CH29A_H.Alarm	{2008.06 ADD}
+THEN  	
+    G0021_CDS_ALM_Mreal = 2;	
+    G0022_CDS_ALM_Mreal = 2;	
+ENDIF;	
+	
+{ --- SDS Alarm --- }	
+G0021_SDS_ALM_Mreal = 0;	
+G0022_SDS_ALM_Mreal = 0;	
+IF CH39A_L.Alarm OR	
+   CH40A_L.Alarm OR	
+   CH41A_L.Alarm OR	
+   CH42A_L.Alarm OR	
+   CH43A_L.Alarm OR	
+   CH44A_L.Alarm OR	
+   CH45A_L.Alarm OR	
+   CH46A_L.Alarm OR	
+   CH47A_L.Alarm OR	
+   CH48A_L.Alarm OR	
+   CH49A_L.Alarm OR	{2008.06 ADD}
+   CH50A_L.Alarm	
+THEN   	
+    G0021_SDS_ALM_Mreal = 1;	
+    G0022_SDS_ALM_Mreal = 1;	
+ENDIF;	
+IF CH39A_H.Alarm OR	
+   CH40A_H.Alarm OR	
+   CH41A_H.Alarm OR	
+   CH42A_H.Alarm OR	
+   CH43A_H.Alarm OR	
+   CH44A_H.Alarm OR	
+   CH45A_H.Alarm OR	
+   CH46A_H.Alarm OR	
+   CH47A_H.Alarm OR	
+   CH48A_H.Alarm OR	
+   CH49A_H.Alarm OR	{2008.06 ADD}
+   CH50A_H.Alarm	
+THEN   	
+    G0021_SDS_ALM_Mreal = 2;	
+    G0022_SDS_ALM_Mreal = 2;	
+ENDIF;	

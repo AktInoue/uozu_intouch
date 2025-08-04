@@ -1,0 +1,5 @@
+ŠJ‚­Žž
+
+{ --- Initialize --- }
+G5092_SetMax_MReal = G0092_SetPenMax_Ianlg;
+G5092_SetMin_MReal = G0092_SetPenMin_Ianlg;

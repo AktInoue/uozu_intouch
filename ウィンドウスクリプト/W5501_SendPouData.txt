@@ -1,0 +1,4 @@
+ŠJ‚­Žž
+
+{ --- Initialize --- }
+W5501_PLCSendFlg_Mreal = 0;

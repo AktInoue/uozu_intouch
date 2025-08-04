@@ -1,0 +1,4 @@
+ŠJ‚­Žž
+
+{ -- Start Query -- }
+CALL G0081ExeAlarmQuery( G0081_ChemNo_Mreal, 0, 999);

@@ -1,0 +1,4 @@
+ŠJ‚­Žž
+
+{ --- LoadData --- }
+CALL G9001LoadData();

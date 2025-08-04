@@ -1,0 +1,6 @@
+ŠJ‚­Žž
+
+{ --- Initialize --- }
+W1000_SendFlg_Mreal = 0;
+W1000_ErrFlg_Mreal = 0;
+COM_PLCTimeSend_Mdisc = 0;

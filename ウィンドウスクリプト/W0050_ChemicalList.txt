@@ -1,0 +1,33 @@
+ŠJ‚­Žž
+
+{ --- DIM --- }
+DIM I AS REAL;
+DIM SetDat AS MESSAGE;
+
+{ --- Liat Add Item --- }
+wcClear( "W0050_listChemical" );
+
+IF W0050_AllUsedFlg_Mreal == 1 THEN
+    SetDat = "‘S‚Ä" + StringSpace(40);
+    Setdat = StringLeft(setdat,40);
+    Setdat = Setdat + Text(0 , "00" );
+    wcAddItem ( "W0050_listChemical", SetDat );
+ENDIF;
+
+FOR I = 1 TO 60{50}
+    IF (I <> 35) AND (I <> 36) AND (I <> 37) AND (I <> 38) THEN
+    
+    W0050_Work01_Lmesg.Name = "COM_ChemNM_F" + Text(W0050_Filter_Mreal,"0") + Text(I,"00") + "_Mmesg";
+    
+    IF StringTrim(W0050_Work01_Lmesg , 3) == "1" THEN
+        W0050_Work01_Lmesg.Name = "COM_ChemNM_L" + Text(I , "00" ) + "_Mmesg";
+        IF StringTrim(W0050_Work01_Lmesg , 3) <> "" THEN
+           SetDat = W0050_Work01_Lmesg + StringSpace(40);
+           Setdat = StringLeft(setdat,40);
+           Setdat = Setdat + Text(I , "00" );
+           wcAddItem ( "W0050_listChemical", SetDat );
+        ENDIF;
+    ENDIF;
+    
+    ENDIF;
+NEXT;

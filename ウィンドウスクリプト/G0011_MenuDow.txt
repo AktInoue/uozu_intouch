@@ -1,0 +1,16 @@
+ŠJ‚­Žž
+
+{ --- DIM --- }
+DIM FileName AS MESSAGE;
+DIM FileOffSet AS REAL;
+
+{-----------------------------------
+  Read Ciriterion File
+------------------------------------}
+{Create File Name}
+FileName = "C:\KEY";
+FileOffSet = InfoFile( FileName, 1, 0 );
+IF FileOffSet == 0 THEN
+    { --- KEY NOT --- }
+    CALL DspWindow(9999);
+ENDIF;

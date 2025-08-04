@@ -1,0 +1,6 @@
+ŠJ‚­Žž
+
+{ --- DIM --- }
+DIM Ret AS REAL;
+
+Ret = wcLoadText("W2001_txtAlarmHelp", W2000_LoadFileName_Mmesg); 

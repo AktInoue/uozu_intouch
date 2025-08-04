@@ -1,0 +1,155 @@
+ŠJ‚­Žž
+
+{ --- Liat Add Item --- }
+wcAddItem ( "AlarmSummGroup_ComboBox01", "‘S‚Ä" );
+
+IF StringTrim(COM_ChemNM_L01_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L01_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L02_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L02_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L03_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L03_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L04_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L04_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L05_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L05_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L06_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L06_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L07_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L07_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L08_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L08_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L09_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L09_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L10_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L10_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L11_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L11_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L12_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L12_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L13_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L13_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L14_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L14_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L15_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L15_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L16_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L16_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L17_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L17_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L18_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L18_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L19_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L19_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L20_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L20_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L21_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L21_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L22_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L22_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L23_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L23_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L24_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L24_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L25_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L25_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L26_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L26_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L27_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L27_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L28_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L28_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L29_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L29_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L30_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L30_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L31_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L31_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L32_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L32_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L33_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L33_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L34_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L34_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L35_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L35_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L36_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L36_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L37_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L37_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L38_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L38_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L39_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L39_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L40_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L40_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L41_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L41_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L42_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L42_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L43_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L43_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L44_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L44_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L45_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L45_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L46_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L46_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L47_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L47_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L48_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L48_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L49_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L49_Mmesg );
+ENDIF;
+IF StringTrim(COM_ChemNM_L50_Mmesg , 3) <> "" THEN
+   wcAddItem ( "AlarmSummGroup_ComboBox01", COM_ChemNM_L50_Mmesg );
+ENDIF;
